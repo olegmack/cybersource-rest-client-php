@@ -398,6 +398,7 @@ class Ptsv2paymentsTravelInformationTransitAirline implements ArrayAccess
      */
     public function setBookingReferenceNumber($bookingReferenceNumber)
     {
+
         $this->container['bookingReferenceNumber'] = $bookingReferenceNumber;
 
         return $this;
@@ -419,6 +420,7 @@ class Ptsv2paymentsTravelInformationTransitAirline implements ArrayAccess
      */
     public function setCarrierName($carrierName)
     {
+
         $this->container['carrierName'] = $carrierName;
 
         return $this;
@@ -461,6 +463,7 @@ class Ptsv2paymentsTravelInformationTransitAirline implements ArrayAccess
      */
     public function setTicketNumber($ticketNumber)
     {
+
         $this->container['ticketNumber'] = $ticketNumber;
 
         return $this;
@@ -482,6 +485,7 @@ class Ptsv2paymentsTravelInformationTransitAirline implements ArrayAccess
      */
     public function setCheckDigit($checkDigit)
     {
+
         $this->container['checkDigit'] = $checkDigit;
 
         return $this;
@@ -545,6 +549,7 @@ class Ptsv2paymentsTravelInformationTransitAirline implements ArrayAccess
      */
     public function setExtendedPaymentCode($extendedPaymentCode)
     {
+
         $this->container['extendedPaymentCode'] = $extendedPaymentCode;
 
         return $this;
@@ -566,6 +571,7 @@ class Ptsv2paymentsTravelInformationTransitAirline implements ArrayAccess
      */
     public function setPassengerName($passengerName)
     {
+
         $this->container['passengerName'] = $passengerName;
 
         return $this;
@@ -587,6 +593,7 @@ class Ptsv2paymentsTravelInformationTransitAirline implements ArrayAccess
      */
     public function setCustomerCode($customerCode)
     {
+
         $this->container['customerCode'] = $customerCode;
 
         return $this;
@@ -608,6 +615,7 @@ class Ptsv2paymentsTravelInformationTransitAirline implements ArrayAccess
      */
     public function setDocumentType($documentType)
     {
+
         $this->container['documentType'] = $documentType;
 
         return $this;
@@ -629,6 +637,7 @@ class Ptsv2paymentsTravelInformationTransitAirline implements ArrayAccess
      */
     public function setDocumentNumber($documentNumber)
     {
+
         $this->container['documentNumber'] = $documentNumber;
 
         return $this;
@@ -671,6 +680,7 @@ class Ptsv2paymentsTravelInformationTransitAirline implements ArrayAccess
      */
     public function setInvoiceNumber($invoiceNumber)
     {
+
         $this->container['invoiceNumber'] = $invoiceNumber;
 
         return $this;
@@ -713,6 +723,7 @@ class Ptsv2paymentsTravelInformationTransitAirline implements ArrayAccess
      */
     public function setAdditionalCharges($additionalCharges)
     {
+
         $this->container['additionalCharges'] = $additionalCharges;
 
         return $this;
@@ -734,6 +745,7 @@ class Ptsv2paymentsTravelInformationTransitAirline implements ArrayAccess
      */
     public function setTotalFeeAmount($totalFeeAmount)
     {
+
         $this->container['totalFeeAmount'] = $totalFeeAmount;
 
         return $this;
@@ -755,6 +767,7 @@ class Ptsv2paymentsTravelInformationTransitAirline implements ArrayAccess
      */
     public function setClearingSequence($clearingSequence)
     {
+
         $this->container['clearingSequence'] = $clearingSequence;
 
         return $this;
@@ -776,6 +789,7 @@ class Ptsv2paymentsTravelInformationTransitAirline implements ArrayAccess
      */
     public function setClearingCount($clearingCount)
     {
+
         $this->container['clearingCount'] = $clearingCount;
 
         return $this;
@@ -797,6 +811,7 @@ class Ptsv2paymentsTravelInformationTransitAirline implements ArrayAccess
      */
     public function setTotalClearingAmount($totalClearingAmount)
     {
+
         $this->container['totalClearingAmount'] = $totalClearingAmount;
 
         return $this;
@@ -839,6 +854,7 @@ class Ptsv2paymentsTravelInformationTransitAirline implements ArrayAccess
      */
     public function setReservationSystemCode($reservationSystemCode)
     {
+
         $this->container['reservationSystemCode'] = $reservationSystemCode;
 
         return $this;
@@ -860,6 +876,7 @@ class Ptsv2paymentsTravelInformationTransitAirline implements ArrayAccess
      */
     public function setProcessIdentifier($processIdentifier)
     {
+
         $this->container['processIdentifier'] = $processIdentifier;
 
         return $this;
@@ -881,6 +898,7 @@ class Ptsv2paymentsTravelInformationTransitAirline implements ArrayAccess
      */
     public function setTicketIssueDate($ticketIssueDate)
     {
+
         $this->container['ticketIssueDate'] = $ticketIssueDate;
 
         return $this;
@@ -923,6 +941,7 @@ class Ptsv2paymentsTravelInformationTransitAirline implements ArrayAccess
      */
     public function setOriginalTicketNumber($originalTicketNumber)
     {
+
         $this->container['originalTicketNumber'] = $originalTicketNumber;
 
         return $this;
@@ -944,6 +963,7 @@ class Ptsv2paymentsTravelInformationTransitAirline implements ArrayAccess
      */
     public function setPurchaseType($purchaseType)
     {
+
         $this->container['purchaseType'] = $purchaseType;
 
         return $this;
@@ -965,6 +985,7 @@ class Ptsv2paymentsTravelInformationTransitAirline implements ArrayAccess
      */
     public function setCreditReasonIndicator($creditReasonIndicator)
     {
+
         $this->container['creditReasonIndicator'] = $creditReasonIndicator;
 
         return $this;
@@ -986,6 +1007,7 @@ class Ptsv2paymentsTravelInformationTransitAirline implements ArrayAccess
      */
     public function setTicketChangeIndicator($ticketChangeIndicator)
     {
+
         $this->container['ticketChangeIndicator'] = $ticketChangeIndicator;
 
         return $this;
@@ -1007,6 +1029,7 @@ class Ptsv2paymentsTravelInformationTransitAirline implements ArrayAccess
      */
     public function setPlanNumber($planNumber)
     {
+
         $this->container['planNumber'] = $planNumber;
 
         return $this;
@@ -1028,6 +1051,7 @@ class Ptsv2paymentsTravelInformationTransitAirline implements ArrayAccess
      */
     public function setArrivalDate($arrivalDate)
     {
+
         $this->container['arrivalDate'] = $arrivalDate;
 
         return $this;
@@ -1049,6 +1073,7 @@ class Ptsv2paymentsTravelInformationTransitAirline implements ArrayAccess
      */
     public function setRestrictedTicketDesciption($restrictedTicketDesciption)
     {
+
         $this->container['restrictedTicketDesciption'] = $restrictedTicketDesciption;
 
         return $this;
@@ -1070,6 +1095,7 @@ class Ptsv2paymentsTravelInformationTransitAirline implements ArrayAccess
      */
     public function setExchangeTicketAmount($exchangeTicketAmount)
     {
+
         $this->container['exchangeTicketAmount'] = $exchangeTicketAmount;
 
         return $this;
@@ -1091,6 +1117,7 @@ class Ptsv2paymentsTravelInformationTransitAirline implements ArrayAccess
      */
     public function setExchangeTicketFeeAmount($exchangeTicketFeeAmount)
     {
+
         $this->container['exchangeTicketFeeAmount'] = $exchangeTicketFeeAmount;
 
         return $this;
@@ -1112,6 +1139,7 @@ class Ptsv2paymentsTravelInformationTransitAirline implements ArrayAccess
      */
     public function setReservationType($reservationType)
     {
+
         $this->container['reservationType'] = $reservationType;
 
         return $this;
@@ -1133,6 +1161,7 @@ class Ptsv2paymentsTravelInformationTransitAirline implements ArrayAccess
      */
     public function setBoardingFeeAmount($boardingFeeAmount)
     {
+
         $this->container['boardingFeeAmount'] = $boardingFeeAmount;
 
         return $this;
@@ -1184,7 +1213,6 @@ class Ptsv2paymentsTravelInformationTransitAirline implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -1195,7 +1223,6 @@ class Ptsv2paymentsTravelInformationTransitAirline implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -1207,7 +1234,6 @@ class Ptsv2paymentsTravelInformationTransitAirline implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -1222,7 +1248,6 @@ class Ptsv2paymentsTravelInformationTransitAirline implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

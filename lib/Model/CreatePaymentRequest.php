@@ -76,8 +76,7 @@ class CreatePaymentRequest implements ArrayAccess
         'processorInformation' => '\CyberSource\Model\Ptsv2paymentsProcessorInformation',
         'riskInformation' => '\CyberSource\Model\Ptsv2paymentsRiskInformation',
         'acquirerInformation' => '\CyberSource\Model\Ptsv2paymentsAcquirerInformation',
-        'recurringPaymentInformation' => '\CyberSource\Model\Ptsv2paymentsRecurringPaymentInformation',
-        'watchlistScreeningInformation' => '\CyberSource\Model\Ptsv2paymentsWatchlistScreeningInformation'
+        'recurringPaymentInformation' => '\CyberSource\Model\Ptsv2paymentsRecurringPaymentInformation'
     ];
 
     /**
@@ -107,8 +106,7 @@ class CreatePaymentRequest implements ArrayAccess
         'processorInformation' => null,
         'riskInformation' => null,
         'acquirerInformation' => null,
-        'recurringPaymentInformation' => null,
-        'watchlistScreeningInformation' => null
+        'recurringPaymentInformation' => null
     ];
 
     public static function swaggerTypes()
@@ -148,8 +146,7 @@ class CreatePaymentRequest implements ArrayAccess
         'processorInformation' => 'processorInformation',
         'riskInformation' => 'riskInformation',
         'acquirerInformation' => 'acquirerInformation',
-        'recurringPaymentInformation' => 'recurringPaymentInformation',
-        'watchlistScreeningInformation' => 'watchlistScreeningInformation'
+        'recurringPaymentInformation' => 'recurringPaymentInformation'
     ];
 
 
@@ -180,8 +177,7 @@ class CreatePaymentRequest implements ArrayAccess
         'processorInformation' => 'setProcessorInformation',
         'riskInformation' => 'setRiskInformation',
         'acquirerInformation' => 'setAcquirerInformation',
-        'recurringPaymentInformation' => 'setRecurringPaymentInformation',
-        'watchlistScreeningInformation' => 'setWatchlistScreeningInformation'
+        'recurringPaymentInformation' => 'setRecurringPaymentInformation'
     ];
 
 
@@ -212,8 +208,7 @@ class CreatePaymentRequest implements ArrayAccess
         'processorInformation' => 'getProcessorInformation',
         'riskInformation' => 'getRiskInformation',
         'acquirerInformation' => 'getAcquirerInformation',
-        'recurringPaymentInformation' => 'getRecurringPaymentInformation',
-        'watchlistScreeningInformation' => 'getWatchlistScreeningInformation'
+        'recurringPaymentInformation' => 'getRecurringPaymentInformation'
     ];
 
     public static function attributeMap()
@@ -270,7 +265,6 @@ class CreatePaymentRequest implements ArrayAccess
         $this->container['riskInformation'] = isset($data['riskInformation']) ? $data['riskInformation'] : null;
         $this->container['acquirerInformation'] = isset($data['acquirerInformation']) ? $data['acquirerInformation'] : null;
         $this->container['recurringPaymentInformation'] = isset($data['recurringPaymentInformation']) ? $data['recurringPaymentInformation'] : null;
-        $this->container['watchlistScreeningInformation'] = isset($data['watchlistScreeningInformation']) ? $data['watchlistScreeningInformation'] : null;
     }
 
     /**
@@ -780,33 +774,11 @@ class CreatePaymentRequest implements ArrayAccess
 
         return $this;
     }
-
-    /**
-     * Gets watchlistScreeningInformation
-     * @return \CyberSource\Model\Ptsv2paymentsWatchlistScreeningInformation
-     */
-    public function getWatchlistScreeningInformation()
-    {
-        return $this->container['watchlistScreeningInformation'];
-    }
-
-    /**
-     * Sets watchlistScreeningInformation
-     * @param \CyberSource\Model\Ptsv2paymentsWatchlistScreeningInformation $watchlistScreeningInformation
-     * @return $this
-     */
-    public function setWatchlistScreeningInformation($watchlistScreeningInformation)
-    {
-        $this->container['watchlistScreeningInformation'] = $watchlistScreeningInformation;
-
-        return $this;
-    }
     /**
      * Returns true if offset exists. False otherwise.
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -817,7 +789,6 @@ class CreatePaymentRequest implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -829,7 +800,6 @@ class CreatePaymentRequest implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -844,7 +814,6 @@ class CreatePaymentRequest implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

@@ -224,6 +224,7 @@ class Ptsv2paymentsClientReferenceInformation implements ArrayAccess
      */
     public function setCode($code)
     {
+
         $this->container['code'] = $code;
 
         return $this;
@@ -245,6 +246,7 @@ class Ptsv2paymentsClientReferenceInformation implements ArrayAccess
      */
     public function setReconciliationId($reconciliationId)
     {
+
         $this->container['reconciliationId'] = $reconciliationId;
 
         return $this;
@@ -266,6 +268,7 @@ class Ptsv2paymentsClientReferenceInformation implements ArrayAccess
      */
     public function setPausedRequestId($pausedRequestId)
     {
+
         $this->container['pausedRequestId'] = $pausedRequestId;
 
         return $this;
@@ -287,6 +290,7 @@ class Ptsv2paymentsClientReferenceInformation implements ArrayAccess
      */
     public function setTransactionId($transactionId)
     {
+
         $this->container['transactionId'] = $transactionId;
 
         return $this;
@@ -401,7 +405,6 @@ class Ptsv2paymentsClientReferenceInformation implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -412,7 +415,6 @@ class Ptsv2paymentsClientReferenceInformation implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -424,7 +426,6 @@ class Ptsv2paymentsClientReferenceInformation implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -439,7 +440,6 @@ class Ptsv2paymentsClientReferenceInformation implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

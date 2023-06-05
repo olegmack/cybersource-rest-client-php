@@ -347,6 +347,7 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
      */
     public function setAcsTransactionId($acsTransactionId)
     {
+
         $this->container['acsTransactionId'] = $acsTransactionId;
 
         return $this;
@@ -410,6 +411,7 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
      */
     public function setAuthenticationTransactionId($authenticationTransactionId)
     {
+
         $this->container['authenticationTransactionId'] = $authenticationTransactionId;
 
         return $this;
@@ -431,6 +433,7 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
      */
     public function setAuthenticationTransactionContextId($authenticationTransactionContextId)
     {
+
         $this->container['authenticationTransactionContextId'] = $authenticationTransactionContextId;
 
         return $this;
@@ -452,6 +455,7 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
      */
     public function setTransactionToken($transactionToken)
     {
+
         $this->container['transactionToken'] = $transactionToken;
 
         return $this;
@@ -494,6 +498,7 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
      */
     public function setCavv($cavv)
     {
+
         $this->container['cavv'] = $cavv;
 
         return $this;
@@ -515,6 +520,7 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
      */
     public function setCavvAlgorithm($cavvAlgorithm)
     {
+
         $this->container['cavvAlgorithm'] = $cavvAlgorithm;
 
         return $this;
@@ -557,6 +563,7 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
      */
     public function setDirectoryServerErrorDescription($directoryServerErrorDescription)
     {
+
         $this->container['directoryServerErrorDescription'] = $directoryServerErrorDescription;
 
         return $this;
@@ -599,6 +606,7 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
      */
     public function setInteractionCounter($interactionCounter)
     {
+
         $this->container['interactionCounter'] = $interactionCounter;
 
         return $this;
@@ -683,6 +691,7 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
      */
     public function setSdkTransactionId($sdkTransactionId)
     {
+
         $this->container['sdkTransactionId'] = $sdkTransactionId;
 
         return $this;
@@ -725,6 +734,7 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
      */
     public function setThreeDSServerTransactionId($threeDSServerTransactionId)
     {
+
         $this->container['threeDSServerTransactionId'] = $threeDSServerTransactionId;
 
         return $this;
@@ -788,6 +798,7 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
      */
     public function setWhiteListStatus($whiteListStatus)
     {
+
         $this->container['whiteListStatus'] = $whiteListStatus;
 
         return $this;
@@ -809,6 +820,7 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
      */
     public function setWhiteListStatusSource($whiteListStatusSource)
     {
+
         $this->container['whiteListStatusSource'] = $whiteListStatusSource;
 
         return $this;
@@ -851,6 +863,7 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
      */
     public function setDirectoryServerTransactionId($directoryServerTransactionId)
     {
+
         $this->container['directoryServerTransactionId'] = $directoryServerTransactionId;
 
         return $this;
@@ -860,7 +873,6 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -871,7 +883,6 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -883,7 +894,6 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -898,7 +908,6 @@ class RiskV1AuthenticationResultsPost201ResponseConsumerAuthenticationInformatio
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

@@ -54,7 +54,6 @@ class TssV2TransactionsGet200ResponseProcessingInformation implements ArrayAcces
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'binSource' => 'string',
         'industryDataType' => 'string',
         'paymentSolution' => 'string',
         'commerceIndicator' => 'string',
@@ -70,7 +69,6 @@ class TssV2TransactionsGet200ResponseProcessingInformation implements ArrayAcces
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'binSource' => null,
         'industryDataType' => null,
         'paymentSolution' => null,
         'commerceIndicator' => null,
@@ -96,7 +94,6 @@ class TssV2TransactionsGet200ResponseProcessingInformation implements ArrayAcces
      * @var string[]
      */
     protected static $attributeMap = [
-        'binSource' => 'binSource',
         'industryDataType' => 'industryDataType',
         'paymentSolution' => 'paymentSolution',
         'commerceIndicator' => 'commerceIndicator',
@@ -113,7 +110,6 @@ class TssV2TransactionsGet200ResponseProcessingInformation implements ArrayAcces
      * @var string[]
      */
     protected static $setters = [
-        'binSource' => 'setBinSource',
         'industryDataType' => 'setIndustryDataType',
         'paymentSolution' => 'setPaymentSolution',
         'commerceIndicator' => 'setCommerceIndicator',
@@ -130,7 +126,6 @@ class TssV2TransactionsGet200ResponseProcessingInformation implements ArrayAcces
      * @var string[]
      */
     protected static $getters = [
-        'binSource' => 'getBinSource',
         'industryDataType' => 'getIndustryDataType',
         'paymentSolution' => 'getPaymentSolution',
         'commerceIndicator' => 'getCommerceIndicator',
@@ -172,7 +167,6 @@ class TssV2TransactionsGet200ResponseProcessingInformation implements ArrayAcces
      */
     public function __construct(array $data = null)
     {
-        $this->container['binSource'] = isset($data['binSource']) ? $data['binSource'] : null;
         $this->container['industryDataType'] = isset($data['industryDataType']) ? $data['industryDataType'] : null;
         $this->container['paymentSolution'] = isset($data['paymentSolution']) ? $data['paymentSolution'] : null;
         $this->container['commerceIndicator'] = isset($data['commerceIndicator']) ? $data['commerceIndicator'] : null;
@@ -209,27 +203,6 @@ class TssV2TransactionsGet200ResponseProcessingInformation implements ArrayAcces
 
 
     /**
-     * Gets binSource
-     * @return string
-     */
-    public function getBinSource()
-    {
-        return $this->container['binSource'];
-    }
-
-    /**
-     * Sets binSource
-     * @param string $binSource Bin Source File Identifier. Possible values: - itmx - rupay
-     * @return $this
-     */
-    public function setBinSource($binSource)
-    {
-        $this->container['binSource'] = $binSource;
-
-        return $this;
-    }
-
-    /**
      * Gets industryDataType
      * @return string
      */
@@ -245,6 +218,7 @@ class TssV2TransactionsGet200ResponseProcessingInformation implements ArrayAcces
      */
     public function setIndustryDataType($industryDataType)
     {
+
         $this->container['industryDataType'] = $industryDataType;
 
         return $this;
@@ -266,6 +240,7 @@ class TssV2TransactionsGet200ResponseProcessingInformation implements ArrayAcces
      */
     public function setPaymentSolution($paymentSolution)
     {
+
         $this->container['paymentSolution'] = $paymentSolution;
 
         return $this;
@@ -287,6 +262,7 @@ class TssV2TransactionsGet200ResponseProcessingInformation implements ArrayAcces
      */
     public function setCommerceIndicator($commerceIndicator)
     {
+
         $this->container['commerceIndicator'] = $commerceIndicator;
 
         return $this;
@@ -308,6 +284,7 @@ class TssV2TransactionsGet200ResponseProcessingInformation implements ArrayAcces
      */
     public function setCommerceIndicatorLabel($commerceIndicatorLabel)
     {
+
         $this->container['commerceIndicatorLabel'] = $commerceIndicatorLabel;
 
         return $this;
@@ -401,7 +378,6 @@ class TssV2TransactionsGet200ResponseProcessingInformation implements ArrayAcces
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -412,7 +388,6 @@ class TssV2TransactionsGet200ResponseProcessingInformation implements ArrayAcces
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -424,7 +399,6 @@ class TssV2TransactionsGet200ResponseProcessingInformation implements ArrayAcces
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -439,7 +413,6 @@ class TssV2TransactionsGet200ResponseProcessingInformation implements ArrayAcces
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

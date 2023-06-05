@@ -194,6 +194,7 @@ class Ptsv2paymentsRecipientInformation implements ArrayAccess
      */
     public function setAccountId($accountId)
     {
+
         $this->container['accountId'] = $accountId;
 
         return $this;
@@ -215,6 +216,7 @@ class Ptsv2paymentsRecipientInformation implements ArrayAccess
      */
     public function setLastName($lastName)
     {
+
         $this->container['lastName'] = $lastName;
 
         return $this;
@@ -236,6 +238,7 @@ class Ptsv2paymentsRecipientInformation implements ArrayAccess
      */
     public function setMiddleName($middleName)
     {
+
         $this->container['middleName'] = $middleName;
 
         return $this;
@@ -257,6 +260,7 @@ class Ptsv2paymentsRecipientInformation implements ArrayAccess
      */
     public function setPostalCode($postalCode)
     {
+
         $this->container['postalCode'] = $postalCode;
 
         return $this;
@@ -266,7 +270,6 @@ class Ptsv2paymentsRecipientInformation implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -277,7 +280,6 @@ class Ptsv2paymentsRecipientInformation implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -289,7 +291,6 @@ class Ptsv2paymentsRecipientInformation implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -304,7 +305,6 @@ class Ptsv2paymentsRecipientInformation implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

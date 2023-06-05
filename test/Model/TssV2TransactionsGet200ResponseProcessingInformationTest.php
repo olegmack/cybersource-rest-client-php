@@ -78,13 +78,6 @@ class TssV2TransactionsGet200ResponseProcessingInformationTest extends \PHPUnit_
     }
 
     /**
-     * Test attribute "binSource"
-     */
-    public function testPropertyBinSource()
-    {
-    }
-
-    /**
      * Test attribute "industryDataType"
      */
     public function testPropertyIndustryDataType()

@@ -62,8 +62,7 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation implements Ar
         'responseAccessToken' => 'string',
         'signedParesStatusReason' => 'string',
         'signedPares' => 'string',
-        'whiteListStatus' => 'string',
-        'credentialEncrypted' => 'string'
+        'whiteListStatus' => 'string'
     ];
 
     /**
@@ -79,8 +78,7 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation implements Ar
         'responseAccessToken' => null,
         'signedParesStatusReason' => null,
         'signedPares' => null,
-        'whiteListStatus' => null,
-        'credentialEncrypted' => null
+        'whiteListStatus' => null
     ];
 
     public static function swaggerTypes()
@@ -106,8 +104,7 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation implements Ar
         'responseAccessToken' => 'responseAccessToken',
         'signedParesStatusReason' => 'signedParesStatusReason',
         'signedPares' => 'signedPares',
-        'whiteListStatus' => 'whiteListStatus',
-        'credentialEncrypted' => 'credentialEncrypted'
+        'whiteListStatus' => 'whiteListStatus'
     ];
 
 
@@ -124,8 +121,7 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation implements Ar
         'responseAccessToken' => 'setResponseAccessToken',
         'signedParesStatusReason' => 'setSignedParesStatusReason',
         'signedPares' => 'setSignedPares',
-        'whiteListStatus' => 'setWhiteListStatus',
-        'credentialEncrypted' => 'setCredentialEncrypted'
+        'whiteListStatus' => 'setWhiteListStatus'
     ];
 
 
@@ -142,8 +138,7 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation implements Ar
         'responseAccessToken' => 'getResponseAccessToken',
         'signedParesStatusReason' => 'getSignedParesStatusReason',
         'signedPares' => 'getSignedPares',
-        'whiteListStatus' => 'getWhiteListStatus',
-        'credentialEncrypted' => 'getCredentialEncrypted'
+        'whiteListStatus' => 'getWhiteListStatus'
     ];
 
     public static function attributeMap()
@@ -186,7 +181,6 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation implements Ar
         $this->container['signedParesStatusReason'] = isset($data['signedParesStatusReason']) ? $data['signedParesStatusReason'] : null;
         $this->container['signedPares'] = isset($data['signedPares']) ? $data['signedPares'] : null;
         $this->container['whiteListStatus'] = isset($data['whiteListStatus']) ? $data['whiteListStatus'] : null;
-        $this->container['credentialEncrypted'] = isset($data['credentialEncrypted']) ? $data['credentialEncrypted'] : null;
     }
 
     /**
@@ -230,6 +224,7 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation implements Ar
      */
     public function setAuthenticationTransactionId($authenticationTransactionId)
     {
+
         $this->container['authenticationTransactionId'] = $authenticationTransactionId;
 
         return $this;
@@ -251,6 +246,7 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation implements Ar
      */
     public function setAuthenticationTransactionContext($authenticationTransactionContext)
     {
+
         $this->container['authenticationTransactionContext'] = $authenticationTransactionContext;
 
         return $this;
@@ -272,6 +268,7 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation implements Ar
      */
     public function setOtpToken($otpToken)
     {
+
         $this->container['otpToken'] = $otpToken;
 
         return $this;
@@ -293,6 +290,7 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation implements Ar
      */
     public function setAuthenticationType($authenticationType)
     {
+
         $this->container['authenticationType'] = $authenticationType;
 
         return $this;
@@ -314,6 +312,7 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation implements Ar
      */
     public function setEffectiveAuthenticationType($effectiveAuthenticationType)
     {
+
         $this->container['effectiveAuthenticationType'] = $effectiveAuthenticationType;
 
         return $this;
@@ -356,6 +355,7 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation implements Ar
      */
     public function setSignedParesStatusReason($signedParesStatusReason)
     {
+
         $this->container['signedParesStatusReason'] = $signedParesStatusReason;
 
         return $this;
@@ -398,28 +398,8 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation implements Ar
      */
     public function setWhiteListStatus($whiteListStatus)
     {
+
         $this->container['whiteListStatus'] = $whiteListStatus;
-
-        return $this;
-    }
-
-    /**
-     * Gets credentialEncrypted
-     * @return string
-     */
-    public function getCredentialEncrypted()
-    {
-        return $this->container['credentialEncrypted'];
-    }
-
-    /**
-     * Sets credentialEncrypted
-     * @param string $credentialEncrypted A flag to indicate if the passed credential has been encrypted by the Merchant.
-     * @return $this
-     */
-    public function setCredentialEncrypted($credentialEncrypted)
-    {
-        $this->container['credentialEncrypted'] = $credentialEncrypted;
 
         return $this;
     }
@@ -428,7 +408,6 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation implements Ar
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -439,7 +418,6 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation implements Ar
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -451,7 +429,6 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation implements Ar
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -466,7 +443,6 @@ class Riskv1authenticationresultsConsumerAuthenticationInformation implements Ar
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

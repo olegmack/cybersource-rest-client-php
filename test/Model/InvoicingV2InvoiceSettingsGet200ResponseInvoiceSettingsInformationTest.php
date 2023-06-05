@@ -132,18 +132,4 @@ class InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformationTest ext
     public function testPropertyPayerAuthentication3DSVersion()
     {
     }
-
-    /**
-     * Test attribute "showVatNumber"
-     */
-    public function testPropertyShowVatNumber()
-    {
-    }
-
-    /**
-     * Test attribute "vatRegistrationNumber"
-     */
-    public function testPropertyVatRegistrationNumber()
-    {
-    }
 }

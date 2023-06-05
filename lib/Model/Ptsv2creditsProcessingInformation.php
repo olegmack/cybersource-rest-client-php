@@ -278,6 +278,7 @@ class Ptsv2creditsProcessingInformation implements ArrayAccess
      */
     public function setCommerceIndicator($commerceIndicator)
     {
+
         $this->container['commerceIndicator'] = $commerceIndicator;
 
         return $this;
@@ -299,6 +300,7 @@ class Ptsv2creditsProcessingInformation implements ArrayAccess
      */
     public function setProcessorId($processorId)
     {
+
         $this->container['processorId'] = $processorId;
 
         return $this;
@@ -320,6 +322,7 @@ class Ptsv2creditsProcessingInformation implements ArrayAccess
      */
     public function setPaymentSolution($paymentSolution)
     {
+
         $this->container['paymentSolution'] = $paymentSolution;
 
         return $this;
@@ -341,6 +344,7 @@ class Ptsv2creditsProcessingInformation implements ArrayAccess
      */
     public function setReconciliationId($reconciliationId)
     {
+
         $this->container['reconciliationId'] = $reconciliationId;
 
         return $this;
@@ -362,6 +366,7 @@ class Ptsv2creditsProcessingInformation implements ArrayAccess
      */
     public function setLinkId($linkId)
     {
+
         $this->container['linkId'] = $linkId;
 
         return $this;
@@ -383,6 +388,7 @@ class Ptsv2creditsProcessingInformation implements ArrayAccess
      */
     public function setReportGroup($reportGroup)
     {
+
         $this->container['reportGroup'] = $reportGroup;
 
         return $this;
@@ -404,6 +410,7 @@ class Ptsv2creditsProcessingInformation implements ArrayAccess
      */
     public function setVisaCheckoutId($visaCheckoutId)
     {
+
         $this->container['visaCheckoutId'] = $visaCheckoutId;
 
         return $this;
@@ -425,6 +432,7 @@ class Ptsv2creditsProcessingInformation implements ArrayAccess
      */
     public function setPurchaseLevel($purchaseLevel)
     {
+
         $this->container['purchaseLevel'] = $purchaseLevel;
 
         return $this;
@@ -446,6 +454,7 @@ class Ptsv2creditsProcessingInformation implements ArrayAccess
      */
     public function setIndustryDataType($industryDataType)
     {
+
         $this->container['industryDataType'] = $industryDataType;
 
         return $this;
@@ -467,6 +476,7 @@ class Ptsv2creditsProcessingInformation implements ArrayAccess
      */
     public function setWalletType($walletType)
     {
+
         $this->container['walletType'] = $walletType;
 
         return $this;
@@ -488,6 +498,7 @@ class Ptsv2creditsProcessingInformation implements ArrayAccess
      */
     public function setNationalNetDomesticData($nationalNetDomesticData)
     {
+
         $this->container['nationalNetDomesticData'] = $nationalNetDomesticData;
 
         return $this;
@@ -509,6 +520,7 @@ class Ptsv2creditsProcessingInformation implements ArrayAccess
      */
     public function setNetworkRoutingOrder($networkRoutingOrder)
     {
+
         $this->container['networkRoutingOrder'] = $networkRoutingOrder;
 
         return $this;
@@ -644,7 +656,6 @@ class Ptsv2creditsProcessingInformation implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -655,7 +666,6 @@ class Ptsv2creditsProcessingInformation implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -667,7 +677,6 @@ class Ptsv2creditsProcessingInformation implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -682,7 +691,6 @@ class Ptsv2creditsProcessingInformation implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

@@ -104,11 +104,4 @@ class TssV2TransactionsPost201ResponseEmbeddedPointOfSaleInformationTest extends
     public function testPropertyPartner()
     {
     }
-
-    /**
-     * Test attribute "emv"
-     */
-    public function testPropertyEmv()
-    {
-    }
 }

@@ -99,37 +99,9 @@ class TssV2TransactionsGet200ResponsePaymentInformationTest extends \PHPUnit_Fra
     }
 
     /**
-     * Test attribute "brands"
-     */
-    public function testPropertyBrands()
-    {
-    }
-
-    /**
-     * Test attribute "features"
-     */
-    public function testPropertyFeatures()
-    {
-    }
-
-    /**
      * Test attribute "invoice"
      */
     public function testPropertyInvoice()
-    {
-    }
-
-    /**
-     * Test attribute "network"
-     */
-    public function testPropertyNetwork()
-    {
-    }
-
-    /**
-     * Test attribute "issuerInformation"
-     */
-    public function testPropertyIssuerInformation()
     {
     }
 

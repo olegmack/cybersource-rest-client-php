@@ -33,7 +33,7 @@ namespace CyberSource;
  * InlineResponse200Test Class Doc Comment
  *
  * @category    Class */
-// * @description InlineResponse200
+// * @description Successful searchKeysResponse
 /**
  * @package     CyberSource
  * @author      Swagger Codegen team
@@ -78,13 +78,6 @@ class InlineResponse200Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "links"
-     */
-    public function testPropertyLinks()
-    {
-    }
-
-    /**
      * Test attribute "submitTimeUtc"
      */
     public function testPropertySubmitTimeUtc()
@@ -99,9 +92,30 @@ class InlineResponse200Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "plans"
+     * Test attribute "offset"
      */
-    public function testPropertyPlans()
+    public function testPropertyOffset()
+    {
+    }
+
+    /**
+     * Test attribute "limit"
+     */
+    public function testPropertyLimit()
+    {
+    }
+
+    /**
+     * Test attribute "sort"
+     */
+    public function testPropertySort()
+    {
+    }
+
+    /**
+     * Test attribute "keys"
+     */
+    public function testPropertyKeys()
     {
     }
 }

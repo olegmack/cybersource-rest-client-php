@@ -257,6 +257,7 @@ class RiskV1AddressVerificationsPost201ResponseAddressVerificationInformationSta
      */
     public function setAddress2($address2)
     {
+
         $this->container['address2'] = $address2;
 
         return $this;
@@ -278,6 +279,7 @@ class RiskV1AddressVerificationsPost201ResponseAddressVerificationInformationSta
      */
     public function setAddress3($address3)
     {
+
         $this->container['address3'] = $address3;
 
         return $this;
@@ -299,6 +301,7 @@ class RiskV1AddressVerificationsPost201ResponseAddressVerificationInformationSta
      */
     public function setAddress4($address4)
     {
+
         $this->container['address4'] = $address4;
 
         return $this;
@@ -320,6 +323,7 @@ class RiskV1AddressVerificationsPost201ResponseAddressVerificationInformationSta
      */
     public function setLocality($locality)
     {
+
         $this->container['locality'] = $locality;
 
         return $this;
@@ -341,6 +345,7 @@ class RiskV1AddressVerificationsPost201ResponseAddressVerificationInformationSta
      */
     public function setCounty($county)
     {
+
         $this->container['county'] = $county;
 
         return $this;
@@ -362,6 +367,7 @@ class RiskV1AddressVerificationsPost201ResponseAddressVerificationInformationSta
      */
     public function setCountry($country)
     {
+
         $this->container['country'] = $country;
 
         return $this;
@@ -383,6 +389,7 @@ class RiskV1AddressVerificationsPost201ResponseAddressVerificationInformationSta
      */
     public function setCsz($csz)
     {
+
         $this->container['csz'] = $csz;
 
         return $this;
@@ -404,6 +411,7 @@ class RiskV1AddressVerificationsPost201ResponseAddressVerificationInformationSta
      */
     public function setIsoCountry($isoCountry)
     {
+
         $this->container['isoCountry'] = $isoCountry;
 
         return $this;
@@ -425,6 +433,7 @@ class RiskV1AddressVerificationsPost201ResponseAddressVerificationInformationSta
      */
     public function setAdministrativeArea($administrativeArea)
     {
+
         $this->container['administrativeArea'] = $administrativeArea;
 
         return $this;
@@ -446,6 +455,7 @@ class RiskV1AddressVerificationsPost201ResponseAddressVerificationInformationSta
      */
     public function setPostalCode($postalCode)
     {
+
         $this->container['postalCode'] = $postalCode;
 
         return $this;
@@ -455,7 +465,6 @@ class RiskV1AddressVerificationsPost201ResponseAddressVerificationInformationSta
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -466,7 +475,6 @@ class RiskV1AddressVerificationsPost201ResponseAddressVerificationInformationSta
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -478,7 +486,6 @@ class RiskV1AddressVerificationsPost201ResponseAddressVerificationInformationSta
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -493,7 +500,6 @@ class RiskV1AddressVerificationsPost201ResponseAddressVerificationInformationSta
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

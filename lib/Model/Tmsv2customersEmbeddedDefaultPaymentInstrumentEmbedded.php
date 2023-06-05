@@ -35,7 +35,7 @@ use \ArrayAccess;
  * Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbedded Class Doc Comment
  *
  * @category    Class
- * @description Additional resources for the Payment Instrument.
+ * @description Additional resources for the Payment Instrument token.
  * @package     CyberSource
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -186,7 +186,6 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbedded implements ArrayAcc
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -197,7 +196,6 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbedded implements ArrayAcc
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -209,7 +207,6 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbedded implements ArrayAcc
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -224,7 +221,6 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbedded implements ArrayAcc
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

@@ -97,11 +97,4 @@ class Invoicingv2invoicesCustomerInformationTest extends \PHPUnit_Framework_Test
     public function testPropertyMerchantCustomerId()
     {
     }
-
-    /**
-     * Test attribute "company"
-     */
-    public function testPropertyCompany()
-    {
-    }
 }

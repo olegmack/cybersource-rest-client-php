@@ -194,6 +194,7 @@ class Riskv1decisionsTravelInformationLegs implements ArrayAccess
      */
     public function setOrigination($origination)
     {
+
         $this->container['origination'] = $origination;
 
         return $this;
@@ -215,6 +216,7 @@ class Riskv1decisionsTravelInformationLegs implements ArrayAccess
      */
     public function setDestination($destination)
     {
+
         $this->container['destination'] = $destination;
 
         return $this;
@@ -236,6 +238,7 @@ class Riskv1decisionsTravelInformationLegs implements ArrayAccess
      */
     public function setCarrierCode($carrierCode)
     {
+
         $this->container['carrierCode'] = $carrierCode;
 
         return $this;
@@ -266,7 +269,6 @@ class Riskv1decisionsTravelInformationLegs implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -277,7 +279,6 @@ class Riskv1decisionsTravelInformationLegs implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -289,7 +290,6 @@ class Riskv1decisionsTravelInformationLegs implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -304,7 +304,6 @@ class Riskv1decisionsTravelInformationLegs implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

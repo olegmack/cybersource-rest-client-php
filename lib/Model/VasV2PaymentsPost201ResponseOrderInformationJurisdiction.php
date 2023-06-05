@@ -224,6 +224,7 @@ class VasV2PaymentsPost201ResponseOrderInformationJurisdiction implements ArrayA
      */
     public function setType($type)
     {
+
         $this->container['type'] = $type;
 
         return $this;
@@ -245,6 +246,7 @@ class VasV2PaymentsPost201ResponseOrderInformationJurisdiction implements ArrayA
      */
     public function setTaxName($taxName)
     {
+
         $this->container['taxName'] = $taxName;
 
         return $this;
@@ -266,6 +268,7 @@ class VasV2PaymentsPost201ResponseOrderInformationJurisdiction implements ArrayA
      */
     public function setTaxAmount($taxAmount)
     {
+
         $this->container['taxAmount'] = $taxAmount;
 
         return $this;
@@ -287,6 +290,7 @@ class VasV2PaymentsPost201ResponseOrderInformationJurisdiction implements ArrayA
      */
     public function setTaxable($taxable)
     {
+
         $this->container['taxable'] = $taxable;
 
         return $this;
@@ -308,6 +312,7 @@ class VasV2PaymentsPost201ResponseOrderInformationJurisdiction implements ArrayA
      */
     public function setName($name)
     {
+
         $this->container['name'] = $name;
 
         return $this;
@@ -329,6 +334,7 @@ class VasV2PaymentsPost201ResponseOrderInformationJurisdiction implements ArrayA
      */
     public function setCode($code)
     {
+
         $this->container['code'] = $code;
 
         return $this;
@@ -350,6 +356,7 @@ class VasV2PaymentsPost201ResponseOrderInformationJurisdiction implements ArrayA
      */
     public function setRate($rate)
     {
+
         $this->container['rate'] = $rate;
 
         return $this;
@@ -371,6 +378,7 @@ class VasV2PaymentsPost201ResponseOrderInformationJurisdiction implements ArrayA
      */
     public function setRegion($region)
     {
+
         $this->container['region'] = $region;
 
         return $this;
@@ -392,6 +400,7 @@ class VasV2PaymentsPost201ResponseOrderInformationJurisdiction implements ArrayA
      */
     public function setCountry($country)
     {
+
         $this->container['country'] = $country;
 
         return $this;
@@ -401,7 +410,6 @@ class VasV2PaymentsPost201ResponseOrderInformationJurisdiction implements ArrayA
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -412,7 +420,6 @@ class VasV2PaymentsPost201ResponseOrderInformationJurisdiction implements ArrayA
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -424,7 +431,6 @@ class VasV2PaymentsPost201ResponseOrderInformationJurisdiction implements ArrayA
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -439,7 +445,6 @@ class VasV2PaymentsPost201ResponseOrderInformationJurisdiction implements ArrayA
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

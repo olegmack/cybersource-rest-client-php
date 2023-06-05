@@ -55,9 +55,8 @@ class InvoicingV2InvoicesAllGet200ResponseLinks implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'self' => '\CyberSource\Model\PtsV2PaymentsPost201ResponseLinksSelf',
-        'update' => '\CyberSource\Model\PtsV2PaymentsPost201ResponseLinksSelf',
-        'deliver' => '\CyberSource\Model\PtsV2PaymentsPost201ResponseLinksSelf',
-        'cancel' => '\CyberSource\Model\PtsV2PaymentsPost201ResponseLinksSelf'
+        'next' => '\CyberSource\Model\PtsV2PaymentsPost201ResponseLinksSelf',
+        'previous' => '\CyberSource\Model\PtsV2PaymentsPost201ResponseLinksSelf'
     ];
 
     /**
@@ -66,9 +65,8 @@ class InvoicingV2InvoicesAllGet200ResponseLinks implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'self' => null,
-        'update' => null,
-        'deliver' => null,
-        'cancel' => null
+        'next' => null,
+        'previous' => null
     ];
 
     public static function swaggerTypes()
@@ -87,9 +85,8 @@ class InvoicingV2InvoicesAllGet200ResponseLinks implements ArrayAccess
      */
     protected static $attributeMap = [
         'self' => 'self',
-        'update' => 'update',
-        'deliver' => 'deliver',
-        'cancel' => 'cancel'
+        'next' => 'next',
+        'previous' => 'previous'
     ];
 
 
@@ -99,9 +96,8 @@ class InvoicingV2InvoicesAllGet200ResponseLinks implements ArrayAccess
      */
     protected static $setters = [
         'self' => 'setSelf',
-        'update' => 'setUpdate',
-        'deliver' => 'setDeliver',
-        'cancel' => 'setCancel'
+        'next' => 'setNext',
+        'previous' => 'setPrevious'
     ];
 
 
@@ -111,9 +107,8 @@ class InvoicingV2InvoicesAllGet200ResponseLinks implements ArrayAccess
      */
     protected static $getters = [
         'self' => 'getSelf',
-        'update' => 'getUpdate',
-        'deliver' => 'getDeliver',
-        'cancel' => 'getCancel'
+        'next' => 'getNext',
+        'previous' => 'getPrevious'
     ];
 
     public static function attributeMap()
@@ -148,9 +143,8 @@ class InvoicingV2InvoicesAllGet200ResponseLinks implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['self'] = isset($data['self']) ? $data['self'] : null;
-        $this->container['update'] = isset($data['update']) ? $data['update'] : null;
-        $this->container['deliver'] = isset($data['deliver']) ? $data['deliver'] : null;
-        $this->container['cancel'] = isset($data['cancel']) ? $data['cancel'] : null;
+        $this->container['next'] = isset($data['next']) ? $data['next'] : null;
+        $this->container['previous'] = isset($data['previous']) ? $data['previous'] : null;
     }
 
     /**
@@ -200,64 +194,43 @@ class InvoicingV2InvoicesAllGet200ResponseLinks implements ArrayAccess
     }
 
     /**
-     * Gets update
+     * Gets next
      * @return \CyberSource\Model\PtsV2PaymentsPost201ResponseLinksSelf
      */
-    public function getUpdate()
+    public function getNext()
     {
-        return $this->container['update'];
+        return $this->container['next'];
     }
 
     /**
-     * Sets update
-     * @param \CyberSource\Model\PtsV2PaymentsPost201ResponseLinksSelf $update
+     * Sets next
+     * @param \CyberSource\Model\PtsV2PaymentsPost201ResponseLinksSelf $next
      * @return $this
      */
-    public function setUpdate($update)
+    public function setNext($next)
     {
-        $this->container['update'] = $update;
+        $this->container['next'] = $next;
 
         return $this;
     }
 
     /**
-     * Gets deliver
+     * Gets previous
      * @return \CyberSource\Model\PtsV2PaymentsPost201ResponseLinksSelf
      */
-    public function getDeliver()
+    public function getPrevious()
     {
-        return $this->container['deliver'];
+        return $this->container['previous'];
     }
 
     /**
-     * Sets deliver
-     * @param \CyberSource\Model\PtsV2PaymentsPost201ResponseLinksSelf $deliver
+     * Sets previous
+     * @param \CyberSource\Model\PtsV2PaymentsPost201ResponseLinksSelf $previous
      * @return $this
      */
-    public function setDeliver($deliver)
+    public function setPrevious($previous)
     {
-        $this->container['deliver'] = $deliver;
-
-        return $this;
-    }
-
-    /**
-     * Gets cancel
-     * @return \CyberSource\Model\PtsV2PaymentsPost201ResponseLinksSelf
-     */
-    public function getCancel()
-    {
-        return $this->container['cancel'];
-    }
-
-    /**
-     * Sets cancel
-     * @param \CyberSource\Model\PtsV2PaymentsPost201ResponseLinksSelf $cancel
-     * @return $this
-     */
-    public function setCancel($cancel)
-    {
-        $this->container['cancel'] = $cancel;
+        $this->container['previous'] = $previous;
 
         return $this;
     }
@@ -266,7 +239,6 @@ class InvoicingV2InvoicesAllGet200ResponseLinks implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -277,7 +249,6 @@ class InvoicingV2InvoicesAllGet200ResponseLinks implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -289,7 +260,6 @@ class InvoicingV2InvoicesAllGet200ResponseLinks implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -304,7 +274,6 @@ class InvoicingV2InvoicesAllGet200ResponseLinks implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

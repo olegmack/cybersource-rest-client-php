@@ -92,13 +92,7 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation implements
         'veresEnrolled' => 'string',
         'whiteListStatusSource' => 'string',
         'xid' => 'string',
-        'directoryServerTransactionId' => 'string',
-        'acsOperatorID' => 'int',
-        'acsReferenceNumber' => 'string',
-        'idciDecision' => 'string',
-        'idciReasonCode1' => 'string',
-        'idciReasonCode2' => 'string',
-        'idciScore' => 'int'
+        'directoryServerTransactionId' => 'string'
     ];
 
     /**
@@ -144,13 +138,7 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation implements
         'veresEnrolled' => null,
         'whiteListStatusSource' => null,
         'xid' => null,
-        'directoryServerTransactionId' => null,
-        'acsOperatorID' => null,
-        'acsReferenceNumber' => null,
-        'idciDecision' => null,
-        'idciReasonCode1' => null,
-        'idciReasonCode2' => null,
-        'idciScore' => null
+        'directoryServerTransactionId' => null
     ];
 
     public static function swaggerTypes()
@@ -206,13 +194,7 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation implements
         'veresEnrolled' => 'veresEnrolled',
         'whiteListStatusSource' => 'whiteListStatusSource',
         'xid' => 'xid',
-        'directoryServerTransactionId' => 'directoryServerTransactionId',
-        'acsOperatorID' => 'acsOperatorID',
-        'acsReferenceNumber' => 'acsReferenceNumber',
-        'idciDecision' => 'idciDecision',
-        'idciReasonCode1' => 'idciReasonCode1',
-        'idciReasonCode2' => 'idciReasonCode2',
-        'idciScore' => 'idciScore'
+        'directoryServerTransactionId' => 'directoryServerTransactionId'
     ];
 
 
@@ -259,13 +241,7 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation implements
         'veresEnrolled' => 'setVeresEnrolled',
         'whiteListStatusSource' => 'setWhiteListStatusSource',
         'xid' => 'setXid',
-        'directoryServerTransactionId' => 'setDirectoryServerTransactionId',
-        'acsOperatorID' => 'setAcsOperatorID',
-        'acsReferenceNumber' => 'setAcsReferenceNumber',
-        'idciDecision' => 'setIdciDecision',
-        'idciReasonCode1' => 'setIdciReasonCode1',
-        'idciReasonCode2' => 'setIdciReasonCode2',
-        'idciScore' => 'setIdciScore'
+        'directoryServerTransactionId' => 'setDirectoryServerTransactionId'
     ];
 
 
@@ -312,13 +288,7 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation implements
         'veresEnrolled' => 'getVeresEnrolled',
         'whiteListStatusSource' => 'getWhiteListStatusSource',
         'xid' => 'getXid',
-        'directoryServerTransactionId' => 'getDirectoryServerTransactionId',
-        'acsOperatorID' => 'getAcsOperatorID',
-        'acsReferenceNumber' => 'getAcsReferenceNumber',
-        'idciDecision' => 'getIdciDecision',
-        'idciReasonCode1' => 'getIdciReasonCode1',
-        'idciReasonCode2' => 'getIdciReasonCode2',
-        'idciScore' => 'getIdciScore'
+        'directoryServerTransactionId' => 'getDirectoryServerTransactionId'
     ];
 
     public static function attributeMap()
@@ -391,12 +361,6 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation implements
         $this->container['whiteListStatusSource'] = isset($data['whiteListStatusSource']) ? $data['whiteListStatusSource'] : null;
         $this->container['xid'] = isset($data['xid']) ? $data['xid'] : null;
         $this->container['directoryServerTransactionId'] = isset($data['directoryServerTransactionId']) ? $data['directoryServerTransactionId'] : null;
-        $this->container['acsOperatorID'] = isset($data['acsOperatorID']) ? $data['acsOperatorID'] : null;
-        $this->container['acsReferenceNumber'] = isset($data['acsReferenceNumber']) ? $data['acsReferenceNumber'] : null;
-        $this->container['idciDecision'] = isset($data['idciDecision']) ? $data['idciDecision'] : null;
-        $this->container['idciReasonCode1'] = isset($data['idciReasonCode1']) ? $data['idciReasonCode1'] : null;
-        $this->container['idciReasonCode2'] = isset($data['idciReasonCode2']) ? $data['idciReasonCode2'] : null;
-        $this->container['idciScore'] = isset($data['idciScore']) ? $data['idciScore'] : null;
     }
 
     /**
@@ -482,6 +446,7 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation implements
      */
     public function setAcsTransactionId($acsTransactionId)
     {
+
         $this->container['acsTransactionId'] = $acsTransactionId;
 
         return $this;
@@ -503,6 +468,7 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation implements
      */
     public function setAcsUrl($acsUrl)
     {
+
         $this->container['acsUrl'] = $acsUrl;
 
         return $this;
@@ -566,6 +532,7 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation implements
      */
     public function setAuthenticationType($authenticationType)
     {
+
         $this->container['authenticationType'] = $authenticationType;
 
         return $this;
@@ -587,6 +554,7 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation implements
      */
     public function setAuthenticationTransactionId($authenticationTransactionId)
     {
+
         $this->container['authenticationTransactionId'] = $authenticationTransactionId;
 
         return $this;
@@ -608,6 +576,7 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation implements
      */
     public function setAuthenticationTransactionContextId($authenticationTransactionContextId)
     {
+
         $this->container['authenticationTransactionContextId'] = $authenticationTransactionContextId;
 
         return $this;
@@ -650,6 +619,7 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation implements
      */
     public function setCardholderMessage($cardholderMessage)
     {
+
         $this->container['cardholderMessage'] = $cardholderMessage;
 
         return $this;
@@ -671,6 +641,7 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation implements
      */
     public function setCavv($cavv)
     {
+
         $this->container['cavv'] = $cavv;
 
         return $this;
@@ -692,6 +663,7 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation implements
      */
     public function setCavvAlgorithm($cavvAlgorithm)
     {
+
         $this->container['cavvAlgorithm'] = $cavvAlgorithm;
 
         return $this;
@@ -713,6 +685,7 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation implements
      */
     public function setChallengeCancelCode($challengeCancelCode)
     {
+
         $this->container['challengeCancelCode'] = $challengeCancelCode;
 
         return $this;
@@ -734,6 +707,7 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation implements
      */
     public function setChallengeRequired($challengeRequired)
     {
+
         $this->container['challengeRequired'] = $challengeRequired;
 
         return $this;
@@ -755,6 +729,7 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation implements
      */
     public function setDecoupledAuthenticationIndicator($decoupledAuthenticationIndicator)
     {
+
         $this->container['decoupledAuthenticationIndicator'] = $decoupledAuthenticationIndicator;
 
         return $this;
@@ -797,6 +772,7 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation implements
      */
     public function setDirectoryServerErrorDescription($directoryServerErrorDescription)
     {
+
         $this->container['directoryServerErrorDescription'] = $directoryServerErrorDescription;
 
         return $this;
@@ -818,6 +794,7 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation implements
      */
     public function setEcommerceIndicator($ecommerceIndicator)
     {
+
         $this->container['ecommerceIndicator'] = $ecommerceIndicator;
 
         return $this;
@@ -881,6 +858,7 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation implements
      */
     public function setEffectiveAuthenticationType($effectiveAuthenticationType)
     {
+
         $this->container['effectiveAuthenticationType'] = $effectiveAuthenticationType;
 
         return $this;
@@ -923,6 +901,7 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation implements
      */
     public function setNetworkScore($networkScore)
     {
+
         $this->container['networkScore'] = $networkScore;
 
         return $this;
@@ -1028,6 +1007,7 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation implements
      */
     public function setSdkTransactionId($sdkTransactionId)
     {
+
         $this->container['sdkTransactionId'] = $sdkTransactionId;
 
         return $this;
@@ -1049,6 +1029,7 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation implements
      */
     public function setSignedParesStatusReason($signedParesStatusReason)
     {
+
         $this->container['signedParesStatusReason'] = $signedParesStatusReason;
 
         return $this;
@@ -1091,6 +1072,7 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation implements
      */
     public function setStepUpUrl($stepUpUrl)
     {
+
         $this->container['stepUpUrl'] = $stepUpUrl;
 
         return $this;
@@ -1112,6 +1094,7 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation implements
      */
     public function setThreeDSServerTransactionId($threeDSServerTransactionId)
     {
+
         $this->container['threeDSServerTransactionId'] = $threeDSServerTransactionId;
 
         return $this;
@@ -1196,6 +1179,7 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation implements
      */
     public function setWhiteListStatusSource($whiteListStatusSource)
     {
+
         $this->container['whiteListStatusSource'] = $whiteListStatusSource;
 
         return $this;
@@ -1238,133 +1222,8 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation implements
      */
     public function setDirectoryServerTransactionId($directoryServerTransactionId)
     {
+
         $this->container['directoryServerTransactionId'] = $directoryServerTransactionId;
-
-        return $this;
-    }
-
-    /**
-     * Gets acsOperatorID
-     * @return int
-     */
-    public function getAcsOperatorID()
-    {
-        return $this->container['acsOperatorID'];
-    }
-
-    /**
-     * Sets acsOperatorID
-     * @param int $acsOperatorID Directory Server assigned ACS identifier.
-     * @return $this
-     */
-    public function setAcsOperatorID($acsOperatorID)
-    {
-        $this->container['acsOperatorID'] = $acsOperatorID;
-
-        return $this;
-    }
-
-    /**
-     * Gets acsReferenceNumber
-     * @return string
-     */
-    public function getAcsReferenceNumber()
-    {
-        return $this->container['acsReferenceNumber'];
-    }
-
-    /**
-     * Sets acsReferenceNumber
-     * @param string $acsReferenceNumber Unique identifier assigned by the EMVCo Secretariat upon Testing and Approval.
-     * @return $this
-     */
-    public function setAcsReferenceNumber($acsReferenceNumber)
-    {
-        $this->container['acsReferenceNumber'] = $acsReferenceNumber;
-
-        return $this;
-    }
-
-    /**
-     * Gets idciDecision
-     * @return string
-     */
-    public function getIdciDecision()
-    {
-        return $this->container['idciDecision'];
-    }
-
-    /**
-     * Sets idciDecision
-     * @param string $idciDecision Decision on the Risk Assessment from Mastercard.
-     * @return $this
-     */
-    public function setIdciDecision($idciDecision)
-    {
-        $this->container['idciDecision'] = $idciDecision;
-
-        return $this;
-    }
-
-    /**
-     * Gets idciReasonCode1
-     * @return string
-     */
-    public function getIdciReasonCode1()
-    {
-        return $this->container['idciReasonCode1'];
-    }
-
-    /**
-     * Sets idciReasonCode1
-     * @param string $idciReasonCode1 ReasonCode from Mastercard
-     * @return $this
-     */
-    public function setIdciReasonCode1($idciReasonCode1)
-    {
-        $this->container['idciReasonCode1'] = $idciReasonCode1;
-
-        return $this;
-    }
-
-    /**
-     * Gets idciReasonCode2
-     * @return string
-     */
-    public function getIdciReasonCode2()
-    {
-        return $this->container['idciReasonCode2'];
-    }
-
-    /**
-     * Sets idciReasonCode2
-     * @param string $idciReasonCode2 ReasonCode from Mastercard
-     * @return $this
-     */
-    public function setIdciReasonCode2($idciReasonCode2)
-    {
-        $this->container['idciReasonCode2'] = $idciReasonCode2;
-
-        return $this;
-    }
-
-    /**
-     * Gets idciScore
-     * @return int
-     */
-    public function getIdciScore()
-    {
-        return $this->container['idciScore'];
-    }
-
-    /**
-     * Sets idciScore
-     * @param int $idciScore Risk Assessment from Mastercard
-     * @return $this
-     */
-    public function setIdciScore($idciScore)
-    {
-        $this->container['idciScore'] = $idciScore;
 
         return $this;
     }
@@ -1373,7 +1232,6 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation implements
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -1384,7 +1242,6 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation implements
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -1396,7 +1253,6 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation implements
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -1411,7 +1267,6 @@ class RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation implements
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

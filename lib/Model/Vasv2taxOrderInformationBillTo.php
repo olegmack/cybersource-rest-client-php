@@ -206,6 +206,7 @@ class Vasv2taxOrderInformationBillTo implements ArrayAccess
      */
     public function setAddress1($address1)
     {
+
         $this->container['address1'] = $address1;
 
         return $this;
@@ -227,6 +228,7 @@ class Vasv2taxOrderInformationBillTo implements ArrayAccess
      */
     public function setAddress2($address2)
     {
+
         $this->container['address2'] = $address2;
 
         return $this;
@@ -248,6 +250,7 @@ class Vasv2taxOrderInformationBillTo implements ArrayAccess
      */
     public function setLocality($locality)
     {
+
         $this->container['locality'] = $locality;
 
         return $this;
@@ -269,6 +272,7 @@ class Vasv2taxOrderInformationBillTo implements ArrayAccess
      */
     public function setAdministrativeArea($administrativeArea)
     {
+
         $this->container['administrativeArea'] = $administrativeArea;
 
         return $this;
@@ -290,6 +294,7 @@ class Vasv2taxOrderInformationBillTo implements ArrayAccess
      */
     public function setPostalCode($postalCode)
     {
+
         $this->container['postalCode'] = $postalCode;
 
         return $this;
@@ -311,6 +316,7 @@ class Vasv2taxOrderInformationBillTo implements ArrayAccess
      */
     public function setCountry($country)
     {
+
         $this->container['country'] = $country;
 
         return $this;
@@ -320,7 +326,6 @@ class Vasv2taxOrderInformationBillTo implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -331,7 +336,6 @@ class Vasv2taxOrderInformationBillTo implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -343,7 +347,6 @@ class Vasv2taxOrderInformationBillTo implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -358,7 +361,6 @@ class Vasv2taxOrderInformationBillTo implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

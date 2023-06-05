@@ -78,30 +78,23 @@ class BodyTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "type"
+     * Test attribute "requestor"
      */
-    public function testPropertyType()
+    public function testPropertyRequestor()
     {
     }
 
     /**
-     * Test attribute "included"
+     * Test attribute "parsedTagLimit"
      */
-    public function testPropertyIncluded()
+    public function testPropertyParsedTagLimit()
     {
     }
 
     /**
-     * Test attribute "merchantReference"
+     * Test attribute "emvDetailsList"
      */
-    public function testPropertyMerchantReference()
-    {
-    }
-
-    /**
-     * Test attribute "notificationEmail"
-     */
-    public function testPropertyNotificationEmail()
+    public function testPropertyEmvDetailsList()
     {
     }
 }

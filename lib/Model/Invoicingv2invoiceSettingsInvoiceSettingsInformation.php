@@ -61,9 +61,7 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation implements ArrayAcces
         'headerStyle' => '\CyberSource\Model\InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformationHeaderStyle',
         'deliveryLanguage' => 'string',
         'defaultCurrencyCode' => 'string',
-        'payerAuthenticationInInvoicing' => 'string',
-        'showVatNumber' => 'bool',
-        'vatRegistrationNumber' => 'string'
+        'payerAuthenticationInInvoicing' => 'string'
     ];
 
     /**
@@ -78,9 +76,7 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation implements ArrayAcces
         'headerStyle' => null,
         'deliveryLanguage' => null,
         'defaultCurrencyCode' => null,
-        'payerAuthenticationInInvoicing' => null,
-        'showVatNumber' => null,
-        'vatRegistrationNumber' => null
+        'payerAuthenticationInInvoicing' => null
     ];
 
     public static function swaggerTypes()
@@ -105,9 +101,7 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation implements ArrayAcces
         'headerStyle' => 'headerStyle',
         'deliveryLanguage' => 'deliveryLanguage',
         'defaultCurrencyCode' => 'defaultCurrencyCode',
-        'payerAuthenticationInInvoicing' => 'payerAuthenticationInInvoicing',
-        'showVatNumber' => 'showVatNumber',
-        'vatRegistrationNumber' => 'vatRegistrationNumber'
+        'payerAuthenticationInInvoicing' => 'payerAuthenticationInInvoicing'
     ];
 
 
@@ -123,9 +117,7 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation implements ArrayAcces
         'headerStyle' => 'setHeaderStyle',
         'deliveryLanguage' => 'setDeliveryLanguage',
         'defaultCurrencyCode' => 'setDefaultCurrencyCode',
-        'payerAuthenticationInInvoicing' => 'setPayerAuthenticationInInvoicing',
-        'showVatNumber' => 'setShowVatNumber',
-        'vatRegistrationNumber' => 'setVatRegistrationNumber'
+        'payerAuthenticationInInvoicing' => 'setPayerAuthenticationInInvoicing'
     ];
 
 
@@ -141,9 +133,7 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation implements ArrayAcces
         'headerStyle' => 'getHeaderStyle',
         'deliveryLanguage' => 'getDeliveryLanguage',
         'defaultCurrencyCode' => 'getDefaultCurrencyCode',
-        'payerAuthenticationInInvoicing' => 'getPayerAuthenticationInInvoicing',
-        'showVatNumber' => 'getShowVatNumber',
-        'vatRegistrationNumber' => 'getVatRegistrationNumber'
+        'payerAuthenticationInInvoicing' => 'getPayerAuthenticationInInvoicing'
     ];
 
     public static function attributeMap()
@@ -185,8 +175,6 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation implements ArrayAcces
         $this->container['deliveryLanguage'] = isset($data['deliveryLanguage']) ? $data['deliveryLanguage'] : null;
         $this->container['defaultCurrencyCode'] = isset($data['defaultCurrencyCode']) ? $data['defaultCurrencyCode'] : null;
         $this->container['payerAuthenticationInInvoicing'] = isset($data['payerAuthenticationInInvoicing']) ? $data['payerAuthenticationInInvoicing'] : null;
-        $this->container['showVatNumber'] = isset($data['showVatNumber']) ? $data['showVatNumber'] : false;
-        $this->container['vatRegistrationNumber'] = isset($data['vatRegistrationNumber']) ? $data['vatRegistrationNumber'] : null;
     }
 
     /**
@@ -230,6 +218,7 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation implements ArrayAcces
      */
     public function setMerchantLogo($merchantLogo)
     {
+
         $this->container['merchantLogo'] = $merchantLogo;
 
         return $this;
@@ -251,6 +240,7 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation implements ArrayAcces
      */
     public function setMerchantDisplayName($merchantDisplayName)
     {
+
         $this->container['merchantDisplayName'] = $merchantDisplayName;
 
         return $this;
@@ -272,6 +262,7 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation implements ArrayAcces
      */
     public function setCustomEmailMessage($customEmailMessage)
     {
+
         $this->container['customEmailMessage'] = $customEmailMessage;
 
         return $this;
@@ -335,6 +326,7 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation implements ArrayAcces
      */
     public function setDeliveryLanguage($deliveryLanguage)
     {
+
         $this->container['deliveryLanguage'] = $deliveryLanguage;
 
         return $this;
@@ -356,6 +348,7 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation implements ArrayAcces
      */
     public function setDefaultCurrencyCode($defaultCurrencyCode)
     {
+
         $this->container['defaultCurrencyCode'] = $defaultCurrencyCode;
 
         return $this;
@@ -377,49 +370,8 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation implements ArrayAcces
      */
     public function setPayerAuthenticationInInvoicing($payerAuthenticationInInvoicing)
     {
+
         $this->container['payerAuthenticationInInvoicing'] = $payerAuthenticationInInvoicing;
-
-        return $this;
-    }
-
-    /**
-     * Gets showVatNumber
-     * @return bool
-     */
-    public function getShowVatNumber()
-    {
-        return $this->container['showVatNumber'];
-    }
-
-    /**
-     * Sets showVatNumber
-     * @param bool $showVatNumber Display VAT number on Invoice.
-     * @return $this
-     */
-    public function setShowVatNumber($showVatNumber)
-    {
-        $this->container['showVatNumber'] = $showVatNumber;
-
-        return $this;
-    }
-
-    /**
-     * Gets vatRegistrationNumber
-     * @return string
-     */
-    public function getVatRegistrationNumber()
-    {
-        return $this->container['vatRegistrationNumber'];
-    }
-
-    /**
-     * Sets vatRegistrationNumber
-     * @param string $vatRegistrationNumber Your government-assigned tax identification number.  #### Tax Calculation Required field for value added tax only. Not applicable to U.S. and Canadian taxes.
-     * @return $this
-     */
-    public function setVatRegistrationNumber($vatRegistrationNumber)
-    {
-        $this->container['vatRegistrationNumber'] = $vatRegistrationNumber;
 
         return $this;
     }
@@ -428,7 +380,6 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation implements ArrayAcces
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -439,7 +390,6 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation implements ArrayAcces
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -451,7 +401,6 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation implements ArrayAcces
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -466,7 +415,6 @@ class Invoicingv2invoiceSettingsInvoiceSettingsInformation implements ArrayAcces
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

@@ -63,8 +63,8 @@ class Ptsv2paymentsidrefundsPaymentInformation implements ArrayAccess
         'instrumentIdentifier' => '\CyberSource\Model\Ptsv2paymentsPaymentInformationInstrumentIdentifier',
         'shippingAddress' => '\CyberSource\Model\Ptsv2paymentsPaymentInformationShippingAddress',
         'legacyToken' => '\CyberSource\Model\Ptsv2paymentsPaymentInformationLegacyToken',
-        'paymentType' => '\CyberSource\Model\Ptsv2paymentsidrefundsPaymentInformationPaymentType',
-        'eWallet' => '\CyberSource\Model\Ptsv2paymentsidrefundsPaymentInformationEWallet'
+        'paymentType' => '\CyberSource\Model\Ptsv2paymentsPaymentInformationPaymentType',
+        'eWallet' => '\CyberSource\Model\Ptsv2paymentsPaymentInformationEWallet'
     ];
 
     /**
@@ -411,7 +411,7 @@ class Ptsv2paymentsidrefundsPaymentInformation implements ArrayAccess
 
     /**
      * Gets paymentType
-     * @return \CyberSource\Model\Ptsv2paymentsidrefundsPaymentInformationPaymentType
+     * @return \CyberSource\Model\Ptsv2paymentsPaymentInformationPaymentType
      */
     public function getPaymentType()
     {
@@ -420,7 +420,7 @@ class Ptsv2paymentsidrefundsPaymentInformation implements ArrayAccess
 
     /**
      * Sets paymentType
-     * @param \CyberSource\Model\Ptsv2paymentsidrefundsPaymentInformationPaymentType $paymentType
+     * @param \CyberSource\Model\Ptsv2paymentsPaymentInformationPaymentType $paymentType
      * @return $this
      */
     public function setPaymentType($paymentType)
@@ -432,7 +432,7 @@ class Ptsv2paymentsidrefundsPaymentInformation implements ArrayAccess
 
     /**
      * Gets eWallet
-     * @return \CyberSource\Model\Ptsv2paymentsidrefundsPaymentInformationEWallet
+     * @return \CyberSource\Model\Ptsv2paymentsPaymentInformationEWallet
      */
     public function getEWallet()
     {
@@ -441,7 +441,7 @@ class Ptsv2paymentsidrefundsPaymentInformation implements ArrayAccess
 
     /**
      * Sets eWallet
-     * @param \CyberSource\Model\Ptsv2paymentsidrefundsPaymentInformationEWallet $eWallet
+     * @param \CyberSource\Model\Ptsv2paymentsPaymentInformationEWallet $eWallet
      * @return $this
      */
     public function setEWallet($eWallet)
@@ -455,7 +455,6 @@ class Ptsv2paymentsidrefundsPaymentInformation implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -466,7 +465,6 @@ class Ptsv2paymentsidrefundsPaymentInformation implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -478,7 +476,6 @@ class Ptsv2paymentsidrefundsPaymentInformation implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -493,7 +490,6 @@ class Ptsv2paymentsidrefundsPaymentInformation implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

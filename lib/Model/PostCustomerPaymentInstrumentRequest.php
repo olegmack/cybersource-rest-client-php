@@ -59,7 +59,6 @@ class PostCustomerPaymentInstrumentRequest implements ArrayAccess
         'object' => 'string',
         'default' => 'bool',
         'state' => 'string',
-        'type' => 'string',
         'bankAccount' => '\CyberSource\Model\Tmsv2customersEmbeddedDefaultPaymentInstrumentBankAccount',
         'card' => '\CyberSource\Model\Tmsv2customersEmbeddedDefaultPaymentInstrumentCard',
         'buyerInformation' => '\CyberSource\Model\Tmsv2customersEmbeddedDefaultPaymentInstrumentBuyerInformation',
@@ -81,7 +80,6 @@ class PostCustomerPaymentInstrumentRequest implements ArrayAccess
         'object' => null,
         'default' => null,
         'state' => null,
-        'type' => null,
         'bankAccount' => null,
         'card' => null,
         'buyerInformation' => null,
@@ -113,7 +111,6 @@ class PostCustomerPaymentInstrumentRequest implements ArrayAccess
         'object' => 'object',
         'default' => 'default',
         'state' => 'state',
-        'type' => 'type',
         'bankAccount' => 'bankAccount',
         'card' => 'card',
         'buyerInformation' => 'buyerInformation',
@@ -136,7 +133,6 @@ class PostCustomerPaymentInstrumentRequest implements ArrayAccess
         'object' => 'setObject',
         'default' => 'setDefault',
         'state' => 'setState',
-        'type' => 'setType',
         'bankAccount' => 'setBankAccount',
         'card' => 'setCard',
         'buyerInformation' => 'setBuyerInformation',
@@ -159,7 +155,6 @@ class PostCustomerPaymentInstrumentRequest implements ArrayAccess
         'object' => 'getObject',
         'default' => 'getDefault',
         'state' => 'getState',
-        'type' => 'getType',
         'bankAccount' => 'getBankAccount',
         'card' => 'getCard',
         'buyerInformation' => 'getBuyerInformation',
@@ -207,7 +202,6 @@ class PostCustomerPaymentInstrumentRequest implements ArrayAccess
         $this->container['object'] = isset($data['object']) ? $data['object'] : null;
         $this->container['default'] = isset($data['default']) ? $data['default'] : null;
         $this->container['state'] = isset($data['state']) ? $data['state'] : null;
-        $this->container['type'] = isset($data['type']) ? $data['type'] : null;
         $this->container['bankAccount'] = isset($data['bankAccount']) ? $data['bankAccount'] : null;
         $this->container['card'] = isset($data['card']) ? $data['card'] : null;
         $this->container['buyerInformation'] = isset($data['buyerInformation']) ? $data['buyerInformation'] : null;
@@ -276,11 +270,12 @@ class PostCustomerPaymentInstrumentRequest implements ArrayAccess
 
     /**
      * Sets id
-     * @param string $id The Id of the Payment Instrument Token.
+     * @param string $id The id of the Payment Instrument Token.
      * @return $this
      */
     public function setId($id)
     {
+
         $this->container['id'] = $id;
 
         return $this;
@@ -297,7 +292,7 @@ class PostCustomerPaymentInstrumentRequest implements ArrayAccess
 
     /**
      * Sets object
-     * @param string $object The type.  Possible Values: - paymentInstrument
+     * @param string $object The type of token.  Valid values: - paymentInstrument
      * @return $this
      */
     public function setObject($object)
@@ -318,7 +313,7 @@ class PostCustomerPaymentInstrumentRequest implements ArrayAccess
 
     /**
      * Sets default
-     * @param bool $default Flag that indicates whether customer payment instrument is the dafault. Possible Values:  - `true`: Payment instrument is customer's default.  - `false`: Payment instrument is not customer's default.
+     * @param bool $default Flag that indicates whether customer payment instrument is the dafault. Valid values:  - `true`: Payment instrument is customer's default.  - `false`: Payment instrument is not customer's default.
      * @return $this
      */
     public function setDefault($default)
@@ -339,33 +334,12 @@ class PostCustomerPaymentInstrumentRequest implements ArrayAccess
 
     /**
      * Sets state
-     * @param string $state Issuers state for the card number. Possible Values: - ACTIVE - CLOSED : The account has been closed.
+     * @param string $state Issuers state for the card number. Valid values: - ACTIVE - CLOSED : The account has been closed.
      * @return $this
      */
     public function setState($state)
     {
         $this->container['state'] = $state;
-
-        return $this;
-    }
-
-    /**
-     * Gets type
-     * @return string
-     */
-    public function getType()
-    {
-        return $this->container['type'];
-    }
-
-    /**
-     * Sets type
-     * @param string $type The type of Payment Instrument. Possible Values: - cardHash
-     * @return $this
-     */
-    public function setType($type)
-    {
-        $this->container['type'] = $type;
 
         return $this;
     }
@@ -563,7 +537,6 @@ class PostCustomerPaymentInstrumentRequest implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -574,7 +547,6 @@ class PostCustomerPaymentInstrumentRequest implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -586,7 +558,6 @@ class PostCustomerPaymentInstrumentRequest implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -601,7 +572,6 @@ class PostCustomerPaymentInstrumentRequest implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

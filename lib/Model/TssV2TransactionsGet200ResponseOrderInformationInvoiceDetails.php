@@ -144,6 +144,10 @@ class TssV2TransactionsGet200ResponseOrderInformationInvoiceDetails implements A
     {
         $invalid_properties = [];
 
+        if (!is_null($this->container['salesSlipNumber']) && ($this->container['salesSlipNumber'] > 99999)) {
+            $invalid_properties[] = "invalid value for 'salesSlipNumber', must be smaller than or equal to 99999.";
+        }
+
         return $invalid_properties;
     }
 
@@ -156,6 +160,9 @@ class TssV2TransactionsGet200ResponseOrderInformationInvoiceDetails implements A
     public function valid()
     {
 
+        if ($this->container['salesSlipNumber'] > 99999) {
+            return false;
+        }
         return true;
     }
 
@@ -176,6 +183,10 @@ class TssV2TransactionsGet200ResponseOrderInformationInvoiceDetails implements A
      */
     public function setSalesSlipNumber($salesSlipNumber)
     {
+        if (!is_null($salesSlipNumber) && ($salesSlipNumber > 99999)) {
+            throw new \InvalidArgumentException('invalid value for $salesSlipNumber when calling TssV2TransactionsGet200ResponseOrderInformationInvoiceDetails., must be smaller than or equal to 99999.');
+        }
+
         $this->container['salesSlipNumber'] = $salesSlipNumber;
 
         return $this;
@@ -185,7 +196,6 @@ class TssV2TransactionsGet200ResponseOrderInformationInvoiceDetails implements A
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -196,7 +206,6 @@ class TssV2TransactionsGet200ResponseOrderInformationInvoiceDetails implements A
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -208,7 +217,6 @@ class TssV2TransactionsGet200ResponseOrderInformationInvoiceDetails implements A
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -223,7 +231,6 @@ class TssV2TransactionsGet200ResponseOrderInformationInvoiceDetails implements A
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

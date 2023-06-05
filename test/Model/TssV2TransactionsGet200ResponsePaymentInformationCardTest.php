@@ -134,20 +134,6 @@ class TssV2TransactionsGet200ResponsePaymentInformationCardTest extends \PHPUnit
     }
 
     /**
-     * Test attribute "brandName"
-     */
-    public function testPropertyBrandName()
-    {
-    }
-
-    /**
-     * Test attribute "currency"
-     */
-    public function testPropertyCurrency()
-    {
-    }
-
-    /**
      * Test attribute "accountEncoderId"
      */
     public function testPropertyAccountEncoderId()

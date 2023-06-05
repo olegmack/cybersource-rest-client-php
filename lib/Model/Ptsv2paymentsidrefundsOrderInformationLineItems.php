@@ -258,6 +258,14 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems implements ArrayAccess
     {
         $invalid_properties = [];
 
+        if (!is_null($this->container['quantity']) && ($this->container['quantity'] > 999999999)) {
+            $invalid_properties[] = "invalid value for 'quantity', must be smaller than or equal to 999999999.";
+        }
+
+        if (!is_null($this->container['quantity']) && ($this->container['quantity'] < 1)) {
+            $invalid_properties[] = "invalid value for 'quantity', must be bigger than or equal to 1.";
+        }
+
         return $invalid_properties;
     }
 
@@ -270,6 +278,12 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems implements ArrayAccess
     public function valid()
     {
 
+        if ($this->container['quantity'] > 999999999) {
+            return false;
+        }
+        if ($this->container['quantity'] < 1) {
+            return false;
+        }
         return true;
     }
 
@@ -285,11 +299,12 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems implements ArrayAccess
 
     /**
      * Sets productCode
-     * @param string $productCode Type of product. The value for this field is used to identify the product category (electronic, handling, physical, service, or shipping). The default value is `default`.  If you are performing an authorization transaction (`processingOptions.capture` is set to `false`), and you set this field to a value other than `default` or one of the values related to shipping and/or handling, then `orderInformation.lineItems[].quantity`, `orderInformation.lineItems[].productName`, and `orderInformation.lineItems[].productSku` fields are required.  Optional field.  For details, see the `product_code` field description in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/).  #### Tax Calculation Optional field for U.S., Canadian, international tax, and value added taxes.  The Product Codes for the tax service are located in the Cybersource Tax Codes guide. Contact Customer Support to request the guide. If you don’t send a tax service Product Code in your tax request, product-based rules or exemptions will not be applied and the transaction will default to fully taxable in the locations where you’ve indicated you need to collect tax [by way of nexus, no nexus, or seller registration number fields].
+     * @param string $productCode Type of product. The value for this field is used to identify the product category (electronic, handling, physical, service, or shipping). The default value is `default`.  If you are performing an authorization transaction (`processingOptions.capture` is set to `false`), and you set this field to a value other than `default` or one of the values related to shipping and/or handling, then `orderInformation.lineItems[].quantity`, `orderInformation.lineItems[].productName`, and `orderInformation.lineItems[].productSku` fields are required.  Optional field.  For details, see the `product_code` field description in the [Credit Card Services Using the SCMP API Guide](https://apps.cybersource.com/library/documentation/dev_guides/CC_Svcs_SCMP_API/html/).  #### Tax Calculation Optional field for U.S., Canadian, international tax, and value added taxes.  To use the tax calculation service, use values listed in the Tax Product Code Guide. For information about this document, contact customer support. See \"Product Codes,\" page 14, for more information.
      * @return $this
      */
     public function setProductCode($productCode)
     {
+
         $this->container['productCode'] = $productCode;
 
         return $this;
@@ -311,6 +326,7 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems implements ArrayAccess
      */
     public function setProductName($productName)
     {
+
         $this->container['productName'] = $productName;
 
         return $this;
@@ -332,6 +348,7 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems implements ArrayAccess
      */
     public function setProductSku($productSku)
     {
+
         $this->container['productSku'] = $productSku;
 
         return $this;
@@ -353,6 +370,13 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems implements ArrayAccess
      */
     public function setQuantity($quantity)
     {
+        if (!is_null($quantity) && ($quantity > 999999999)) {
+            throw new \InvalidArgumentException('invalid value for $quantity when calling Ptsv2paymentsidrefundsOrderInformationLineItems., must be smaller than or equal to 999999999.');
+        }
+        if (!is_null($quantity) && ($quantity < 1)) {
+            throw new \InvalidArgumentException('invalid value for $quantity when calling Ptsv2paymentsidrefundsOrderInformationLineItems., must be bigger than or equal to 1.');
+        }
+
         $this->container['quantity'] = $quantity;
 
         return $this;
@@ -374,6 +398,7 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems implements ArrayAccess
      */
     public function setUnitPrice($unitPrice)
     {
+
         $this->container['unitPrice'] = $unitPrice;
 
         return $this;
@@ -395,6 +420,7 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems implements ArrayAccess
      */
     public function setUnitOfMeasure($unitOfMeasure)
     {
+
         $this->container['unitOfMeasure'] = $unitOfMeasure;
 
         return $this;
@@ -416,6 +442,7 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems implements ArrayAccess
      */
     public function setTotalAmount($totalAmount)
     {
+
         $this->container['totalAmount'] = $totalAmount;
 
         return $this;
@@ -437,6 +464,7 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems implements ArrayAccess
      */
     public function setTaxAmount($taxAmount)
     {
+
         $this->container['taxAmount'] = $taxAmount;
 
         return $this;
@@ -458,6 +486,7 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems implements ArrayAccess
      */
     public function setTaxRate($taxRate)
     {
+
         $this->container['taxRate'] = $taxRate;
 
         return $this;
@@ -479,6 +508,7 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems implements ArrayAccess
      */
     public function setTaxAppliedAfterDiscount($taxAppliedAfterDiscount)
     {
+
         $this->container['taxAppliedAfterDiscount'] = $taxAppliedAfterDiscount;
 
         return $this;
@@ -500,6 +530,7 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems implements ArrayAccess
      */
     public function setTaxStatusIndicator($taxStatusIndicator)
     {
+
         $this->container['taxStatusIndicator'] = $taxStatusIndicator;
 
         return $this;
@@ -521,6 +552,7 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems implements ArrayAccess
      */
     public function setTaxTypeCode($taxTypeCode)
     {
+
         $this->container['taxTypeCode'] = $taxTypeCode;
 
         return $this;
@@ -563,6 +595,7 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems implements ArrayAccess
      */
     public function setTypeOfSupply($typeOfSupply)
     {
+
         $this->container['typeOfSupply'] = $typeOfSupply;
 
         return $this;
@@ -584,6 +617,7 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems implements ArrayAccess
      */
     public function setCommodityCode($commodityCode)
     {
+
         $this->container['commodityCode'] = $commodityCode;
 
         return $this;
@@ -605,6 +639,7 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems implements ArrayAccess
      */
     public function setDiscountAmount($discountAmount)
     {
+
         $this->container['discountAmount'] = $discountAmount;
 
         return $this;
@@ -647,6 +682,7 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems implements ArrayAccess
      */
     public function setDiscountRate($discountRate)
     {
+
         $this->container['discountRate'] = $discountRate;
 
         return $this;
@@ -668,6 +704,7 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems implements ArrayAccess
      */
     public function setInvoiceNumber($invoiceNumber)
     {
+
         $this->container['invoiceNumber'] = $invoiceNumber;
 
         return $this;
@@ -698,7 +735,6 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -709,7 +745,6 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -721,7 +756,6 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -736,7 +770,6 @@ class Ptsv2paymentsidrefundsOrderInformationLineItems implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

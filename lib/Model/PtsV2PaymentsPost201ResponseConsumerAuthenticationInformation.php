@@ -464,6 +464,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation implements A
      */
     public function setAcsTransactionId($acsTransactionId)
     {
+
         $this->container['acsTransactionId'] = $acsTransactionId;
 
         return $this;
@@ -485,6 +486,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation implements A
      */
     public function setAcsUrl($acsUrl)
     {
+
         $this->container['acsUrl'] = $acsUrl;
 
         return $this;
@@ -548,6 +550,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation implements A
      */
     public function setAuthenticationTransactionId($authenticationTransactionId)
     {
+
         $this->container['authenticationTransactionId'] = $authenticationTransactionId;
 
         return $this;
@@ -569,6 +572,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation implements A
      */
     public function setCardholderMessage($cardholderMessage)
     {
+
         $this->container['cardholderMessage'] = $cardholderMessage;
 
         return $this;
@@ -590,6 +594,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation implements A
      */
     public function setCavv($cavv)
     {
+
         $this->container['cavv'] = $cavv;
 
         return $this;
@@ -611,6 +616,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation implements A
      */
     public function setCavvAlgorithm($cavvAlgorithm)
     {
+
         $this->container['cavvAlgorithm'] = $cavvAlgorithm;
 
         return $this;
@@ -632,6 +638,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation implements A
      */
     public function setChallengeCancelCode($challengeCancelCode)
     {
+
         $this->container['challengeCancelCode'] = $challengeCancelCode;
 
         return $this;
@@ -653,6 +660,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation implements A
      */
     public function setChallengeRequired($challengeRequired)
     {
+
         $this->container['challengeRequired'] = $challengeRequired;
 
         return $this;
@@ -674,6 +682,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation implements A
      */
     public function setDecoupledAuthenticationIndicator($decoupledAuthenticationIndicator)
     {
+
         $this->container['decoupledAuthenticationIndicator'] = $decoupledAuthenticationIndicator;
 
         return $this;
@@ -716,6 +725,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation implements A
      */
     public function setDirectoryServerErrorDescription($directoryServerErrorDescription)
     {
+
         $this->container['directoryServerErrorDescription'] = $directoryServerErrorDescription;
 
         return $this;
@@ -737,6 +747,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation implements A
      */
     public function setEcommerceIndicator($ecommerceIndicator)
     {
+
         $this->container['ecommerceIndicator'] = $ecommerceIndicator;
 
         return $this;
@@ -800,6 +811,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation implements A
      */
     public function setEffectiveAuthenticationType($effectiveAuthenticationType)
     {
+
         $this->container['effectiveAuthenticationType'] = $effectiveAuthenticationType;
 
         return $this;
@@ -863,6 +875,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation implements A
      */
     public function setNetworkScore($networkScore)
     {
+
         $this->container['networkScore'] = $networkScore;
 
         return $this;
@@ -968,6 +981,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation implements A
      */
     public function setSdkTransactionId($sdkTransactionId)
     {
+
         $this->container['sdkTransactionId'] = $sdkTransactionId;
 
         return $this;
@@ -989,6 +1003,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation implements A
      */
     public function setSignedParesStatusReason($signedParesStatusReason)
     {
+
         $this->container['signedParesStatusReason'] = $signedParesStatusReason;
 
         return $this;
@@ -1031,6 +1046,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation implements A
      */
     public function setStepUpUrl($stepUpUrl)
     {
+
         $this->container['stepUpUrl'] = $stepUpUrl;
 
         return $this;
@@ -1052,6 +1068,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation implements A
      */
     public function setThreeDSServerTransactionId($threeDSServerTransactionId)
     {
+
         $this->container['threeDSServerTransactionId'] = $threeDSServerTransactionId;
 
         return $this;
@@ -1136,6 +1153,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation implements A
      */
     public function setWhiteListStatusSource($whiteListStatusSource)
     {
+
         $this->container['whiteListStatusSource'] = $whiteListStatusSource;
 
         return $this;
@@ -1178,6 +1196,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation implements A
      */
     public function setDirectoryServerTransactionId($directoryServerTransactionId)
     {
+
         $this->container['directoryServerTransactionId'] = $directoryServerTransactionId;
 
         return $this;
@@ -1262,6 +1281,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation implements A
      */
     public function setInteractionCounter($interactionCounter)
     {
+
         $this->container['interactionCounter'] = $interactionCounter;
 
         return $this;
@@ -1283,6 +1303,7 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation implements A
      */
     public function setWhiteListStatus($whiteListStatus)
     {
+
         $this->container['whiteListStatus'] = $whiteListStatus;
 
         return $this;
@@ -1292,7 +1313,6 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation implements A
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -1303,7 +1323,6 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation implements A
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -1315,7 +1334,6 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation implements A
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -1330,7 +1348,6 @@ class PtsV2PaymentsPost201ResponseConsumerAuthenticationInformation implements A
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

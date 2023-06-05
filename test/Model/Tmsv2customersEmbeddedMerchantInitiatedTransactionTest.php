@@ -83,11 +83,4 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentEmbeddedInstrumentIdentifier
     public function testPropertyPreviousTransactionId()
     {
     }
-
-    /**
-     * Test attribute "originalAuthorizedAmount"
-     */
-    public function testPropertyOriginalAuthorizedAmount()
-    {
-    }
 }

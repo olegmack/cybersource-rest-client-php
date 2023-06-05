@@ -72,8 +72,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions implements ArrayAcc
         'aggregatedAuthIndicator' => 'string',
         'debtRecoveryIndicator' => 'string',
         'deferredAuthIndicator' => 'bool',
-        'cashAdvanceIndicator' => 'bool',
-        'splitPaymentTransaction' => 'bool'
+        'cashAdvanceIndicator' => 'bool'
     ];
 
     /**
@@ -99,8 +98,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions implements ArrayAcc
         'aggregatedAuthIndicator' => null,
         'debtRecoveryIndicator' => null,
         'deferredAuthIndicator' => null,
-        'cashAdvanceIndicator' => null,
-        'splitPaymentTransaction' => null
+        'cashAdvanceIndicator' => null
     ];
 
     public static function swaggerTypes()
@@ -136,8 +134,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions implements ArrayAcc
         'aggregatedAuthIndicator' => 'aggregatedAuthIndicator',
         'debtRecoveryIndicator' => 'debtRecoveryIndicator',
         'deferredAuthIndicator' => 'deferredAuthIndicator',
-        'cashAdvanceIndicator' => 'cashAdvanceIndicator',
-        'splitPaymentTransaction' => 'splitPaymentTransaction'
+        'cashAdvanceIndicator' => 'cashAdvanceIndicator'
     ];
 
 
@@ -164,8 +161,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions implements ArrayAcc
         'aggregatedAuthIndicator' => 'setAggregatedAuthIndicator',
         'debtRecoveryIndicator' => 'setDebtRecoveryIndicator',
         'deferredAuthIndicator' => 'setDeferredAuthIndicator',
-        'cashAdvanceIndicator' => 'setCashAdvanceIndicator',
-        'splitPaymentTransaction' => 'setSplitPaymentTransaction'
+        'cashAdvanceIndicator' => 'setCashAdvanceIndicator'
     ];
 
 
@@ -192,8 +188,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions implements ArrayAcc
         'aggregatedAuthIndicator' => 'getAggregatedAuthIndicator',
         'debtRecoveryIndicator' => 'getDebtRecoveryIndicator',
         'deferredAuthIndicator' => 'getDeferredAuthIndicator',
-        'cashAdvanceIndicator' => 'getCashAdvanceIndicator',
-        'splitPaymentTransaction' => 'getSplitPaymentTransaction'
+        'cashAdvanceIndicator' => 'getCashAdvanceIndicator'
     ];
 
     public static function attributeMap()
@@ -246,7 +241,6 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions implements ArrayAcc
         $this->container['debtRecoveryIndicator'] = isset($data['debtRecoveryIndicator']) ? $data['debtRecoveryIndicator'] : null;
         $this->container['deferredAuthIndicator'] = isset($data['deferredAuthIndicator']) ? $data['deferredAuthIndicator'] : null;
         $this->container['cashAdvanceIndicator'] = isset($data['cashAdvanceIndicator']) ? $data['cashAdvanceIndicator'] : null;
-        $this->container['splitPaymentTransaction'] = isset($data['splitPaymentTransaction']) ? $data['splitPaymentTransaction'] : null;
     }
 
     /**
@@ -290,6 +284,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions implements ArrayAcc
      */
     public function setAuthType($authType)
     {
+
         $this->container['authType'] = $authType;
 
         return $this;
@@ -311,6 +306,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions implements ArrayAcc
      */
     public function setPanReturnIndicator($panReturnIndicator)
     {
+
         $this->container['panReturnIndicator'] = $panReturnIndicator;
 
         return $this;
@@ -332,6 +328,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions implements ArrayAcc
      */
     public function setVerbalAuthCode($verbalAuthCode)
     {
+
         $this->container['verbalAuthCode'] = $verbalAuthCode;
 
         return $this;
@@ -353,6 +350,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions implements ArrayAcc
      */
     public function setVerbalAuthTransactionId($verbalAuthTransactionId)
     {
+
         $this->container['verbalAuthTransactionId'] = $verbalAuthTransactionId;
 
         return $this;
@@ -374,6 +372,7 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions implements ArrayAcc
      */
     public function setAuthIndicator($authIndicator)
     {
+
         $this->container['authIndicator'] = $authIndicator;
 
         return $this;
@@ -672,33 +671,11 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions implements ArrayAcc
 
         return $this;
     }
-
-    /**
-     * Gets splitPaymentTransaction
-     * @return bool
-     */
-    public function getSplitPaymentTransaction()
-    {
-        return $this->container['splitPaymentTransaction'];
-    }
-
-    /**
-     * Sets splitPaymentTransaction
-     * @param bool $splitPaymentTransaction #### Visa Platform Connect Indicates split payment transaction. A split payment allows the use of two payment methods for a single transaction.  Possible values:   - `true` (split payment transaction is supported)   - `false` (default: split payment transaction is not supported)
-     * @return $this
-     */
-    public function setSplitPaymentTransaction($splitPaymentTransaction)
-    {
-        $this->container['splitPaymentTransaction'] = $splitPaymentTransaction;
-
-        return $this;
-    }
     /**
      * Returns true if offset exists. False otherwise.
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -709,7 +686,6 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions implements ArrayAcc
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -721,7 +697,6 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions implements ArrayAcc
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -736,7 +711,6 @@ class Ptsv2paymentsProcessingInformationAuthorizationOptions implements ArrayAcc
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

@@ -64,8 +64,7 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor implements ArrayAccess
         'administrativeArea' => 'string',
         'phone' => 'string',
         'url' => 'string',
-        'countryOfOrigin' => 'string',
-        'customerServicePhoneNumber' => 'string'
+        'countryOfOrigin' => 'string'
     ];
 
     /**
@@ -83,8 +82,7 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor implements ArrayAccess
         'administrativeArea' => null,
         'phone' => null,
         'url' => null,
-        'countryOfOrigin' => null,
-        'customerServicePhoneNumber' => null
+        'countryOfOrigin' => null
     ];
 
     public static function swaggerTypes()
@@ -112,8 +110,7 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor implements ArrayAccess
         'administrativeArea' => 'administrativeArea',
         'phone' => 'phone',
         'url' => 'url',
-        'countryOfOrigin' => 'countryOfOrigin',
-        'customerServicePhoneNumber' => 'customerServicePhoneNumber'
+        'countryOfOrigin' => 'countryOfOrigin'
     ];
 
 
@@ -132,8 +129,7 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor implements ArrayAccess
         'administrativeArea' => 'setAdministrativeArea',
         'phone' => 'setPhone',
         'url' => 'setUrl',
-        'countryOfOrigin' => 'setCountryOfOrigin',
-        'customerServicePhoneNumber' => 'setCustomerServicePhoneNumber'
+        'countryOfOrigin' => 'setCountryOfOrigin'
     ];
 
 
@@ -152,8 +148,7 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor implements ArrayAccess
         'administrativeArea' => 'getAdministrativeArea',
         'phone' => 'getPhone',
         'url' => 'getUrl',
-        'countryOfOrigin' => 'getCountryOfOrigin',
-        'customerServicePhoneNumber' => 'getCustomerServicePhoneNumber'
+        'countryOfOrigin' => 'getCountryOfOrigin'
     ];
 
     public static function attributeMap()
@@ -198,7 +193,6 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor implements ArrayAccess
         $this->container['phone'] = isset($data['phone']) ? $data['phone'] : null;
         $this->container['url'] = isset($data['url']) ? $data['url'] : null;
         $this->container['countryOfOrigin'] = isset($data['countryOfOrigin']) ? $data['countryOfOrigin'] : null;
-        $this->container['customerServicePhoneNumber'] = isset($data['customerServicePhoneNumber']) ? $data['customerServicePhoneNumber'] : null;
     }
 
     /**
@@ -263,6 +257,7 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor implements ArrayAccess
      */
     public function setAlternateName($alternateName)
     {
+
         $this->container['alternateName'] = $alternateName;
 
         return $this;
@@ -284,6 +279,7 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor implements ArrayAccess
      */
     public function setContact($contact)
     {
+
         $this->container['contact'] = $contact;
 
         return $this;
@@ -305,6 +301,7 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor implements ArrayAccess
      */
     public function setAddress1($address1)
     {
+
         $this->container['address1'] = $address1;
 
         return $this;
@@ -326,6 +323,7 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor implements ArrayAccess
      */
     public function setLocality($locality)
     {
+
         $this->container['locality'] = $locality;
 
         return $this;
@@ -347,6 +345,7 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor implements ArrayAccess
      */
     public function setCountry($country)
     {
+
         $this->container['country'] = $country;
 
         return $this;
@@ -368,6 +367,7 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor implements ArrayAccess
      */
     public function setPostalCode($postalCode)
     {
+
         $this->container['postalCode'] = $postalCode;
 
         return $this;
@@ -410,6 +410,7 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor implements ArrayAccess
      */
     public function setPhone($phone)
     {
+
         $this->container['phone'] = $phone;
 
         return $this;
@@ -431,6 +432,7 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor implements ArrayAccess
      */
     public function setUrl($url)
     {
+
         $this->container['url'] = $url;
 
         return $this;
@@ -452,28 +454,8 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor implements ArrayAccess
      */
     public function setCountryOfOrigin($countryOfOrigin)
     {
+
         $this->container['countryOfOrigin'] = $countryOfOrigin;
-
-        return $this;
-    }
-
-    /**
-     * Gets customerServicePhoneNumber
-     * @return string
-     */
-    public function getCustomerServicePhoneNumber()
-    {
-        return $this->container['customerServicePhoneNumber'];
-    }
-
-    /**
-     * Sets customerServicePhoneNumber
-     * @param string $customerServicePhoneNumber #### Visa Platform Connect Indicates customer service phone number of Merchant.
-     * @return $this
-     */
-    public function setCustomerServicePhoneNumber($customerServicePhoneNumber)
-    {
-        $this->container['customerServicePhoneNumber'] = $customerServicePhoneNumber;
 
         return $this;
     }
@@ -482,7 +464,6 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -493,7 +474,6 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -505,7 +485,6 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -520,7 +499,6 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptor implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

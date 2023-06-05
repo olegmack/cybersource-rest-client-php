@@ -61,9 +61,7 @@ class InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation impleme
         'headerStyle' => '\CyberSource\Model\InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformationHeaderStyle',
         'deliveryLanguage' => 'string',
         'defaultCurrencyCode' => 'string',
-        'payerAuthentication3DSVersion' => 'bool',
-        'showVatNumber' => 'bool',
-        'vatRegistrationNumber' => 'string'
+        'payerAuthentication3DSVersion' => 'string'
     ];
 
     /**
@@ -78,9 +76,7 @@ class InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation impleme
         'headerStyle' => null,
         'deliveryLanguage' => null,
         'defaultCurrencyCode' => null,
-        'payerAuthentication3DSVersion' => null,
-        'showVatNumber' => null,
-        'vatRegistrationNumber' => null
+        'payerAuthentication3DSVersion' => null
     ];
 
     public static function swaggerTypes()
@@ -105,9 +101,7 @@ class InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation impleme
         'headerStyle' => 'headerStyle',
         'deliveryLanguage' => 'deliveryLanguage',
         'defaultCurrencyCode' => 'defaultCurrencyCode',
-        'payerAuthentication3DSVersion' => 'payerAuthentication3DSVersion',
-        'showVatNumber' => 'showVatNumber',
-        'vatRegistrationNumber' => 'vatRegistrationNumber'
+        'payerAuthentication3DSVersion' => 'payerAuthentication3DSVersion'
     ];
 
 
@@ -123,9 +117,7 @@ class InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation impleme
         'headerStyle' => 'setHeaderStyle',
         'deliveryLanguage' => 'setDeliveryLanguage',
         'defaultCurrencyCode' => 'setDefaultCurrencyCode',
-        'payerAuthentication3DSVersion' => 'setPayerAuthentication3DSVersion',
-        'showVatNumber' => 'setShowVatNumber',
-        'vatRegistrationNumber' => 'setVatRegistrationNumber'
+        'payerAuthentication3DSVersion' => 'setPayerAuthentication3DSVersion'
     ];
 
 
@@ -141,9 +133,7 @@ class InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation impleme
         'headerStyle' => 'getHeaderStyle',
         'deliveryLanguage' => 'getDeliveryLanguage',
         'defaultCurrencyCode' => 'getDefaultCurrencyCode',
-        'payerAuthentication3DSVersion' => 'getPayerAuthentication3DSVersion',
-        'showVatNumber' => 'getShowVatNumber',
-        'vatRegistrationNumber' => 'getVatRegistrationNumber'
+        'payerAuthentication3DSVersion' => 'getPayerAuthentication3DSVersion'
     ];
 
     public static function attributeMap()
@@ -184,9 +174,7 @@ class InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation impleme
         $this->container['headerStyle'] = isset($data['headerStyle']) ? $data['headerStyle'] : null;
         $this->container['deliveryLanguage'] = isset($data['deliveryLanguage']) ? $data['deliveryLanguage'] : null;
         $this->container['defaultCurrencyCode'] = isset($data['defaultCurrencyCode']) ? $data['defaultCurrencyCode'] : null;
-        $this->container['payerAuthentication3DSVersion'] = isset($data['payerAuthentication3DSVersion']) ? $data['payerAuthentication3DSVersion'] : false;
-        $this->container['showVatNumber'] = isset($data['showVatNumber']) ? $data['showVatNumber'] : false;
-        $this->container['vatRegistrationNumber'] = isset($data['vatRegistrationNumber']) ? $data['vatRegistrationNumber'] : null;
+        $this->container['payerAuthentication3DSVersion'] = isset($data['payerAuthentication3DSVersion']) ? $data['payerAuthentication3DSVersion'] : null;
     }
 
     /**
@@ -230,6 +218,7 @@ class InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation impleme
      */
     public function setMerchantLogo($merchantLogo)
     {
+
         $this->container['merchantLogo'] = $merchantLogo;
 
         return $this;
@@ -251,6 +240,7 @@ class InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation impleme
      */
     public function setMerchantDisplayName($merchantDisplayName)
     {
+
         $this->container['merchantDisplayName'] = $merchantDisplayName;
 
         return $this;
@@ -272,6 +262,7 @@ class InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation impleme
      */
     public function setCustomEmailMessage($customEmailMessage)
     {
+
         $this->container['customEmailMessage'] = $customEmailMessage;
 
         return $this;
@@ -335,6 +326,7 @@ class InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation impleme
      */
     public function setDeliveryLanguage($deliveryLanguage)
     {
+
         $this->container['deliveryLanguage'] = $deliveryLanguage;
 
         return $this;
@@ -356,6 +348,7 @@ class InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation impleme
      */
     public function setDefaultCurrencyCode($defaultCurrencyCode)
     {
+
         $this->container['defaultCurrencyCode'] = $defaultCurrencyCode;
 
         return $this;
@@ -363,7 +356,7 @@ class InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation impleme
 
     /**
      * Gets payerAuthentication3DSVersion
-     * @return bool
+     * @return string
      */
     public function getPayerAuthentication3DSVersion()
     {
@@ -372,54 +365,13 @@ class InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation impleme
 
     /**
      * Sets payerAuthentication3DSVersion
-     * @param bool $payerAuthentication3DSVersion The 3D Secure payer authentication status for a merchant's invoice payments.
+     * @param string $payerAuthentication3DSVersion The 3D Secure payer authentication version or status for a merchant's invoice payments. Possible values are: - `1` - `2` - `None` - `Disabled`
      * @return $this
      */
     public function setPayerAuthentication3DSVersion($payerAuthentication3DSVersion)
     {
+
         $this->container['payerAuthentication3DSVersion'] = $payerAuthentication3DSVersion;
-
-        return $this;
-    }
-
-    /**
-     * Gets showVatNumber
-     * @return bool
-     */
-    public function getShowVatNumber()
-    {
-        return $this->container['showVatNumber'];
-    }
-
-    /**
-     * Sets showVatNumber
-     * @param bool $showVatNumber Display VAT number on Invoice.
-     * @return $this
-     */
-    public function setShowVatNumber($showVatNumber)
-    {
-        $this->container['showVatNumber'] = $showVatNumber;
-
-        return $this;
-    }
-
-    /**
-     * Gets vatRegistrationNumber
-     * @return string
-     */
-    public function getVatRegistrationNumber()
-    {
-        return $this->container['vatRegistrationNumber'];
-    }
-
-    /**
-     * Sets vatRegistrationNumber
-     * @param string $vatRegistrationNumber Your government-assigned tax identification number.  #### Tax Calculation Required field for value added tax only. Not applicable to U.S. and Canadian taxes.
-     * @return $this
-     */
-    public function setVatRegistrationNumber($vatRegistrationNumber)
-    {
-        $this->container['vatRegistrationNumber'] = $vatRegistrationNumber;
 
         return $this;
     }
@@ -428,7 +380,6 @@ class InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation impleme
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -439,7 +390,6 @@ class InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation impleme
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -451,7 +401,6 @@ class InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation impleme
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -466,7 +415,6 @@ class InvoicingV2InvoiceSettingsGet200ResponseInvoiceSettingsInformation impleme
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

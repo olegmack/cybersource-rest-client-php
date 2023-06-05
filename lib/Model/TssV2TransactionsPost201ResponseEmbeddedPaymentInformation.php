@@ -55,7 +55,7 @@ class TssV2TransactionsPost201ResponseEmbeddedPaymentInformation implements Arra
       */
     protected static $swaggerTypes = [
         'paymentType' => '\CyberSource\Model\TssV2TransactionsPost201ResponseEmbeddedPaymentInformationPaymentType',
-        'customer' => '\CyberSource\Model\Ptsv2refreshpaymentstatusidPaymentInformationCustomer',
+        'customer' => '\CyberSource\Model\TssV2TransactionsPost201ResponseEmbeddedPaymentInformationCustomer',
         'card' => '\CyberSource\Model\TssV2TransactionsPost201ResponseEmbeddedPaymentInformationCard',
         'bank' => '\CyberSource\Model\TssV2TransactionsPost201ResponseEmbeddedPaymentInformationBank'
     ];
@@ -201,7 +201,7 @@ class TssV2TransactionsPost201ResponseEmbeddedPaymentInformation implements Arra
 
     /**
      * Gets customer
-     * @return \CyberSource\Model\Ptsv2refreshpaymentstatusidPaymentInformationCustomer
+     * @return \CyberSource\Model\TssV2TransactionsPost201ResponseEmbeddedPaymentInformationCustomer
      */
     public function getCustomer()
     {
@@ -210,7 +210,7 @@ class TssV2TransactionsPost201ResponseEmbeddedPaymentInformation implements Arra
 
     /**
      * Sets customer
-     * @param \CyberSource\Model\Ptsv2refreshpaymentstatusidPaymentInformationCustomer $customer
+     * @param \CyberSource\Model\TssV2TransactionsPost201ResponseEmbeddedPaymentInformationCustomer $customer
      * @return $this
      */
     public function setCustomer($customer)
@@ -266,7 +266,6 @@ class TssV2TransactionsPost201ResponseEmbeddedPaymentInformation implements Arra
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -277,7 +276,6 @@ class TssV2TransactionsPost201ResponseEmbeddedPaymentInformation implements Arra
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -289,7 +287,6 @@ class TssV2TransactionsPost201ResponseEmbeddedPaymentInformation implements Arra
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -304,7 +301,6 @@ class TssV2TransactionsPost201ResponseEmbeddedPaymentInformation implements Arra
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

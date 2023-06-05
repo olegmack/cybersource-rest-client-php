@@ -106,9 +106,9 @@ class InlineResponse4002Test extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "details"
+     * Test attribute "statusCode"
      */
-    public function testPropertyDetails()
+    public function testPropertyStatusCode()
     {
     }
 }

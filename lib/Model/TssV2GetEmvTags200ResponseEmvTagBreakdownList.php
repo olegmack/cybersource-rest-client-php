@@ -192,6 +192,7 @@ class TssV2GetEmvTags200ResponseEmvTagBreakdownList implements ArrayAccess
         if (!is_null($tag) && (!preg_match("/^[0-9A-F]*$/", $tag))) {
             throw new \InvalidArgumentException("invalid value for $tag when calling TssV2GetEmvTags200ResponseEmvTagBreakdownList., must conform to the pattern /^[0-9A-F]*$/.");
         }
+
         $this->container['tag'] = $tag;
 
         return $this;
@@ -213,6 +214,7 @@ class TssV2GetEmvTags200ResponseEmvTagBreakdownList implements ArrayAccess
      */
     public function setName($name)
     {
+
         $this->container['name'] = $name;
 
         return $this;
@@ -222,7 +224,6 @@ class TssV2GetEmvTags200ResponseEmvTagBreakdownList implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -233,7 +234,6 @@ class TssV2GetEmvTags200ResponseEmvTagBreakdownList implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -245,7 +245,6 @@ class TssV2GetEmvTags200ResponseEmvTagBreakdownList implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -260,7 +259,6 @@ class TssV2GetEmvTags200ResponseEmvTagBreakdownList implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

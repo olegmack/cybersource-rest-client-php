@@ -85,23 +85,9 @@ class Ptsv2paymentsProcessingInformationTest extends \PHPUnit_Framework_TestCase
     }
 
     /**
-     * Test attribute "enableEscrowOption"
-     */
-    public function testPropertyEnableEscrowOption()
-    {
-    }
-
-    /**
      * Test attribute "actionTokenTypes"
      */
     public function testPropertyActionTokenTypes()
-    {
-    }
-
-    /**
-     * Test attribute "binSource"
-     */
-    public function testPropertyBinSource()
     {
     }
 

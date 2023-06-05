@@ -182,6 +182,7 @@ class PtsV2PayoutsPost201ResponseRecipientInformationCard implements ArrayAccess
      */
     public function setBalance($balance)
     {
+
         $this->container['balance'] = $balance;
 
         return $this;
@@ -198,11 +199,12 @@ class PtsV2PayoutsPost201ResponseRecipientInformationCard implements ArrayAccess
 
     /**
      * Sets currency
-     * @param string $currency This field indicates the 3-letter [ISO Standard Currency Codes](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf) for the card currency.
+     * @param string $currency This is a multicurrency-only field. It contains a 3-digit numeric code that identifies the currency used by the issuer.
      * @return $this
      */
     public function setCurrency($currency)
     {
+
         $this->container['currency'] = $currency;
 
         return $this;
@@ -212,7 +214,6 @@ class PtsV2PayoutsPost201ResponseRecipientInformationCard implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -223,7 +224,6 @@ class PtsV2PayoutsPost201ResponseRecipientInformationCard implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -235,7 +235,6 @@ class PtsV2PayoutsPost201ResponseRecipientInformationCard implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -250,7 +249,6 @@ class PtsV2PayoutsPost201ResponseRecipientInformationCard implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

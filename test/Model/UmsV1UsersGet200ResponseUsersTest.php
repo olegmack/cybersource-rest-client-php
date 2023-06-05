@@ -97,11 +97,4 @@ class UmsV1UsersGet200ResponseUsersTest extends \PHPUnit_Framework_TestCase
     public function testPropertyContactInformation()
     {
     }
-
-    /**
-     * Test attribute "customFields"
-     */
-    public function testPropertyCustomFields()
-    {
-    }
 }

@@ -78,13 +78,6 @@ class Ptsv2paymentsidrefundsProcessingInformationTest extends \PHPUnit_Framework
     }
 
     /**
-     * Test attribute "actionList"
-     */
-    public function testPropertyActionList()
-    {
-    }
-
-    /**
      * Test attribute "paymentSolution"
      */
     public function testPropertyPaymentSolution()
@@ -137,20 +130,6 @@ class Ptsv2paymentsidrefundsProcessingInformationTest extends \PHPUnit_Framework
      * Test attribute "industryDataType"
      */
     public function testPropertyIndustryDataType()
-    {
-    }
-
-    /**
-     * Test attribute "paymentType"
-     */
-    public function testPropertyPaymentType()
-    {
-    }
-
-    /**
-     * Test attribute "refundOptions"
-     */
-    public function testPropertyRefundOptions()
     {
     }
 }

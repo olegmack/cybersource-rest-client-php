@@ -127,13 +127,6 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentCardTest extends \PHPUnit_Fr
     }
 
     /**
-     * Test attribute "hash"
-     */
-    public function testPropertyHash()
-    {
-    }
-
-    /**
      * Test attribute "tokenizedInformation"
      */
     public function testPropertyTokenizedInformation()

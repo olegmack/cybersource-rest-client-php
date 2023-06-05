@@ -188,6 +188,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationAccountFeatures implement
      */
     public function setBalanceAmount($balanceAmount)
     {
+
         $this->container['balanceAmount'] = $balanceAmount;
 
         return $this;
@@ -209,6 +210,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationAccountFeatures implement
      */
     public function setPreviousBalanceAmount($previousBalanceAmount)
     {
+
         $this->container['previousBalanceAmount'] = $previousBalanceAmount;
 
         return $this;
@@ -230,6 +232,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationAccountFeatures implement
      */
     public function setCurrency($currency)
     {
+
         $this->container['currency'] = $currency;
 
         return $this;
@@ -239,7 +242,6 @@ class TssV2TransactionsGet200ResponsePaymentInformationAccountFeatures implement
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -250,7 +252,6 @@ class TssV2TransactionsGet200ResponsePaymentInformationAccountFeatures implement
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -262,7 +263,6 @@ class TssV2TransactionsGet200ResponsePaymentInformationAccountFeatures implement
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -277,7 +277,6 @@ class TssV2TransactionsGet200ResponsePaymentInformationAccountFeatures implement
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

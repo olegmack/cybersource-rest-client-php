@@ -125,11 +125,4 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformationTest extends \PHPUni
     public function testPropertyNetworkTransactionId()
     {
     }
-
-    /**
-     * Test attribute "settlementDate"
-     */
-    public function testPropertySettlementDate()
-    {
-    }
 }

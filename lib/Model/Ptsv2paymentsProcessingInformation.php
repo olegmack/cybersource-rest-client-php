@@ -55,9 +55,7 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
       */
     protected static $swaggerTypes = [
         'actionList' => 'string[]',
-        'enableEscrowOption' => 'bool',
         'actionTokenTypes' => 'string[]',
-        'binSource' => 'string',
         'capture' => 'bool',
         'processorId' => 'string',
         'businessApplicationId' => 'string',
@@ -94,9 +92,7 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
       */
     protected static $swaggerFormats = [
         'actionList' => null,
-        'enableEscrowOption' => null,
         'actionTokenTypes' => null,
-        'binSource' => null,
         'capture' => null,
         'processorId' => null,
         'businessApplicationId' => null,
@@ -143,9 +139,7 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
      */
     protected static $attributeMap = [
         'actionList' => 'actionList',
-        'enableEscrowOption' => 'enableEscrowOption',
         'actionTokenTypes' => 'actionTokenTypes',
-        'binSource' => 'binSource',
         'capture' => 'capture',
         'processorId' => 'processorId',
         'businessApplicationId' => 'businessApplicationId',
@@ -183,9 +177,7 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
      */
     protected static $setters = [
         'actionList' => 'setActionList',
-        'enableEscrowOption' => 'setEnableEscrowOption',
         'actionTokenTypes' => 'setActionTokenTypes',
-        'binSource' => 'setBinSource',
         'capture' => 'setCapture',
         'processorId' => 'setProcessorId',
         'businessApplicationId' => 'setBusinessApplicationId',
@@ -223,9 +215,7 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
      */
     protected static $getters = [
         'actionList' => 'getActionList',
-        'enableEscrowOption' => 'getEnableEscrowOption',
         'actionTokenTypes' => 'getActionTokenTypes',
-        'binSource' => 'getBinSource',
         'capture' => 'getCapture',
         'processorId' => 'getProcessorId',
         'businessApplicationId' => 'getBusinessApplicationId',
@@ -288,9 +278,7 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
     public function __construct(array $data = null)
     {
         $this->container['actionList'] = isset($data['actionList']) ? $data['actionList'] : null;
-        $this->container['enableEscrowOption'] = isset($data['enableEscrowOption']) ? $data['enableEscrowOption'] : null;
         $this->container['actionTokenTypes'] = isset($data['actionTokenTypes']) ? $data['actionTokenTypes'] : null;
-        $this->container['binSource'] = isset($data['binSource']) ? $data['binSource'] : null;
         $this->container['capture'] = isset($data['capture']) ? $data['capture'] : false;
         $this->container['processorId'] = isset($data['processorId']) ? $data['processorId'] : null;
         $this->container['businessApplicationId'] = isset($data['businessApplicationId']) ? $data['businessApplicationId'] : null;
@@ -357,33 +345,12 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
 
     /**
      * Sets actionList
-     * @param string[] $actionList Array of actions (one or more) to be included in the payment to invoke bundled services along with payment.  Possible values are one or more of follows:   - `DECISION_SKIP`: Use this when you want to skip Decision Manager service(s).   - `TOKEN_CREATE`: Use this when you want to create a token from the card/bank data in your payment request.   - `CONSUMER_AUTHENTICATION`: Use this when you want to check if a card is enrolled in Payer Authentioncation along with your payment request.   - `VALIDATE_CONSUMER_AUTHENTICATION`: Use this after you acquire a Payer Authentioncation result that needs to be included for your payment request.    - `AP_INITIATE`: Use this when Alternative Payment Initiate service is requested.   - `WATCHLIST_SCREENING` : Use this when you want to call Watchlist Screening service.
+     * @param string[] $actionList Array of actions (one or more) to be included in the payment to invoke bundled serviecs along with payment.  Possible values are one or more of follows:   - `DECISION_SKIP`: Use this when you want to skip Decision Manager service(s).   - `TOKEN_CREATE`: Use this when you want to create a token from the card/bank data in your payment request.   - `CONSUMER_AUTHENTICATION`: Use this when you want to check if a card is enrolled in Payer Authentioncation along with your payment request.   - `VALIDATE_CONSUMER_AUTHENTICATION`: Use this after you acquire a Payer Authentioncation result that needs to be included for your payment request.
      * @return $this
      */
     public function setActionList($actionList)
     {
         $this->container['actionList'] = $actionList;
-
-        return $this;
-    }
-
-    /**
-     * Gets enableEscrowOption
-     * @return bool
-     */
-    public function getEnableEscrowOption()
-    {
-        return $this->container['enableEscrowOption'];
-    }
-
-    /**
-     * Sets enableEscrowOption
-     * @param bool $enableEscrowOption Indicates whether to use the customer’s escrow agreement. Possible values: - `true`: yes, use the customer’s escrow agreement. - `false`: no, do not use the customer’s escrow agreement.
-     * @return $this
-     */
-    public function setEnableEscrowOption($enableEscrowOption)
-    {
-        $this->container['enableEscrowOption'] = $enableEscrowOption;
 
         return $this;
     }
@@ -405,27 +372,6 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
     public function setActionTokenTypes($actionTokenTypes)
     {
         $this->container['actionTokenTypes'] = $actionTokenTypes;
-
-        return $this;
-    }
-
-    /**
-     * Gets binSource
-     * @return string
-     */
-    public function getBinSource()
-    {
-        return $this->container['binSource'];
-    }
-
-    /**
-     * Sets binSource
-     * @param string $binSource Bin Source File Identifier. Possible values: - itmx - rupay
-     * @return $this
-     */
-    public function setBinSource($binSource)
-    {
-        $this->container['binSource'] = $binSource;
 
         return $this;
     }
@@ -467,6 +413,7 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
      */
     public function setProcessorId($processorId)
     {
+
         $this->container['processorId'] = $processorId;
 
         return $this;
@@ -509,6 +456,7 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
      */
     public function setCommerceIndicator($commerceIndicator)
     {
+
         $this->container['commerceIndicator'] = $commerceIndicator;
 
         return $this;
@@ -530,6 +478,7 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
      */
     public function setCommerceIndicatorLabel($commerceIndicatorLabel)
     {
+
         $this->container['commerceIndicatorLabel'] = $commerceIndicatorLabel;
 
         return $this;
@@ -551,6 +500,7 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
      */
     public function setPaymentSolution($paymentSolution)
     {
+
         $this->container['paymentSolution'] = $paymentSolution;
 
         return $this;
@@ -572,6 +522,7 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
      */
     public function setReconciliationId($reconciliationId)
     {
+
         $this->container['reconciliationId'] = $reconciliationId;
 
         return $this;
@@ -593,6 +544,7 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
      */
     public function setLinkId($linkId)
     {
+
         $this->container['linkId'] = $linkId;
 
         return $this;
@@ -614,6 +566,7 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
      */
     public function setPurchaseLevel($purchaseLevel)
     {
+
         $this->container['purchaseLevel'] = $purchaseLevel;
 
         return $this;
@@ -635,6 +588,7 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
      */
     public function setPaymentId($paymentId)
     {
+
         $this->container['paymentId'] = $paymentId;
 
         return $this;
@@ -656,6 +610,7 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
      */
     public function setReportGroup($reportGroup)
     {
+
         $this->container['reportGroup'] = $reportGroup;
 
         return $this;
@@ -677,6 +632,7 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
      */
     public function setVisaCheckoutId($visaCheckoutId)
     {
+
         $this->container['visaCheckoutId'] = $visaCheckoutId;
 
         return $this;
@@ -698,6 +654,7 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
      */
     public function setIndustryDataType($industryDataType)
     {
+
         $this->container['industryDataType'] = $industryDataType;
 
         return $this;
@@ -866,6 +823,7 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
      */
     public function setWalletType($walletType)
     {
+
         $this->container['walletType'] = $walletType;
 
         return $this;
@@ -887,6 +845,7 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
      */
     public function setNationalNetDomesticData($nationalNetDomesticData)
     {
+
         $this->container['nationalNetDomesticData'] = $nationalNetDomesticData;
 
         return $this;
@@ -929,6 +888,7 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
      */
     public function setMobileRemotePaymentType($mobileRemotePaymentType)
     {
+
         $this->container['mobileRemotePaymentType'] = $mobileRemotePaymentType;
 
         return $this;
@@ -950,6 +910,7 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
      */
     public function setExtendedCreditTotalCount($extendedCreditTotalCount)
     {
+
         $this->container['extendedCreditTotalCount'] = $extendedCreditTotalCount;
 
         return $this;
@@ -971,6 +932,7 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
      */
     public function setNetworkRoutingOrder($networkRoutingOrder)
     {
+
         $this->container['networkRoutingOrder'] = $networkRoutingOrder;
 
         return $this;
@@ -1022,7 +984,6 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -1033,7 +994,6 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -1045,7 +1005,6 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -1060,7 +1019,6 @@ class Ptsv2paymentsProcessingInformation implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

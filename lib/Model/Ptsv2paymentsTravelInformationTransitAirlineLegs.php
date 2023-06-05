@@ -290,6 +290,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs implements ArrayAccess
      */
     public function setCarrierCode($carrierCode)
     {
+
         $this->container['carrierCode'] = $carrierCode;
 
         return $this;
@@ -311,6 +312,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs implements ArrayAccess
      */
     public function setFlightNumber($flightNumber)
     {
+
         $this->container['flightNumber'] = $flightNumber;
 
         return $this;
@@ -332,6 +334,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs implements ArrayAccess
      */
     public function setOriginatingAirportCode($originatingAirportCode)
     {
+
         $this->container['originatingAirportCode'] = $originatingAirportCode;
 
         return $this;
@@ -353,6 +356,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs implements ArrayAccess
      */
     public function setClass($class)
     {
+
         $this->container['class'] = $class;
 
         return $this;
@@ -416,6 +420,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs implements ArrayAccess
      */
     public function setDestinationAirportCode($destinationAirportCode)
     {
+
         $this->container['destinationAirportCode'] = $destinationAirportCode;
 
         return $this;
@@ -437,6 +442,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs implements ArrayAccess
      */
     public function setFareBasis($fareBasis)
     {
+
         $this->container['fareBasis'] = $fareBasis;
 
         return $this;
@@ -458,6 +464,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs implements ArrayAccess
      */
     public function setDepartTaxAmount($departTaxAmount)
     {
+
         $this->container['departTaxAmount'] = $departTaxAmount;
 
         return $this;
@@ -479,6 +486,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs implements ArrayAccess
      */
     public function setConjunctionTicket($conjunctionTicket)
     {
+
         $this->container['conjunctionTicket'] = $conjunctionTicket;
 
         return $this;
@@ -500,6 +508,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs implements ArrayAccess
      */
     public function setExchangeTicketNumber($exchangeTicketNumber)
     {
+
         $this->container['exchangeTicketNumber'] = $exchangeTicketNumber;
 
         return $this;
@@ -521,6 +530,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs implements ArrayAccess
      */
     public function setCouponNumber($couponNumber)
     {
+
         $this->container['couponNumber'] = $couponNumber;
 
         return $this;
@@ -563,6 +573,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs implements ArrayAccess
      */
     public function setDepartureTimeMeridian($departureTimeMeridian)
     {
+
         $this->container['departureTimeMeridian'] = $departureTimeMeridian;
 
         return $this;
@@ -605,6 +616,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs implements ArrayAccess
      */
     public function setArrivalTimeMeridian($arrivalTimeMeridian)
     {
+
         $this->container['arrivalTimeMeridian'] = $arrivalTimeMeridian;
 
         return $this;
@@ -626,6 +638,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs implements ArrayAccess
      */
     public function setEndorsementsRestrictions($endorsementsRestrictions)
     {
+
         $this->container['endorsementsRestrictions'] = $endorsementsRestrictions;
 
         return $this;
@@ -647,6 +660,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs implements ArrayAccess
      */
     public function setTotalFareAmount($totalFareAmount)
     {
+
         $this->container['totalFareAmount'] = $totalFareAmount;
 
         return $this;
@@ -668,6 +682,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs implements ArrayAccess
      */
     public function setFeeAmount($feeAmount)
     {
+
         $this->container['feeAmount'] = $feeAmount;
 
         return $this;
@@ -689,6 +704,7 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs implements ArrayAccess
      */
     public function setTaxAmount($taxAmount)
     {
+
         $this->container['taxAmount'] = $taxAmount;
 
         return $this;
@@ -698,7 +714,6 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -709,7 +724,6 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -721,7 +735,6 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -736,7 +749,6 @@ class Ptsv2paymentsTravelInformationTransitAirlineLegs implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

@@ -63,9 +63,7 @@ class Ptsv2paymentsidrefundsPaymentInformationCard implements ArrayAccess
         'startMonth' => 'string',
         'startYear' => 'string',
         'sourceAccountType' => 'string',
-        'sourceAccountTypeDetails' => 'string',
-        'securityCode' => 'string',
-        'useAs' => 'string'
+        'sourceAccountTypeDetails' => 'string'
     ];
 
     /**
@@ -82,9 +80,7 @@ class Ptsv2paymentsidrefundsPaymentInformationCard implements ArrayAccess
         'startMonth' => null,
         'startYear' => null,
         'sourceAccountType' => null,
-        'sourceAccountTypeDetails' => null,
-        'securityCode' => null,
-        'useAs' => null
+        'sourceAccountTypeDetails' => null
     ];
 
     public static function swaggerTypes()
@@ -111,9 +107,7 @@ class Ptsv2paymentsidrefundsPaymentInformationCard implements ArrayAccess
         'startMonth' => 'startMonth',
         'startYear' => 'startYear',
         'sourceAccountType' => 'sourceAccountType',
-        'sourceAccountTypeDetails' => 'sourceAccountTypeDetails',
-        'securityCode' => 'securityCode',
-        'useAs' => 'useAs'
+        'sourceAccountTypeDetails' => 'sourceAccountTypeDetails'
     ];
 
 
@@ -131,9 +125,7 @@ class Ptsv2paymentsidrefundsPaymentInformationCard implements ArrayAccess
         'startMonth' => 'setStartMonth',
         'startYear' => 'setStartYear',
         'sourceAccountType' => 'setSourceAccountType',
-        'sourceAccountTypeDetails' => 'setSourceAccountTypeDetails',
-        'securityCode' => 'setSecurityCode',
-        'useAs' => 'setUseAs'
+        'sourceAccountTypeDetails' => 'setSourceAccountTypeDetails'
     ];
 
 
@@ -151,9 +143,7 @@ class Ptsv2paymentsidrefundsPaymentInformationCard implements ArrayAccess
         'startMonth' => 'getStartMonth',
         'startYear' => 'getStartYear',
         'sourceAccountType' => 'getSourceAccountType',
-        'sourceAccountTypeDetails' => 'getSourceAccountTypeDetails',
-        'securityCode' => 'getSecurityCode',
-        'useAs' => 'getUseAs'
+        'sourceAccountTypeDetails' => 'getSourceAccountTypeDetails'
     ];
 
     public static function attributeMap()
@@ -197,8 +187,6 @@ class Ptsv2paymentsidrefundsPaymentInformationCard implements ArrayAccess
         $this->container['startYear'] = isset($data['startYear']) ? $data['startYear'] : null;
         $this->container['sourceAccountType'] = isset($data['sourceAccountType']) ? $data['sourceAccountType'] : null;
         $this->container['sourceAccountTypeDetails'] = isset($data['sourceAccountTypeDetails']) ? $data['sourceAccountTypeDetails'] : null;
-        $this->container['securityCode'] = isset($data['securityCode']) ? $data['securityCode'] : null;
-        $this->container['useAs'] = isset($data['useAs']) ? $data['useAs'] : null;
     }
 
     /**
@@ -242,6 +230,7 @@ class Ptsv2paymentsidrefundsPaymentInformationCard implements ArrayAccess
      */
     public function setNumber($number)
     {
+
         $this->container['number'] = $number;
 
         return $this;
@@ -263,6 +252,7 @@ class Ptsv2paymentsidrefundsPaymentInformationCard implements ArrayAccess
      */
     public function setExpirationMonth($expirationMonth)
     {
+
         $this->container['expirationMonth'] = $expirationMonth;
 
         return $this;
@@ -284,6 +274,7 @@ class Ptsv2paymentsidrefundsPaymentInformationCard implements ArrayAccess
      */
     public function setExpirationYear($expirationYear)
     {
+
         $this->container['expirationYear'] = $expirationYear;
 
         return $this;
@@ -300,7 +291,7 @@ class Ptsv2paymentsidrefundsPaymentInformationCard implements ArrayAccess
 
     /**
      * Sets type
-     * @param string $type Three-digit value that indicates the card type.  **IMPORTANT** It is strongly recommended that you include the card type field in request messages even if it is optional for your processor and card type. Omitting the card type can cause the transaction to be processed with the wrong card type.  Possible values: - `001`: Visa. For card-present transactions on all processors except SIX, the Visa Electron card type is processed the same way that the Visa debit card is processed. Use card type value `001` for Visa Electron. - `002`: Mastercard, Eurocard[^1], which is a European regional brand of Mastercard. - `003`: American Express - `004`: Discover - `005`: Diners Club - `006`: Carte Blanche[^1] - `007`: JCB[^1] - `014`: Enroute[^1] - `021`: JAL[^1] - `024`: Maestro (UK Domestic)[^1] - `031`: Delta[^1]: Use this value only for Ingenico ePayments. For other processors, use `001` for all Visa card types. - `033`: Visa Electron[^1]. Use this value only for Ingenico ePayments and SIX. For other processors, use `001` for all Visa card types. - `034`: Dankort[^1] - `036`: Cartes Bancaires[^1,4] - `037`: Carta Si[^1] - `039`: Encoded account number[^1] - `040`: UATP[^1] - `042`: Maestro (International)[^1] - `050`: Hipercard[^2,3] - `051`: Aura - `054`: Elo[^3] - `062`: China UnionPay - '070': EFTPOS  [^1]: For this card type, you must include the `paymentInformation.card.type` or `paymentInformation.tokenizedCard.type` field in your request for an authorization or a stand-alone credit. [^2]: For this card type on Cielo 3.0, you must include the `paymentInformation.card.type` or `paymentInformation.tokenizedCard.type` field in a request for an authorization or a stand-alone credit. This card type is not supported on Cielo 1.5. [^3]: For this card type on Getnet and Rede, you must include the `paymentInformation.card.type` or `paymentInformation.tokenizedCard.type` field in a request for an authorization or a stand-alone credit. [^4]: For this card type, you must include the `paymentInformation.card.type` in your request for any payer authentication services.  #### Used by **Authorization** Required for Carte Blanche and JCB. Optional for all other card types.  #### Card Present reply This field is included in the reply message when the client software that is installed on the POS terminal uses the token management service (TMS) to retrieve tokenized payment details. You must contact customer support to have your account enabled to receive these fields in the credit reply message.  Returned by the Credit service.  This reply field is only supported by the following processors: - American Express Direct - Credit Mutuel-CIC - FDC Nashville Global - OmniPay Direct - SIX  #### Google Pay transactions For PAN-based Google Pay transactions, this field is returned in the API response.  #### GPX This field only supports transactions from the following card types: - Visa - Mastercard - AMEX - Discover - Diners - JCB - Union Pay International
+     * @param string $type Three-digit value that indicates the card type.  **IMPORTANT** It is strongly recommended that you include the card type field in request messages even if it is optional for your processor and card type. Omitting the card type can cause the transaction to be processed with the wrong card type.  Possible values: - `001`: Visa. For card-present transactions on all processors except SIX, the Visa Electron card type is processed the same way that the Visa debit card is processed. Use card type value `001` for Visa Electron. - `002`: Mastercard, Eurocard[^1], which is a European regional brand of Mastercard. - `003`: American Express - `004`: Discover - `005`: Diners Club - `006`: Carte Blanche[^1] - `007`: JCB[^1] - `014`: Enroute[^1] - `021`: JAL[^1] - `024`: Maestro (UK Domestic)[^1] - `031`: Delta[^1]: Use this value only for Ingenico ePayments. For other processors, use `001` for all Visa card types. - `033`: Visa Electron[^1]. Use this value only for Ingenico ePayments and SIX. For other processors, use `001` for all Visa card types. - `034`: Dankort[^1] - `036`: Cartes Bancaires[^1,4] - `037`: Carta Si[^1] - `039`: Encoded account number[^1] - `040`: UATP[^1] - `042`: Maestro (International)[^1] - `050`: Hipercard[^2,3] - `051`: Aura - `054`: Elo[^3] - `062`: China UnionPay  [^1]: For this card type, you must include the `paymentInformation.card.type` or `paymentInformation.tokenizedCard.type` field in your request for an authorization or a stand-alone credit. [^2]: For this card type on Cielo 3.0, you must include the `paymentInformation.card.type` or `paymentInformation.tokenizedCard.type` field in a request for an authorization or a stand-alone credit. This card type is not supported on Cielo 1.5. [^3]: For this card type on Getnet and Rede, you must include the `paymentInformation.card.type` or `paymentInformation.tokenizedCard.type` field in a request for an authorization or a stand-alone credit. [^4]: For this card type, you must include the `paymentInformation.card.type` in your request for any payer authentication services.  #### Used by **Authorization** Required for Carte Blanche and JCB. Optional for all other card types.  #### Card Present reply This field is included in the reply message when the client software that is installed on the POS terminal uses the token management service (TMS) to retrieve tokenized payment details. You must contact customer support to have your account enabled to receive these fields in the credit reply message.  Returned by the Credit service.  This reply field is only supported by the following processors: - American Express Direct - Credit Mutuel-CIC - FDC Nashville Global - OmniPay Direct - SIX  #### Google Pay transactions For PAN-based Google Pay transactions, this field is returned in the API response.  #### GPX This field only supports transactions from the following card types: - Visa - Mastercard - AMEX - Discover - Diners - JCB - Union Pay International
      * @return $this
      */
     public function setType($type)
@@ -326,6 +317,7 @@ class Ptsv2paymentsidrefundsPaymentInformationCard implements ArrayAccess
      */
     public function setAccountEncoderId($accountEncoderId)
     {
+
         $this->container['accountEncoderId'] = $accountEncoderId;
 
         return $this;
@@ -347,6 +339,7 @@ class Ptsv2paymentsidrefundsPaymentInformationCard implements ArrayAccess
      */
     public function setIssueNumber($issueNumber)
     {
+
         $this->container['issueNumber'] = $issueNumber;
 
         return $this;
@@ -368,6 +361,7 @@ class Ptsv2paymentsidrefundsPaymentInformationCard implements ArrayAccess
      */
     public function setStartMonth($startMonth)
     {
+
         $this->container['startMonth'] = $startMonth;
 
         return $this;
@@ -389,6 +383,7 @@ class Ptsv2paymentsidrefundsPaymentInformationCard implements ArrayAccess
      */
     public function setStartYear($startYear)
     {
+
         $this->container['startYear'] = $startYear;
 
         return $this;
@@ -410,6 +405,7 @@ class Ptsv2paymentsidrefundsPaymentInformationCard implements ArrayAccess
      */
     public function setSourceAccountType($sourceAccountType)
     {
+
         $this->container['sourceAccountType'] = $sourceAccountType;
 
         return $this;
@@ -431,49 +427,8 @@ class Ptsv2paymentsidrefundsPaymentInformationCard implements ArrayAccess
      */
     public function setSourceAccountTypeDetails($sourceAccountTypeDetails)
     {
+
         $this->container['sourceAccountTypeDetails'] = $sourceAccountTypeDetails;
-
-        return $this;
-    }
-
-    /**
-     * Gets securityCode
-     * @return string
-     */
-    public function getSecurityCode()
-    {
-        return $this->container['securityCode'];
-    }
-
-    /**
-     * Sets securityCode
-     * @param string $securityCode Card Verification Number.  #### FDMS Nashville Required for American Express or if swiped; otherwise, optional.  #### Ingenico ePayments Do not include this field when `commerceIndicator=recurring`. **Note** Ingenico ePayments was previously called _Global Collect_.  #### TSYS Acquiring Solutions Optional if pointOfSaleInformation.entryMode=keyed; otherwise, not used.  #### GPX Optional.  #### All other processors: Optional.
-     * @return $this
-     */
-    public function setSecurityCode($securityCode)
-    {
-        $this->container['securityCode'] = $securityCode;
-
-        return $this;
-    }
-
-    /**
-     * Gets useAs
-     * @return string
-     */
-    public function getUseAs()
-    {
-        return $this->container['useAs'];
-    }
-
-    /**
-     * Sets useAs
-     * @param string $useAs Flag that specifies the type of account associated with the card. The cardholder provides this information during the payment process.  Possible values:   - C: Credit transaction  - D: Debit transaction  This field is supported only for all card Types on Visa Platform Connect.  This field is required for:  - Debit transactions on Cielo and Comercio Latino.  - Transactions with Brazilian-issued cards on CyberSource through VisaNet.  **Note** The value for this field corresponds to the following data in the TC 33 capture file5: - Record: CP07 TCR0 - Position: 51 - Field: Combination Card Transaction Identifier
-     * @return $this
-     */
-    public function setUseAs($useAs)
-    {
-        $this->container['useAs'] = $useAs;
 
         return $this;
     }
@@ -482,7 +437,6 @@ class Ptsv2paymentsidrefundsPaymentInformationCard implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -493,7 +447,6 @@ class Ptsv2paymentsidrefundsPaymentInformationCard implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -505,7 +458,6 @@ class Ptsv2paymentsidrefundsPaymentInformationCard implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -520,7 +472,6 @@ class Ptsv2paymentsidrefundsPaymentInformationCard implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

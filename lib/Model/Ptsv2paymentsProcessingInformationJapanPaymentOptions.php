@@ -254,6 +254,7 @@ class Ptsv2paymentsProcessingInformationJapanPaymentOptions implements ArrayAcce
      */
     public function setPaymentMethod($paymentMethod)
     {
+
         $this->container['paymentMethod'] = $paymentMethod;
 
         return $this;
@@ -275,6 +276,7 @@ class Ptsv2paymentsProcessingInformationJapanPaymentOptions implements ArrayAcce
      */
     public function setBonuses($bonuses)
     {
+
         $this->container['bonuses'] = $bonuses;
 
         return $this;
@@ -296,6 +298,7 @@ class Ptsv2paymentsProcessingInformationJapanPaymentOptions implements ArrayAcce
      */
     public function setBonusMonth($bonusMonth)
     {
+
         $this->container['bonusMonth'] = $bonusMonth;
 
         return $this;
@@ -317,6 +320,7 @@ class Ptsv2paymentsProcessingInformationJapanPaymentOptions implements ArrayAcce
      */
     public function setSecondBonusMonth($secondBonusMonth)
     {
+
         $this->container['secondBonusMonth'] = $secondBonusMonth;
 
         return $this;
@@ -338,6 +342,7 @@ class Ptsv2paymentsProcessingInformationJapanPaymentOptions implements ArrayAcce
      */
     public function setBonusAmount($bonusAmount)
     {
+
         $this->container['bonusAmount'] = $bonusAmount;
 
         return $this;
@@ -359,6 +364,7 @@ class Ptsv2paymentsProcessingInformationJapanPaymentOptions implements ArrayAcce
      */
     public function setSecondBonusAmount($secondBonusAmount)
     {
+
         $this->container['secondBonusAmount'] = $secondBonusAmount;
 
         return $this;
@@ -380,6 +386,7 @@ class Ptsv2paymentsProcessingInformationJapanPaymentOptions implements ArrayAcce
      */
     public function setPreapprovalType($preapprovalType)
     {
+
         $this->container['preapprovalType'] = $preapprovalType;
 
         return $this;
@@ -422,6 +429,7 @@ class Ptsv2paymentsProcessingInformationJapanPaymentOptions implements ArrayAcce
      */
     public function setTerminalId($terminalId)
     {
+
         $this->container['terminalId'] = $terminalId;
 
         return $this;
@@ -443,6 +451,7 @@ class Ptsv2paymentsProcessingInformationJapanPaymentOptions implements ArrayAcce
      */
     public function setFirstBillingMonth($firstBillingMonth)
     {
+
         $this->container['firstBillingMonth'] = $firstBillingMonth;
 
         return $this;
@@ -464,6 +473,7 @@ class Ptsv2paymentsProcessingInformationJapanPaymentOptions implements ArrayAcce
      */
     public function setBusinessName($businessName)
     {
+
         $this->container['businessName'] = $businessName;
 
         return $this;
@@ -485,6 +495,7 @@ class Ptsv2paymentsProcessingInformationJapanPaymentOptions implements ArrayAcce
      */
     public function setBusinessNameKatakana($businessNameKatakana)
     {
+
         $this->container['businessNameKatakana'] = $businessNameKatakana;
 
         return $this;
@@ -506,6 +517,7 @@ class Ptsv2paymentsProcessingInformationJapanPaymentOptions implements ArrayAcce
      */
     public function setJis2TrackData($jis2TrackData)
     {
+
         $this->container['jis2TrackData'] = $jis2TrackData;
 
         return $this;
@@ -527,6 +539,7 @@ class Ptsv2paymentsProcessingInformationJapanPaymentOptions implements ArrayAcce
      */
     public function setBusinessNameAlphaNumeric($businessNameAlphaNumeric)
     {
+
         $this->container['businessNameAlphaNumeric'] = $businessNameAlphaNumeric;
 
         return $this;
@@ -536,7 +549,6 @@ class Ptsv2paymentsProcessingInformationJapanPaymentOptions implements ArrayAcce
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -547,7 +559,6 @@ class Ptsv2paymentsProcessingInformationJapanPaymentOptions implements ArrayAcce
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -559,7 +570,6 @@ class Ptsv2paymentsProcessingInformationJapanPaymentOptions implements ArrayAcce
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -574,7 +584,6 @@ class Ptsv2paymentsProcessingInformationJapanPaymentOptions implements ArrayAcce
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

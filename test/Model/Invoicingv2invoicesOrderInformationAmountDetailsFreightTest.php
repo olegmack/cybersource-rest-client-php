@@ -90,11 +90,4 @@ class Invoicingv2invoicesOrderInformationAmountDetailsFreightTest extends \PHPUn
     public function testPropertyTaxable()
     {
     }
-
-    /**
-     * Test attribute "taxRate"
-     */
-    public function testPropertyTaxRate()
-    {
-    }
 }

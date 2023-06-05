@@ -61,7 +61,7 @@ class RiskV1ExportComplianceInquiriesPost201Response implements ArrayAccess
         'status' => 'string',
         'message' => 'string',
         'clientReferenceInformation' => '\CyberSource\Model\RiskV1DecisionsPost201ResponseClientReferenceInformation',
-        'exportComplianceInformation' => '\CyberSource\Model\PtsV2PaymentsPost201ResponseWatchlistScreeningInformation',
+        'exportComplianceInformation' => '\CyberSource\Model\RiskV1ExportComplianceInquiriesPost201ResponseExportComplianceInformation',
         'errorInformation' => '\CyberSource\Model\RiskV1ExportComplianceInquiriesPost201ResponseErrorInformation'
     ];
 
@@ -245,6 +245,7 @@ class RiskV1ExportComplianceInquiriesPost201Response implements ArrayAccess
      */
     public function setId($id)
     {
+
         $this->container['id'] = $id;
 
         return $this;
@@ -357,7 +358,7 @@ class RiskV1ExportComplianceInquiriesPost201Response implements ArrayAccess
 
     /**
      * Gets exportComplianceInformation
-     * @return \CyberSource\Model\PtsV2PaymentsPost201ResponseWatchlistScreeningInformation
+     * @return \CyberSource\Model\RiskV1ExportComplianceInquiriesPost201ResponseExportComplianceInformation
      */
     public function getExportComplianceInformation()
     {
@@ -366,7 +367,7 @@ class RiskV1ExportComplianceInquiriesPost201Response implements ArrayAccess
 
     /**
      * Sets exportComplianceInformation
-     * @param \CyberSource\Model\PtsV2PaymentsPost201ResponseWatchlistScreeningInformation $exportComplianceInformation
+     * @param \CyberSource\Model\RiskV1ExportComplianceInquiriesPost201ResponseExportComplianceInformation $exportComplianceInformation
      * @return $this
      */
     public function setExportComplianceInformation($exportComplianceInformation)
@@ -401,7 +402,6 @@ class RiskV1ExportComplianceInquiriesPost201Response implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -412,7 +412,6 @@ class RiskV1ExportComplianceInquiriesPost201Response implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -424,7 +423,6 @@ class RiskV1ExportComplianceInquiriesPost201Response implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -439,7 +437,6 @@ class RiskV1ExportComplianceInquiriesPost201Response implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

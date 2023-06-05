@@ -153,11 +153,4 @@ class Ptsv2paymentsMerchantInformationMerchantDescriptorTest extends \PHPUnit_Fr
     public function testPropertyCountryOfOrigin()
     {
     }
-
-    /**
-     * Test attribute "customerServicePhoneNumber"
-     */
-    public function testPropertyCustomerServicePhoneNumber()
-    {
-    }
 }

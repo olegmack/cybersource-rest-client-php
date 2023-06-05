@@ -64,7 +64,6 @@ class RiskV1DecisionsPost201Response implements ArrayAccess
         'clientReferenceInformation' => '\CyberSource\Model\RiskV1DecisionsPost201ResponseClientReferenceInformation',
         'orderInformation' => '\CyberSource\Model\RiskV1DecisionsPost201ResponseOrderInformation',
         'consumerAuthenticationInformation' => '\CyberSource\Model\RiskV1DecisionsPost201ResponseConsumerAuthenticationInformation',
-        'watchlistScreeningInformation' => '\CyberSource\Model\PtsV2PaymentsPost201ResponseWatchlistScreeningInformation',
         'errorInformation' => '\CyberSource\Model\RiskV1DecisionsPost201ResponseErrorInformation'
     ];
 
@@ -83,7 +82,6 @@ class RiskV1DecisionsPost201Response implements ArrayAccess
         'clientReferenceInformation' => null,
         'orderInformation' => null,
         'consumerAuthenticationInformation' => null,
-        'watchlistScreeningInformation' => null,
         'errorInformation' => null
     ];
 
@@ -112,7 +110,6 @@ class RiskV1DecisionsPost201Response implements ArrayAccess
         'clientReferenceInformation' => 'clientReferenceInformation',
         'orderInformation' => 'orderInformation',
         'consumerAuthenticationInformation' => 'consumerAuthenticationInformation',
-        'watchlistScreeningInformation' => 'watchlistScreeningInformation',
         'errorInformation' => 'errorInformation'
     ];
 
@@ -132,7 +129,6 @@ class RiskV1DecisionsPost201Response implements ArrayAccess
         'clientReferenceInformation' => 'setClientReferenceInformation',
         'orderInformation' => 'setOrderInformation',
         'consumerAuthenticationInformation' => 'setConsumerAuthenticationInformation',
-        'watchlistScreeningInformation' => 'setWatchlistScreeningInformation',
         'errorInformation' => 'setErrorInformation'
     ];
 
@@ -152,7 +148,6 @@ class RiskV1DecisionsPost201Response implements ArrayAccess
         'clientReferenceInformation' => 'getClientReferenceInformation',
         'orderInformation' => 'getOrderInformation',
         'consumerAuthenticationInformation' => 'getConsumerAuthenticationInformation',
-        'watchlistScreeningInformation' => 'getWatchlistScreeningInformation',
         'errorInformation' => 'getErrorInformation'
     ];
 
@@ -197,7 +192,6 @@ class RiskV1DecisionsPost201Response implements ArrayAccess
         $this->container['clientReferenceInformation'] = isset($data['clientReferenceInformation']) ? $data['clientReferenceInformation'] : null;
         $this->container['orderInformation'] = isset($data['orderInformation']) ? $data['orderInformation'] : null;
         $this->container['consumerAuthenticationInformation'] = isset($data['consumerAuthenticationInformation']) ? $data['consumerAuthenticationInformation'] : null;
-        $this->container['watchlistScreeningInformation'] = isset($data['watchlistScreeningInformation']) ? $data['watchlistScreeningInformation'] : null;
         $this->container['errorInformation'] = isset($data['errorInformation']) ? $data['errorInformation'] : null;
     }
 
@@ -263,6 +257,7 @@ class RiskV1DecisionsPost201Response implements ArrayAccess
      */
     public function setId($id)
     {
+
         $this->container['id'] = $id;
 
         return $this;
@@ -437,27 +432,6 @@ class RiskV1DecisionsPost201Response implements ArrayAccess
     }
 
     /**
-     * Gets watchlistScreeningInformation
-     * @return \CyberSource\Model\PtsV2PaymentsPost201ResponseWatchlistScreeningInformation
-     */
-    public function getWatchlistScreeningInformation()
-    {
-        return $this->container['watchlistScreeningInformation'];
-    }
-
-    /**
-     * Sets watchlistScreeningInformation
-     * @param \CyberSource\Model\PtsV2PaymentsPost201ResponseWatchlistScreeningInformation $watchlistScreeningInformation
-     * @return $this
-     */
-    public function setWatchlistScreeningInformation($watchlistScreeningInformation)
-    {
-        $this->container['watchlistScreeningInformation'] = $watchlistScreeningInformation;
-
-        return $this;
-    }
-
-    /**
      * Gets errorInformation
      * @return \CyberSource\Model\RiskV1DecisionsPost201ResponseErrorInformation
      */
@@ -482,7 +456,6 @@ class RiskV1DecisionsPost201Response implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -493,7 +466,6 @@ class RiskV1DecisionsPost201Response implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -505,7 +477,6 @@ class RiskV1DecisionsPost201Response implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -520,7 +491,6 @@ class RiskV1DecisionsPost201Response implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

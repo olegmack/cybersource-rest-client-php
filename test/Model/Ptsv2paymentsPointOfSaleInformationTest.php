@@ -197,13 +197,6 @@ class Ptsv2paymentsPointOfSaleInformationTest extends \PHPUnit_Framework_TestCas
     }
 
     /**
-     * Test attribute "pinEntrySolution"
-     */
-    public function testPropertyPinEntrySolution()
-    {
-    }
-
-    /**
      * Test attribute "deviceId"
      */
     public function testPropertyDeviceId()

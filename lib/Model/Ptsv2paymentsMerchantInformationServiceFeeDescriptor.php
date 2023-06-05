@@ -188,6 +188,7 @@ class Ptsv2paymentsMerchantInformationServiceFeeDescriptor implements ArrayAcces
      */
     public function setName($name)
     {
+
         $this->container['name'] = $name;
 
         return $this;
@@ -209,6 +210,7 @@ class Ptsv2paymentsMerchantInformationServiceFeeDescriptor implements ArrayAcces
      */
     public function setContact($contact)
     {
+
         $this->container['contact'] = $contact;
 
         return $this;
@@ -230,6 +232,7 @@ class Ptsv2paymentsMerchantInformationServiceFeeDescriptor implements ArrayAcces
      */
     public function setState($state)
     {
+
         $this->container['state'] = $state;
 
         return $this;
@@ -239,7 +242,6 @@ class Ptsv2paymentsMerchantInformationServiceFeeDescriptor implements ArrayAcces
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -250,7 +252,6 @@ class Ptsv2paymentsMerchantInformationServiceFeeDescriptor implements ArrayAcces
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -262,7 +263,6 @@ class Ptsv2paymentsMerchantInformationServiceFeeDescriptor implements ArrayAcces
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -277,7 +277,6 @@ class Ptsv2paymentsMerchantInformationServiceFeeDescriptor implements ArrayAcces
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

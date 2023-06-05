@@ -67,8 +67,7 @@ class CreateBundledDecisionManagerCaseRequest implements ArrayAccess
         'merchantInformation' => '\CyberSource\Model\Riskv1decisionsMerchantInformation',
         'acquirerInformation' => '\CyberSource\Model\Ptsv2paymentsAcquirerInformation',
         'recurringPaymentInformation' => '\CyberSource\Model\Ptsv2paymentsRecurringPaymentInformation',
-        'consumerAuthenticationInformation' => '\CyberSource\Model\Riskv1decisionsConsumerAuthenticationInformation',
-        'watchlistScreeningInformation' => '\CyberSource\Model\Ptsv2paymentsWatchlistScreeningInformation'
+        'consumerAuthenticationInformation' => '\CyberSource\Model\Riskv1decisionsConsumerAuthenticationInformation'
     ];
 
     /**
@@ -89,8 +88,7 @@ class CreateBundledDecisionManagerCaseRequest implements ArrayAccess
         'merchantInformation' => null,
         'acquirerInformation' => null,
         'recurringPaymentInformation' => null,
-        'consumerAuthenticationInformation' => null,
-        'watchlistScreeningInformation' => null
+        'consumerAuthenticationInformation' => null
     ];
 
     public static function swaggerTypes()
@@ -121,8 +119,7 @@ class CreateBundledDecisionManagerCaseRequest implements ArrayAccess
         'merchantInformation' => 'merchantInformation',
         'acquirerInformation' => 'acquirerInformation',
         'recurringPaymentInformation' => 'recurringPaymentInformation',
-        'consumerAuthenticationInformation' => 'consumerAuthenticationInformation',
-        'watchlistScreeningInformation' => 'watchlistScreeningInformation'
+        'consumerAuthenticationInformation' => 'consumerAuthenticationInformation'
     ];
 
 
@@ -144,8 +141,7 @@ class CreateBundledDecisionManagerCaseRequest implements ArrayAccess
         'merchantInformation' => 'setMerchantInformation',
         'acquirerInformation' => 'setAcquirerInformation',
         'recurringPaymentInformation' => 'setRecurringPaymentInformation',
-        'consumerAuthenticationInformation' => 'setConsumerAuthenticationInformation',
-        'watchlistScreeningInformation' => 'setWatchlistScreeningInformation'
+        'consumerAuthenticationInformation' => 'setConsumerAuthenticationInformation'
     ];
 
 
@@ -167,8 +163,7 @@ class CreateBundledDecisionManagerCaseRequest implements ArrayAccess
         'merchantInformation' => 'getMerchantInformation',
         'acquirerInformation' => 'getAcquirerInformation',
         'recurringPaymentInformation' => 'getRecurringPaymentInformation',
-        'consumerAuthenticationInformation' => 'getConsumerAuthenticationInformation',
-        'watchlistScreeningInformation' => 'getWatchlistScreeningInformation'
+        'consumerAuthenticationInformation' => 'getConsumerAuthenticationInformation'
     ];
 
     public static function attributeMap()
@@ -216,7 +211,6 @@ class CreateBundledDecisionManagerCaseRequest implements ArrayAccess
         $this->container['acquirerInformation'] = isset($data['acquirerInformation']) ? $data['acquirerInformation'] : null;
         $this->container['recurringPaymentInformation'] = isset($data['recurringPaymentInformation']) ? $data['recurringPaymentInformation'] : null;
         $this->container['consumerAuthenticationInformation'] = isset($data['consumerAuthenticationInformation']) ? $data['consumerAuthenticationInformation'] : null;
-        $this->container['watchlistScreeningInformation'] = isset($data['watchlistScreeningInformation']) ? $data['watchlistScreeningInformation'] : null;
     }
 
     /**
@@ -537,33 +531,11 @@ class CreateBundledDecisionManagerCaseRequest implements ArrayAccess
 
         return $this;
     }
-
-    /**
-     * Gets watchlistScreeningInformation
-     * @return \CyberSource\Model\Ptsv2paymentsWatchlistScreeningInformation
-     */
-    public function getWatchlistScreeningInformation()
-    {
-        return $this->container['watchlistScreeningInformation'];
-    }
-
-    /**
-     * Sets watchlistScreeningInformation
-     * @param \CyberSource\Model\Ptsv2paymentsWatchlistScreeningInformation $watchlistScreeningInformation
-     * @return $this
-     */
-    public function setWatchlistScreeningInformation($watchlistScreeningInformation)
-    {
-        $this->container['watchlistScreeningInformation'] = $watchlistScreeningInformation;
-
-        return $this;
-    }
     /**
      * Returns true if offset exists. False otherwise.
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -574,7 +546,6 @@ class CreateBundledDecisionManagerCaseRequest implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -586,7 +557,6 @@ class CreateBundledDecisionManagerCaseRequest implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -601,7 +571,6 @@ class CreateBundledDecisionManagerCaseRequest implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

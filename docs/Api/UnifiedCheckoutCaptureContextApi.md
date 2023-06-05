@@ -8,11 +8,11 @@ Method | HTTP request | Description
 
 
 # **generateUnifiedCheckoutCaptureContext**
-> string generateUnifiedCheckoutCaptureContext($generateUnifiedCheckoutCaptureContextRequest)
+> generateUnifiedCheckoutCaptureContext($generateUnifiedCheckoutCaptureContextRequest)
 
 Generate Unified Checkout Capture Context
 
-Generate a one-time use capture context used for the invocation of Unified Checkout. The Request wil contain all of the parameters for how Unified Checkout will operate within a client webpage. The resulting payload will be a JWT signed object that can be used to initiate Unified Checkout within a merchant web page
+Generate a one-time use capture context used for the invocation of Unified Checkout. The Request wil contain all of the paramiters for how Unified Chkcout will operate within a client webpage. The resulting payload will be a JWT signed object that can be used to initate Unified Checkout within a merchnat web page
 
 ### Example
 ```php
@@ -23,8 +23,7 @@ $api_instance = new CyberSource\Api\UnifiedCheckoutCaptureContextApi();
 $generateUnifiedCheckoutCaptureContextRequest = new \CyberSource\Model\GenerateUnifiedCheckoutCaptureContextRequest(); // \CyberSource\Model\GenerateUnifiedCheckoutCaptureContextRequest | 
 
 try {
-    $result = $api_instance->generateUnifiedCheckoutCaptureContext($generateUnifiedCheckoutCaptureContextRequest);
-    print_r($result);
+    $api_instance->generateUnifiedCheckoutCaptureContext($generateUnifiedCheckoutCaptureContextRequest);
 } catch (Exception $e) {
     echo 'Exception when calling UnifiedCheckoutCaptureContextApi->generateUnifiedCheckoutCaptureContext: ', $e->getMessage(), PHP_EOL;
 }
@@ -39,7 +38,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**string**
+void (empty response body)
 
 ### Authorization
 

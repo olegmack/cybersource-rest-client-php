@@ -54,7 +54,6 @@ class Ptsv2paymentsidrefundsProcessingInformation implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'actionList' => 'string[]',
         'paymentSolution' => 'string',
         'reconciliationId' => 'string',
         'linkId' => 'string',
@@ -62,9 +61,7 @@ class Ptsv2paymentsidrefundsProcessingInformation implements ArrayAccess
         'visaCheckoutId' => 'string',
         'purchaseLevel' => 'string',
         'recurringOptions' => '\CyberSource\Model\Ptsv2paymentsidrefundsProcessingInformationRecurringOptions',
-        'industryDataType' => 'string',
-        'paymentType' => 'string',
-        'refundOptions' => '\CyberSource\Model\Ptsv2paymentsidrefundsProcessingInformationRefundOptions'
+        'industryDataType' => 'string'
     ];
 
     /**
@@ -72,7 +69,6 @@ class Ptsv2paymentsidrefundsProcessingInformation implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'actionList' => null,
         'paymentSolution' => null,
         'reconciliationId' => null,
         'linkId' => null,
@@ -80,9 +76,7 @@ class Ptsv2paymentsidrefundsProcessingInformation implements ArrayAccess
         'visaCheckoutId' => null,
         'purchaseLevel' => null,
         'recurringOptions' => null,
-        'industryDataType' => null,
-        'paymentType' => null,
-        'refundOptions' => null
+        'industryDataType' => null
     ];
 
     public static function swaggerTypes()
@@ -100,7 +94,6 @@ class Ptsv2paymentsidrefundsProcessingInformation implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'actionList' => 'actionList',
         'paymentSolution' => 'paymentSolution',
         'reconciliationId' => 'reconciliationId',
         'linkId' => 'linkId',
@@ -108,9 +101,7 @@ class Ptsv2paymentsidrefundsProcessingInformation implements ArrayAccess
         'visaCheckoutId' => 'visaCheckoutId',
         'purchaseLevel' => 'purchaseLevel',
         'recurringOptions' => 'recurringOptions',
-        'industryDataType' => 'industryDataType',
-        'paymentType' => 'paymentType',
-        'refundOptions' => 'refundOptions'
+        'industryDataType' => 'industryDataType'
     ];
 
 
@@ -119,7 +110,6 @@ class Ptsv2paymentsidrefundsProcessingInformation implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'actionList' => 'setActionList',
         'paymentSolution' => 'setPaymentSolution',
         'reconciliationId' => 'setReconciliationId',
         'linkId' => 'setLinkId',
@@ -127,9 +117,7 @@ class Ptsv2paymentsidrefundsProcessingInformation implements ArrayAccess
         'visaCheckoutId' => 'setVisaCheckoutId',
         'purchaseLevel' => 'setPurchaseLevel',
         'recurringOptions' => 'setRecurringOptions',
-        'industryDataType' => 'setIndustryDataType',
-        'paymentType' => 'setPaymentType',
-        'refundOptions' => 'setRefundOptions'
+        'industryDataType' => 'setIndustryDataType'
     ];
 
 
@@ -138,7 +126,6 @@ class Ptsv2paymentsidrefundsProcessingInformation implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'actionList' => 'getActionList',
         'paymentSolution' => 'getPaymentSolution',
         'reconciliationId' => 'getReconciliationId',
         'linkId' => 'getLinkId',
@@ -146,9 +133,7 @@ class Ptsv2paymentsidrefundsProcessingInformation implements ArrayAccess
         'visaCheckoutId' => 'getVisaCheckoutId',
         'purchaseLevel' => 'getPurchaseLevel',
         'recurringOptions' => 'getRecurringOptions',
-        'industryDataType' => 'getIndustryDataType',
-        'paymentType' => 'getPaymentType',
-        'refundOptions' => 'getRefundOptions'
+        'industryDataType' => 'getIndustryDataType'
     ];
 
     public static function attributeMap()
@@ -182,7 +167,6 @@ class Ptsv2paymentsidrefundsProcessingInformation implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['actionList'] = isset($data['actionList']) ? $data['actionList'] : null;
         $this->container['paymentSolution'] = isset($data['paymentSolution']) ? $data['paymentSolution'] : null;
         $this->container['reconciliationId'] = isset($data['reconciliationId']) ? $data['reconciliationId'] : null;
         $this->container['linkId'] = isset($data['linkId']) ? $data['linkId'] : null;
@@ -191,8 +175,6 @@ class Ptsv2paymentsidrefundsProcessingInformation implements ArrayAccess
         $this->container['purchaseLevel'] = isset($data['purchaseLevel']) ? $data['purchaseLevel'] : null;
         $this->container['recurringOptions'] = isset($data['recurringOptions']) ? $data['recurringOptions'] : null;
         $this->container['industryDataType'] = isset($data['industryDataType']) ? $data['industryDataType'] : null;
-        $this->container['paymentType'] = isset($data['paymentType']) ? $data['paymentType'] : null;
-        $this->container['refundOptions'] = isset($data['refundOptions']) ? $data['refundOptions'] : null;
     }
 
     /**
@@ -221,27 +203,6 @@ class Ptsv2paymentsidrefundsProcessingInformation implements ArrayAccess
 
 
     /**
-     * Gets actionList
-     * @return string[]
-     */
-    public function getActionList()
-    {
-        return $this->container['actionList'];
-    }
-
-    /**
-     * Sets actionList
-     * @param string[] $actionList Array of actions (one or more) to be included in the payment to invoke bundled services along with payment status.  Possible values are one or more of follows:   - `AP_REFUND`: Use this when Alternative Payment Refund service is requested.
-     * @return $this
-     */
-    public function setActionList($actionList)
-    {
-        $this->container['actionList'] = $actionList;
-
-        return $this;
-    }
-
-    /**
      * Gets paymentSolution
      * @return string
      */
@@ -257,6 +218,7 @@ class Ptsv2paymentsidrefundsProcessingInformation implements ArrayAccess
      */
     public function setPaymentSolution($paymentSolution)
     {
+
         $this->container['paymentSolution'] = $paymentSolution;
 
         return $this;
@@ -278,6 +240,7 @@ class Ptsv2paymentsidrefundsProcessingInformation implements ArrayAccess
      */
     public function setReconciliationId($reconciliationId)
     {
+
         $this->container['reconciliationId'] = $reconciliationId;
 
         return $this;
@@ -299,6 +262,7 @@ class Ptsv2paymentsidrefundsProcessingInformation implements ArrayAccess
      */
     public function setLinkId($linkId)
     {
+
         $this->container['linkId'] = $linkId;
 
         return $this;
@@ -320,6 +284,7 @@ class Ptsv2paymentsidrefundsProcessingInformation implements ArrayAccess
      */
     public function setReportGroup($reportGroup)
     {
+
         $this->container['reportGroup'] = $reportGroup;
 
         return $this;
@@ -341,6 +306,7 @@ class Ptsv2paymentsidrefundsProcessingInformation implements ArrayAccess
      */
     public function setVisaCheckoutId($visaCheckoutId)
     {
+
         $this->container['visaCheckoutId'] = $visaCheckoutId;
 
         return $this;
@@ -362,6 +328,7 @@ class Ptsv2paymentsidrefundsProcessingInformation implements ArrayAccess
      */
     public function setPurchaseLevel($purchaseLevel)
     {
+
         $this->container['purchaseLevel'] = $purchaseLevel;
 
         return $this;
@@ -404,49 +371,8 @@ class Ptsv2paymentsidrefundsProcessingInformation implements ArrayAccess
      */
     public function setIndustryDataType($industryDataType)
     {
+
         $this->container['industryDataType'] = $industryDataType;
-
-        return $this;
-    }
-
-    /**
-     * Gets paymentType
-     * @return string
-     */
-    public function getPaymentType()
-    {
-        return $this->container['paymentType'];
-    }
-
-    /**
-     * Sets paymentType
-     * @param string $paymentType Identifier for the payment type
-     * @return $this
-     */
-    public function setPaymentType($paymentType)
-    {
-        $this->container['paymentType'] = $paymentType;
-
-        return $this;
-    }
-
-    /**
-     * Gets refundOptions
-     * @return \CyberSource\Model\Ptsv2paymentsidrefundsProcessingInformationRefundOptions
-     */
-    public function getRefundOptions()
-    {
-        return $this->container['refundOptions'];
-    }
-
-    /**
-     * Sets refundOptions
-     * @param \CyberSource\Model\Ptsv2paymentsidrefundsProcessingInformationRefundOptions $refundOptions
-     * @return $this
-     */
-    public function setRefundOptions($refundOptions)
-    {
-        $this->container['refundOptions'] = $refundOptions;
 
         return $this;
     }
@@ -455,7 +381,6 @@ class Ptsv2paymentsidrefundsProcessingInformation implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -466,7 +391,6 @@ class Ptsv2paymentsidrefundsProcessingInformation implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -478,7 +402,6 @@ class Ptsv2paymentsidrefundsProcessingInformation implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -493,7 +416,6 @@ class Ptsv2paymentsidrefundsProcessingInformation implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

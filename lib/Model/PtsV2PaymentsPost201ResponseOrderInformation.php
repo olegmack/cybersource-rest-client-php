@@ -56,8 +56,7 @@ class PtsV2PaymentsPost201ResponseOrderInformation implements ArrayAccess
     protected static $swaggerTypes = [
         'amountDetails' => '\CyberSource\Model\PtsV2PaymentsPost201ResponseOrderInformationAmountDetails',
         'invoiceDetails' => '\CyberSource\Model\PtsV2PaymentsPost201ResponseOrderInformationInvoiceDetails',
-        'rewardPointsDetails' => '\CyberSource\Model\PtsV2PaymentsPost201ResponseOrderInformationRewardPointsDetails',
-        'billTo' => '\CyberSource\Model\PtsV2PaymentsPost201ResponseOrderInformationBillTo'
+        'rewardPointsDetails' => '\CyberSource\Model\PtsV2PaymentsPost201ResponseOrderInformationRewardPointsDetails'
     ];
 
     /**
@@ -67,8 +66,7 @@ class PtsV2PaymentsPost201ResponseOrderInformation implements ArrayAccess
     protected static $swaggerFormats = [
         'amountDetails' => null,
         'invoiceDetails' => null,
-        'rewardPointsDetails' => null,
-        'billTo' => null
+        'rewardPointsDetails' => null
     ];
 
     public static function swaggerTypes()
@@ -88,8 +86,7 @@ class PtsV2PaymentsPost201ResponseOrderInformation implements ArrayAccess
     protected static $attributeMap = [
         'amountDetails' => 'amountDetails',
         'invoiceDetails' => 'invoiceDetails',
-        'rewardPointsDetails' => 'rewardPointsDetails',
-        'billTo' => 'billTo'
+        'rewardPointsDetails' => 'rewardPointsDetails'
     ];
 
 
@@ -100,8 +97,7 @@ class PtsV2PaymentsPost201ResponseOrderInformation implements ArrayAccess
     protected static $setters = [
         'amountDetails' => 'setAmountDetails',
         'invoiceDetails' => 'setInvoiceDetails',
-        'rewardPointsDetails' => 'setRewardPointsDetails',
-        'billTo' => 'setBillTo'
+        'rewardPointsDetails' => 'setRewardPointsDetails'
     ];
 
 
@@ -112,8 +108,7 @@ class PtsV2PaymentsPost201ResponseOrderInformation implements ArrayAccess
     protected static $getters = [
         'amountDetails' => 'getAmountDetails',
         'invoiceDetails' => 'getInvoiceDetails',
-        'rewardPointsDetails' => 'getRewardPointsDetails',
-        'billTo' => 'getBillTo'
+        'rewardPointsDetails' => 'getRewardPointsDetails'
     ];
 
     public static function attributeMap()
@@ -150,7 +145,6 @@ class PtsV2PaymentsPost201ResponseOrderInformation implements ArrayAccess
         $this->container['amountDetails'] = isset($data['amountDetails']) ? $data['amountDetails'] : null;
         $this->container['invoiceDetails'] = isset($data['invoiceDetails']) ? $data['invoiceDetails'] : null;
         $this->container['rewardPointsDetails'] = isset($data['rewardPointsDetails']) ? $data['rewardPointsDetails'] : null;
-        $this->container['billTo'] = isset($data['billTo']) ? $data['billTo'] : null;
     }
 
     /**
@@ -240,33 +234,11 @@ class PtsV2PaymentsPost201ResponseOrderInformation implements ArrayAccess
 
         return $this;
     }
-
-    /**
-     * Gets billTo
-     * @return \CyberSource\Model\PtsV2PaymentsPost201ResponseOrderInformationBillTo
-     */
-    public function getBillTo()
-    {
-        return $this->container['billTo'];
-    }
-
-    /**
-     * Sets billTo
-     * @param \CyberSource\Model\PtsV2PaymentsPost201ResponseOrderInformationBillTo $billTo
-     * @return $this
-     */
-    public function setBillTo($billTo)
-    {
-        $this->container['billTo'] = $billTo;
-
-        return $this;
-    }
     /**
      * Returns true if offset exists. False otherwise.
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -277,7 +249,6 @@ class PtsV2PaymentsPost201ResponseOrderInformation implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -289,7 +260,6 @@ class PtsV2PaymentsPost201ResponseOrderInformation implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -304,7 +274,6 @@ class PtsV2PaymentsPost201ResponseOrderInformation implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

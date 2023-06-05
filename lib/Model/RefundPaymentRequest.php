@@ -54,7 +54,7 @@ class RefundPaymentRequest implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'clientReferenceInformation' => '\CyberSource\Model\Ptsv2paymentsidrefundsClientReferenceInformation',
+        'clientReferenceInformation' => '\CyberSource\Model\Ptsv2paymentsClientReferenceInformation',
         'processingInformation' => '\CyberSource\Model\Ptsv2paymentsidrefundsProcessingInformation',
         'paymentInformation' => '\CyberSource\Model\Ptsv2paymentsidrefundsPaymentInformation',
         'orderInformation' => '\CyberSource\Model\Ptsv2paymentsidrefundsOrderInformation',
@@ -228,7 +228,7 @@ class RefundPaymentRequest implements ArrayAccess
 
     /**
      * Gets clientReferenceInformation
-     * @return \CyberSource\Model\Ptsv2paymentsidrefundsClientReferenceInformation
+     * @return \CyberSource\Model\Ptsv2paymentsClientReferenceInformation
      */
     public function getClientReferenceInformation()
     {
@@ -237,7 +237,7 @@ class RefundPaymentRequest implements ArrayAccess
 
     /**
      * Sets clientReferenceInformation
-     * @param \CyberSource\Model\Ptsv2paymentsidrefundsClientReferenceInformation $clientReferenceInformation
+     * @param \CyberSource\Model\Ptsv2paymentsClientReferenceInformation $clientReferenceInformation
      * @return $this
      */
     public function setClientReferenceInformation($clientReferenceInformation)
@@ -482,7 +482,6 @@ class RefundPaymentRequest implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -493,7 +492,6 @@ class RefundPaymentRequest implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -505,7 +503,6 @@ class RefundPaymentRequest implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -520,7 +517,6 @@ class RefundPaymentRequest implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

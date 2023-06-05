@@ -212,6 +212,7 @@ class Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication impleme
      */
     public function setLowValueExemptionIndicator($lowValueExemptionIndicator)
     {
+
         $this->container['lowValueExemptionIndicator'] = $lowValueExemptionIndicator;
 
         return $this;
@@ -233,6 +234,7 @@ class Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication impleme
      */
     public function setRiskAnalysisExemptionIndicator($riskAnalysisExemptionIndicator)
     {
+
         $this->container['riskAnalysisExemptionIndicator'] = $riskAnalysisExemptionIndicator;
 
         return $this;
@@ -254,6 +256,7 @@ class Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication impleme
      */
     public function setTrustedMerchantExemptionIndicator($trustedMerchantExemptionIndicator)
     {
+
         $this->container['trustedMerchantExemptionIndicator'] = $trustedMerchantExemptionIndicator;
 
         return $this;
@@ -275,6 +278,7 @@ class Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication impleme
      */
     public function setSecureCorporatePaymentIndicator($secureCorporatePaymentIndicator)
     {
+
         $this->container['secureCorporatePaymentIndicator'] = $secureCorporatePaymentIndicator;
 
         return $this;
@@ -296,6 +300,7 @@ class Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication impleme
      */
     public function setDelegatedAuthenticationExemptionIndicator($delegatedAuthenticationExemptionIndicator)
     {
+
         $this->container['delegatedAuthenticationExemptionIndicator'] = $delegatedAuthenticationExemptionIndicator;
 
         return $this;
@@ -317,6 +322,7 @@ class Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication impleme
      */
     public function setOutageExemptionIndicator($outageExemptionIndicator)
     {
+
         $this->container['outageExemptionIndicator'] = $outageExemptionIndicator;
 
         return $this;
@@ -338,6 +344,7 @@ class Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication impleme
      */
     public function setAuthenticationIndicator($authenticationIndicator)
     {
+
         $this->container['authenticationIndicator'] = $authenticationIndicator;
 
         return $this;
@@ -347,7 +354,6 @@ class Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication impleme
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -358,7 +364,6 @@ class Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication impleme
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -370,7 +375,6 @@ class Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication impleme
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -385,7 +389,6 @@ class Ptsv2paymentsConsumerAuthenticationInformationStrongAuthentication impleme
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

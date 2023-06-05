@@ -230,6 +230,7 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
      */
     public function setEmail($email)
     {
+
         $this->container['email'] = $email;
 
         return $this;
@@ -251,6 +252,7 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
      */
     public function setEmailRaw($emailRaw)
     {
+
         $this->container['emailRaw'] = $emailRaw;
 
         return $this;
@@ -267,11 +269,12 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
 
     /**
      * Sets name
-     * @param string $name #### Visa Platform Connect Mapped Electronic Verification response code for the customer’s name.  Valid values :  'Y'   Yes, the data Matches 'N'   No Match 'O'   Partial Match
+     * @param string $name Mapped Electronic Verification response code for the customer’s name.
      * @return $this
      */
     public function setName($name)
     {
+
         $this->container['name'] = $name;
 
         return $this;
@@ -288,11 +291,12 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
 
     /**
      * Sets nameRaw
-     * @param string $nameRaw #### Visa Platform Connect Raw Electronic Verification response code from the processor for the customer’s name.  Valid values :  '01'     Match '50'     Partial Match '99'     No Match
+     * @param string $nameRaw Raw Electronic Verification response code from the processor for the customer’s name.
      * @return $this
      */
     public function setNameRaw($nameRaw)
     {
+
         $this->container['nameRaw'] = $nameRaw;
 
         return $this;
@@ -314,6 +318,7 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
      */
     public function setPhoneNumber($phoneNumber)
     {
+
         $this->container['phoneNumber'] = $phoneNumber;
 
         return $this;
@@ -335,6 +340,7 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
      */
     public function setPhoneNumberRaw($phoneNumberRaw)
     {
+
         $this->container['phoneNumberRaw'] = $phoneNumberRaw;
 
         return $this;
@@ -356,6 +362,7 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
      */
     public function setStreet($street)
     {
+
         $this->container['street'] = $street;
 
         return $this;
@@ -377,6 +384,7 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
      */
     public function setStreetRaw($streetRaw)
     {
+
         $this->container['streetRaw'] = $streetRaw;
 
         return $this;
@@ -398,6 +406,7 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
      */
     public function setPostalCode($postalCode)
     {
+
         $this->container['postalCode'] = $postalCode;
 
         return $this;
@@ -419,6 +428,7 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
      */
     public function setPostalCodeRaw($postalCodeRaw)
     {
+
         $this->container['postalCodeRaw'] = $postalCodeRaw;
 
         return $this;
@@ -428,7 +438,6 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -439,7 +448,6 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -451,7 +459,6 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -466,7 +473,6 @@ class TssV2TransactionsGet200ResponseProcessorInformationElectronicVerificationR
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

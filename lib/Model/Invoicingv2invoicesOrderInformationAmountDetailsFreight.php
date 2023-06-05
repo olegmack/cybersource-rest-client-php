@@ -56,8 +56,7 @@ class Invoicingv2invoicesOrderInformationAmountDetailsFreight implements ArrayAc
       */
     protected static $swaggerTypes = [
         'amount' => 'string',
-        'taxable' => 'bool',
-        'taxRate' => 'string'
+        'taxable' => 'bool'
     ];
 
     /**
@@ -66,8 +65,7 @@ class Invoicingv2invoicesOrderInformationAmountDetailsFreight implements ArrayAc
       */
     protected static $swaggerFormats = [
         'amount' => null,
-        'taxable' => null,
-        'taxRate' => null
+        'taxable' => null
     ];
 
     public static function swaggerTypes()
@@ -86,8 +84,7 @@ class Invoicingv2invoicesOrderInformationAmountDetailsFreight implements ArrayAc
      */
     protected static $attributeMap = [
         'amount' => 'amount',
-        'taxable' => 'taxable',
-        'taxRate' => 'taxRate'
+        'taxable' => 'taxable'
     ];
 
 
@@ -97,8 +94,7 @@ class Invoicingv2invoicesOrderInformationAmountDetailsFreight implements ArrayAc
      */
     protected static $setters = [
         'amount' => 'setAmount',
-        'taxable' => 'setTaxable',
-        'taxRate' => 'setTaxRate'
+        'taxable' => 'setTaxable'
     ];
 
 
@@ -108,8 +104,7 @@ class Invoicingv2invoicesOrderInformationAmountDetailsFreight implements ArrayAc
      */
     protected static $getters = [
         'amount' => 'getAmount',
-        'taxable' => 'getTaxable',
-        'taxRate' => 'getTaxRate'
+        'taxable' => 'getTaxable'
     ];
 
     public static function attributeMap()
@@ -145,7 +140,6 @@ class Invoicingv2invoicesOrderInformationAmountDetailsFreight implements ArrayAc
     {
         $this->container['amount'] = isset($data['amount']) ? $data['amount'] : null;
         $this->container['taxable'] = isset($data['taxable']) ? $data['taxable'] : null;
-        $this->container['taxRate'] = isset($data['taxRate']) ? $data['taxRate'] : null;
     }
 
     /**
@@ -189,6 +183,7 @@ class Invoicingv2invoicesOrderInformationAmountDetailsFreight implements ArrayAc
      */
     public function setAmount($amount)
     {
+
         $this->container['amount'] = $amount;
 
         return $this;
@@ -214,33 +209,11 @@ class Invoicingv2invoicesOrderInformationAmountDetailsFreight implements ArrayAc
 
         return $this;
     }
-
-    /**
-     * Gets taxRate
-     * @return string
-     */
-    public function getTaxRate()
-    {
-        return $this->container['taxRate'];
-    }
-
-    /**
-     * Sets taxRate
-     * @param string $taxRate Shipping Tax rate applied to the freight amount.  **Visa**: Valid range is 0.01 to 0.99 (1% to 99%, with only whole percentage values accepted; values with additional decimal places will be truncated).  **Mastercard**: Valid range is 0.00001 to 0.99999 (0.001% to 99.999%).
-     * @return $this
-     */
-    public function setTaxRate($taxRate)
-    {
-        $this->container['taxRate'] = $taxRate;
-
-        return $this;
-    }
     /**
      * Returns true if offset exists. False otherwise.
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -251,7 +224,6 @@ class Invoicingv2invoicesOrderInformationAmountDetailsFreight implements ArrayAc
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -263,7 +235,6 @@ class Invoicingv2invoicesOrderInformationAmountDetailsFreight implements ArrayAc
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -278,7 +249,6 @@ class Invoicingv2invoicesOrderInformationAmountDetailsFreight implements ArrayAc
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

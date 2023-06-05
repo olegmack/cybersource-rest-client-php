@@ -506,6 +506,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
      */
     public function setCavv($cavv)
     {
+
         $this->container['cavv'] = $cavv;
 
         return $this;
@@ -527,6 +528,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
      */
     public function setCavvAlgorithm($cavvAlgorithm)
     {
+
         $this->container['cavvAlgorithm'] = $cavvAlgorithm;
 
         return $this;
@@ -548,6 +550,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
      */
     public function setEciRaw($eciRaw)
     {
+
         $this->container['eciRaw'] = $eciRaw;
 
         return $this;
@@ -569,6 +572,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
      */
     public function setParesStatus($paresStatus)
     {
+
         $this->container['paresStatus'] = $paresStatus;
 
         return $this;
@@ -590,6 +594,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
      */
     public function setVeresEnrolled($veresEnrolled)
     {
+
         $this->container['veresEnrolled'] = $veresEnrolled;
 
         return $this;
@@ -611,6 +616,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
      */
     public function setXid($xid)
     {
+
         $this->container['xid'] = $xid;
 
         return $this;
@@ -632,6 +638,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
      */
     public function setUcafCollectionIndicator($ucafCollectionIndicator)
     {
+
         $this->container['ucafCollectionIndicator'] = $ucafCollectionIndicator;
 
         return $this;
@@ -653,6 +660,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
      */
     public function setUcafAuthenticationData($ucafAuthenticationData)
     {
+
         $this->container['ucafAuthenticationData'] = $ucafAuthenticationData;
 
         return $this;
@@ -695,6 +703,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
      */
     public function setDirectoryServerTransactionId($directoryServerTransactionId)
     {
+
         $this->container['directoryServerTransactionId'] = $directoryServerTransactionId;
 
         return $this;
@@ -716,6 +725,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
      */
     public function setPaSpecificationVersion($paSpecificationVersion)
     {
+
         $this->container['paSpecificationVersion'] = $paSpecificationVersion;
 
         return $this;
@@ -737,6 +747,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
      */
     public function setAuthenticationType($authenticationType)
     {
+
         $this->container['authenticationType'] = $authenticationType;
 
         return $this;
@@ -779,6 +790,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
      */
     public function setAcsTransactionId($acsTransactionId)
     {
+
         $this->container['acsTransactionId'] = $acsTransactionId;
 
         return $this;
@@ -800,6 +812,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
      */
     public function setAcsWindowSize($acsWindowSize)
     {
+
         $this->container['acsWindowSize'] = $acsWindowSize;
 
         return $this;
@@ -821,6 +834,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
      */
     public function setAlternateAuthenticationData($alternateAuthenticationData)
     {
+
         $this->container['alternateAuthenticationData'] = $alternateAuthenticationData;
 
         return $this;
@@ -842,6 +856,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
      */
     public function setAlternateAuthenticationDate($alternateAuthenticationDate)
     {
+
         $this->container['alternateAuthenticationDate'] = $alternateAuthenticationDate;
 
         return $this;
@@ -884,6 +899,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
      */
     public function setAuthenticationDate($authenticationDate)
     {
+
         $this->container['authenticationDate'] = $authenticationDate;
 
         return $this;
@@ -905,6 +921,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
      */
     public function setAuthenticationTransactionId($authenticationTransactionId)
     {
+
         $this->container['authenticationTransactionId'] = $authenticationTransactionId;
 
         return $this;
@@ -926,6 +943,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
      */
     public function setChallengeCancelCode($challengeCancelCode)
     {
+
         $this->container['challengeCancelCode'] = $challengeCancelCode;
 
         return $this;
@@ -968,6 +986,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
      */
     public function setChallengeStatus($challengeStatus)
     {
+
         $this->container['challengeStatus'] = $challengeStatus;
 
         return $this;
@@ -989,6 +1008,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
      */
     public function setCustomerCardAlias($customerCardAlias)
     {
+
         $this->container['customerCardAlias'] = $customerCardAlias;
 
         return $this;
@@ -1010,6 +1030,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
      */
     public function setDecoupledAuthenticationIndicator($decoupledAuthenticationIndicator)
     {
+
         $this->container['decoupledAuthenticationIndicator'] = $decoupledAuthenticationIndicator;
 
         return $this;
@@ -1031,6 +1052,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
      */
     public function setDecoupledAuthenticationMaxTime($decoupledAuthenticationMaxTime)
     {
+
         $this->container['decoupledAuthenticationMaxTime'] = $decoupledAuthenticationMaxTime;
 
         return $this;
@@ -1073,6 +1095,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
      */
     public function setDeviceChannel($deviceChannel)
     {
+
         $this->container['deviceChannel'] = $deviceChannel;
 
         return $this;
@@ -1115,6 +1138,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
      */
     public function setMerchantFraudRate($merchantFraudRate)
     {
+
         $this->container['merchantFraudRate'] = $merchantFraudRate;
 
         return $this;
@@ -1157,6 +1181,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
      */
     public function setMarketingSource($marketingSource)
     {
+
         $this->container['marketingSource'] = $marketingSource;
 
         return $this;
@@ -1178,6 +1203,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
      */
     public function setMcc($mcc)
     {
+
         $this->container['mcc'] = $mcc;
 
         return $this;
@@ -1241,6 +1267,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
      */
     public function setNetworkScore($networkScore)
     {
+
         $this->container['networkScore'] = $networkScore;
 
         return $this;
@@ -1262,6 +1289,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
      */
     public function setNpaCode($npaCode)
     {
+
         $this->container['npaCode'] = $npaCode;
 
         return $this;
@@ -1304,6 +1332,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
      */
     public function setOverrideCountryCode($overrideCountryCode)
     {
+
         $this->container['overrideCountryCode'] = $overrideCountryCode;
 
         return $this;
@@ -1325,6 +1354,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
      */
     public function setPriorAuthenticationData($priorAuthenticationData)
     {
+
         $this->container['priorAuthenticationData'] = $priorAuthenticationData;
 
         return $this;
@@ -1346,6 +1376,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
      */
     public function setPriorAuthenticationMethod($priorAuthenticationMethod)
     {
+
         $this->container['priorAuthenticationMethod'] = $priorAuthenticationMethod;
 
         return $this;
@@ -1367,6 +1398,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
      */
     public function setPriorAuthenticationReferenceId($priorAuthenticationReferenceId)
     {
+
         $this->container['priorAuthenticationReferenceId'] = $priorAuthenticationReferenceId;
 
         return $this;
@@ -1388,6 +1420,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
      */
     public function setPriorAuthenticationTime($priorAuthenticationTime)
     {
+
         $this->container['priorAuthenticationTime'] = $priorAuthenticationTime;
 
         return $this;
@@ -1409,6 +1442,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
      */
     public function setProductCode($productCode)
     {
+
         $this->container['productCode'] = $productCode;
 
         return $this;
@@ -1430,6 +1464,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
      */
     public function setReturnUrl($returnUrl)
     {
+
         $this->container['returnUrl'] = $returnUrl;
 
         return $this;
@@ -1451,6 +1486,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
      */
     public function setRequestorId($requestorId)
     {
+
         $this->container['requestorId'] = $requestorId;
 
         return $this;
@@ -1472,6 +1508,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
      */
     public function setRequestorInitiatedAuthenticationIndicator($requestorInitiatedAuthenticationIndicator)
     {
+
         $this->container['requestorInitiatedAuthenticationIndicator'] = $requestorInitiatedAuthenticationIndicator;
 
         return $this;
@@ -1493,6 +1530,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
      */
     public function setRequestorName($requestorName)
     {
+
         $this->container['requestorName'] = $requestorName;
 
         return $this;
@@ -1514,6 +1552,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
      */
     public function setReferenceId($referenceId)
     {
+
         $this->container['referenceId'] = $referenceId;
 
         return $this;
@@ -1535,6 +1574,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
      */
     public function setSdkMaxTimeout($sdkMaxTimeout)
     {
+
         $this->container['sdkMaxTimeout'] = $sdkMaxTimeout;
 
         return $this;
@@ -1556,6 +1596,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
      */
     public function setSecureCorporatePaymentIndicator($secureCorporatePaymentIndicator)
     {
+
         $this->container['secureCorporatePaymentIndicator'] = $secureCorporatePaymentIndicator;
 
         return $this;
@@ -1598,6 +1639,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
      */
     public function setWhiteListStatus($whiteListStatus)
     {
+
         $this->container['whiteListStatus'] = $whiteListStatus;
 
         return $this;
@@ -1619,6 +1661,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
      */
     public function setEffectiveAuthenticationType($effectiveAuthenticationType)
     {
+
         $this->container['effectiveAuthenticationType'] = $effectiveAuthenticationType;
 
         return $this;
@@ -1640,6 +1683,7 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
      */
     public function setSignedParesStatusReason($signedParesStatusReason)
     {
+
         $this->container['signedParesStatusReason'] = $signedParesStatusReason;
 
         return $this;
@@ -1670,7 +1714,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -1681,7 +1724,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -1693,7 +1735,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -1708,7 +1749,6 @@ class Ptsv2paymentsConsumerAuthenticationInformation implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

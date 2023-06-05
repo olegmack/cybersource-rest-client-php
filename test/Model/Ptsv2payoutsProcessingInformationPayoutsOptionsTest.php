@@ -104,11 +104,4 @@ class Ptsv2payoutsProcessingInformationPayoutsOptionsTest extends \PHPUnit_Frame
     public function testPropertyAccountFundingReferenceId()
     {
     }
-
-    /**
-     * Test attribute "deferredDateTime"
-     */
-    public function testPropertyDeferredDateTime()
-    {
-    }
 }

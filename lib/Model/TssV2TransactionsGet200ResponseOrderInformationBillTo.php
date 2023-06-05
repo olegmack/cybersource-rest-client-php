@@ -254,6 +254,7 @@ class TssV2TransactionsGet200ResponseOrderInformationBillTo implements ArrayAcce
      */
     public function setFirstName($firstName)
     {
+
         $this->container['firstName'] = $firstName;
 
         return $this;
@@ -275,6 +276,7 @@ class TssV2TransactionsGet200ResponseOrderInformationBillTo implements ArrayAcce
      */
     public function setLastName($lastName)
     {
+
         $this->container['lastName'] = $lastName;
 
         return $this;
@@ -296,6 +298,7 @@ class TssV2TransactionsGet200ResponseOrderInformationBillTo implements ArrayAcce
      */
     public function setMiddleName($middleName)
     {
+
         $this->container['middleName'] = $middleName;
 
         return $this;
@@ -317,6 +320,7 @@ class TssV2TransactionsGet200ResponseOrderInformationBillTo implements ArrayAcce
      */
     public function setNameSuffix($nameSuffix)
     {
+
         $this->container['nameSuffix'] = $nameSuffix;
 
         return $this;
@@ -338,6 +342,7 @@ class TssV2TransactionsGet200ResponseOrderInformationBillTo implements ArrayAcce
      */
     public function setAddress1($address1)
     {
+
         $this->container['address1'] = $address1;
 
         return $this;
@@ -359,6 +364,7 @@ class TssV2TransactionsGet200ResponseOrderInformationBillTo implements ArrayAcce
      */
     public function setAddress2($address2)
     {
+
         $this->container['address2'] = $address2;
 
         return $this;
@@ -380,6 +386,7 @@ class TssV2TransactionsGet200ResponseOrderInformationBillTo implements ArrayAcce
      */
     public function setLocality($locality)
     {
+
         $this->container['locality'] = $locality;
 
         return $this;
@@ -401,6 +408,7 @@ class TssV2TransactionsGet200ResponseOrderInformationBillTo implements ArrayAcce
      */
     public function setAdministrativeArea($administrativeArea)
     {
+
         $this->container['administrativeArea'] = $administrativeArea;
 
         return $this;
@@ -422,6 +430,7 @@ class TssV2TransactionsGet200ResponseOrderInformationBillTo implements ArrayAcce
      */
     public function setPostalCode($postalCode)
     {
+
         $this->container['postalCode'] = $postalCode;
 
         return $this;
@@ -443,6 +452,7 @@ class TssV2TransactionsGet200ResponseOrderInformationBillTo implements ArrayAcce
      */
     public function setCompany($company)
     {
+
         $this->container['company'] = $company;
 
         return $this;
@@ -464,6 +474,7 @@ class TssV2TransactionsGet200ResponseOrderInformationBillTo implements ArrayAcce
      */
     public function setEmail($email)
     {
+
         $this->container['email'] = $email;
 
         return $this;
@@ -485,6 +496,7 @@ class TssV2TransactionsGet200ResponseOrderInformationBillTo implements ArrayAcce
      */
     public function setCountry($country)
     {
+
         $this->container['country'] = $country;
 
         return $this;
@@ -506,6 +518,7 @@ class TssV2TransactionsGet200ResponseOrderInformationBillTo implements ArrayAcce
      */
     public function setTitle($title)
     {
+
         $this->container['title'] = $title;
 
         return $this;
@@ -527,6 +540,7 @@ class TssV2TransactionsGet200ResponseOrderInformationBillTo implements ArrayAcce
      */
     public function setPhoneNumber($phoneNumber)
     {
+
         $this->container['phoneNumber'] = $phoneNumber;
 
         return $this;
@@ -536,7 +550,6 @@ class TssV2TransactionsGet200ResponseOrderInformationBillTo implements ArrayAcce
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -547,7 +560,6 @@ class TssV2TransactionsGet200ResponseOrderInformationBillTo implements ArrayAcce
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -559,7 +571,6 @@ class TssV2TransactionsGet200ResponseOrderInformationBillTo implements ArrayAcce
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -574,7 +585,6 @@ class TssV2TransactionsGet200ResponseOrderInformationBillTo implements ArrayAcce
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

@@ -174,11 +174,4 @@ class CreateBundledDecisionManagerCaseRequestTest extends \PHPUnit_Framework_Tes
     public function testPropertyConsumerAuthenticationInformation()
     {
     }
-
-    /**
-     * Test attribute "watchlistScreeningInformation"
-     */
-    public function testPropertyWatchlistScreeningInformation()
-    {
-    }
 }

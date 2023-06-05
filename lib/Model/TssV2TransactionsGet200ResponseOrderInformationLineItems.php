@@ -180,6 +180,14 @@ class TssV2TransactionsGet200ResponseOrderInformationLineItems implements ArrayA
     {
         $invalid_properties = [];
 
+        if (!is_null($this->container['quantity']) && ($this->container['quantity'] > 999999999)) {
+            $invalid_properties[] = "invalid value for 'quantity', must be smaller than or equal to 999999999.";
+        }
+
+        if (!is_null($this->container['quantity']) && ($this->container['quantity'] < 1)) {
+            $invalid_properties[] = "invalid value for 'quantity', must be bigger than or equal to 1.";
+        }
+
         return $invalid_properties;
     }
 
@@ -192,6 +200,12 @@ class TssV2TransactionsGet200ResponseOrderInformationLineItems implements ArrayA
     public function valid()
     {
 
+        if ($this->container['quantity'] > 999999999) {
+            return false;
+        }
+        if ($this->container['quantity'] < 1) {
+            return false;
+        }
         return true;
     }
 
@@ -212,6 +226,7 @@ class TssV2TransactionsGet200ResponseOrderInformationLineItems implements ArrayA
      */
     public function setProductCode($productCode)
     {
+
         $this->container['productCode'] = $productCode;
 
         return $this;
@@ -233,6 +248,7 @@ class TssV2TransactionsGet200ResponseOrderInformationLineItems implements ArrayA
      */
     public function setProductName($productName)
     {
+
         $this->container['productName'] = $productName;
 
         return $this;
@@ -254,6 +270,7 @@ class TssV2TransactionsGet200ResponseOrderInformationLineItems implements ArrayA
      */
     public function setProductSku($productSku)
     {
+
         $this->container['productSku'] = $productSku;
 
         return $this;
@@ -275,6 +292,7 @@ class TssV2TransactionsGet200ResponseOrderInformationLineItems implements ArrayA
      */
     public function setTaxAmount($taxAmount)
     {
+
         $this->container['taxAmount'] = $taxAmount;
 
         return $this;
@@ -296,6 +314,13 @@ class TssV2TransactionsGet200ResponseOrderInformationLineItems implements ArrayA
      */
     public function setQuantity($quantity)
     {
+        if (!is_null($quantity) && ($quantity > 999999999)) {
+            throw new \InvalidArgumentException('invalid value for $quantity when calling TssV2TransactionsGet200ResponseOrderInformationLineItems., must be smaller than or equal to 999999999.');
+        }
+        if (!is_null($quantity) && ($quantity < 1)) {
+            throw new \InvalidArgumentException('invalid value for $quantity when calling TssV2TransactionsGet200ResponseOrderInformationLineItems., must be bigger than or equal to 1.');
+        }
+
         $this->container['quantity'] = $quantity;
 
         return $this;
@@ -317,6 +342,7 @@ class TssV2TransactionsGet200ResponseOrderInformationLineItems implements ArrayA
      */
     public function setUnitPrice($unitPrice)
     {
+
         $this->container['unitPrice'] = $unitPrice;
 
         return $this;
@@ -347,7 +373,6 @@ class TssV2TransactionsGet200ResponseOrderInformationLineItems implements ArrayA
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -358,7 +383,6 @@ class TssV2TransactionsGet200ResponseOrderInformationLineItems implements ArrayA
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -370,7 +394,6 @@ class TssV2TransactionsGet200ResponseOrderInformationLineItems implements ArrayA
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -385,7 +408,6 @@ class TssV2TransactionsGet200ResponseOrderInformationLineItems implements ArrayA
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

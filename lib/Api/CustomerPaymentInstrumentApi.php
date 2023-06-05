@@ -99,16 +99,16 @@ class CustomerPaymentInstrumentApi
      *
      * Delete a Customer Payment Instrument
      *
-     * @param string $customerId The Id of a Customer. (required)
-     * @param string $paymentInstrumentId The Id of a payment instrument. (required)
-     * @param string $profileId The Id of a profile containing user specific TMS configuration. (optional)
+     * @param string $customerTokenId The TokenId of a customer. (required)
+     * @param string $paymentInstrumentTokenId The TokenId of a payment instrument. (required)
+     * @param string $profileId The id of a profile containing user specific TMS configuration. (optional)
      * @throws \CyberSource\ApiException on non-2xx response
      * @return array of void, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteCustomerPaymentInstrument($customerId, $paymentInstrumentId, $profileId = null)
+    public function deleteCustomerPaymentInstrument($customerTokenId, $paymentInstrumentTokenId, $profileId = null)
     {
         self::$logger->info('CALL TO METHOD deleteCustomerPaymentInstrument STARTED');
-        list($response, $statusCode, $httpHeader) = $this->deleteCustomerPaymentInstrumentWithHttpInfo($customerId, $paymentInstrumentId, $profileId);
+        list($response, $statusCode, $httpHeader) = $this->deleteCustomerPaymentInstrumentWithHttpInfo($customerTokenId, $paymentInstrumentTokenId, $profileId);
         self::$logger->info('CALL TO METHOD deleteCustomerPaymentInstrument ENDED');
         self::$logger->close();
         return [$response, $statusCode, $httpHeader];
@@ -119,40 +119,40 @@ class CustomerPaymentInstrumentApi
      *
      * Delete a Customer Payment Instrument
      *
-     * @param string $customerId The Id of a Customer. (required)
-     * @param string $paymentInstrumentId The Id of a payment instrument. (required)
-     * @param string $profileId The Id of a profile containing user specific TMS configuration. (optional)
+     * @param string $customerTokenId The TokenId of a customer. (required)
+     * @param string $paymentInstrumentTokenId The TokenId of a payment instrument. (required)
+     * @param string $profileId The id of a profile containing user specific TMS configuration. (optional)
      * @throws \CyberSource\ApiException on non-2xx response
      * @return array of null, HTTP status code, HTTP response headers (array of strings)
      */
-    public function deleteCustomerPaymentInstrumentWithHttpInfo($customerId, $paymentInstrumentId, $profileId = null)
+    public function deleteCustomerPaymentInstrumentWithHttpInfo($customerTokenId, $paymentInstrumentTokenId, $profileId = null)
     {
-        // verify the required parameter 'customerId' is set
-        if ($customerId === null) {
-            self::$logger->error("InvalidArgumentException : Missing the required parameter $customerId when calling deleteCustomerPaymentInstrument");
-            throw new \InvalidArgumentException('Missing the required parameter $customerId when calling deleteCustomerPaymentInstrument');
+        // verify the required parameter 'customerTokenId' is set
+        if ($customerTokenId === null) {
+            self::$logger->error("InvalidArgumentException : Missing the required parameter $customerTokenId when calling deleteCustomerPaymentInstrument");
+            throw new \InvalidArgumentException('Missing the required parameter $customerTokenId when calling deleteCustomerPaymentInstrument');
         }
-        if ((strlen($customerId) > 32)) {
-            self::$logger->error("InvalidArgumentException : Invalid length for \"$customerId\" when calling CustomerPaymentInstrumentApi.deleteCustomerPaymentInstrument, must be smaller than or equal to 32.");
-            throw new \InvalidArgumentException('Invalid length for "$customerId" when calling CustomerPaymentInstrumentApi.deleteCustomerPaymentInstrument, must be smaller than or equal to 32.');
+        if ((strlen($customerTokenId) > 32)) {
+            self::$logger->error("InvalidArgumentException : Invalid length for \"$customerTokenId\" when calling CustomerPaymentInstrumentApi.deleteCustomerPaymentInstrument, must be smaller than or equal to 32.");
+            throw new \InvalidArgumentException('Invalid length for "$customerTokenId" when calling CustomerPaymentInstrumentApi.deleteCustomerPaymentInstrument, must be smaller than or equal to 32.');
         }
-        if ((strlen($customerId) < 1)) {
-            self::$logger->error("InvalidArgumentException : Invalid length for \"$customerId\" when calling CustomerPaymentInstrumentApi.deleteCustomerPaymentInstrument, must be bigger than or equal to 1.");
-            throw new \InvalidArgumentException('Invalid length for "$customerId" when calling CustomerPaymentInstrumentApi.deleteCustomerPaymentInstrument, must be bigger than or equal to 1.');
+        if ((strlen($customerTokenId) < 1)) {
+            self::$logger->error("InvalidArgumentException : Invalid length for \"$customerTokenId\" when calling CustomerPaymentInstrumentApi.deleteCustomerPaymentInstrument, must be bigger than or equal to 1.");
+            throw new \InvalidArgumentException('Invalid length for "$customerTokenId" when calling CustomerPaymentInstrumentApi.deleteCustomerPaymentInstrument, must be bigger than or equal to 1.');
         }
 
-        // verify the required parameter 'paymentInstrumentId' is set
-        if ($paymentInstrumentId === null) {
-            self::$logger->error("InvalidArgumentException : Missing the required parameter $paymentInstrumentId when calling deleteCustomerPaymentInstrument");
-            throw new \InvalidArgumentException('Missing the required parameter $paymentInstrumentId when calling deleteCustomerPaymentInstrument');
+        // verify the required parameter 'paymentInstrumentTokenId' is set
+        if ($paymentInstrumentTokenId === null) {
+            self::$logger->error("InvalidArgumentException : Missing the required parameter $paymentInstrumentTokenId when calling deleteCustomerPaymentInstrument");
+            throw new \InvalidArgumentException('Missing the required parameter $paymentInstrumentTokenId when calling deleteCustomerPaymentInstrument');
         }
-        if ((strlen($paymentInstrumentId) > 32)) {
-            self::$logger->error("InvalidArgumentException : Invalid length for \"$paymentInstrumentId\" when calling CustomerPaymentInstrumentApi.deleteCustomerPaymentInstrument, must be smaller than or equal to 32.");
-            throw new \InvalidArgumentException('Invalid length for "$paymentInstrumentId" when calling CustomerPaymentInstrumentApi.deleteCustomerPaymentInstrument, must be smaller than or equal to 32.');
+        if ((strlen($paymentInstrumentTokenId) > 32)) {
+            self::$logger->error("InvalidArgumentException : Invalid length for \"$paymentInstrumentTokenId\" when calling CustomerPaymentInstrumentApi.deleteCustomerPaymentInstrument, must be smaller than or equal to 32.");
+            throw new \InvalidArgumentException('Invalid length for "$paymentInstrumentTokenId" when calling CustomerPaymentInstrumentApi.deleteCustomerPaymentInstrument, must be smaller than or equal to 32.');
         }
-        if ((strlen($paymentInstrumentId) < 1)) {
-            self::$logger->error("InvalidArgumentException : Invalid length for \"$paymentInstrumentId\" when calling CustomerPaymentInstrumentApi.deleteCustomerPaymentInstrument, must be bigger than or equal to 1.");
-            throw new \InvalidArgumentException('Invalid length for "$paymentInstrumentId" when calling CustomerPaymentInstrumentApi.deleteCustomerPaymentInstrument, must be bigger than or equal to 1.');
+        if ((strlen($paymentInstrumentTokenId) < 1)) {
+            self::$logger->error("InvalidArgumentException : Invalid length for \"$paymentInstrumentTokenId\" when calling CustomerPaymentInstrumentApi.deleteCustomerPaymentInstrument, must be bigger than or equal to 1.");
+            throw new \InvalidArgumentException('Invalid length for "$paymentInstrumentTokenId" when calling CustomerPaymentInstrumentApi.deleteCustomerPaymentInstrument, must be bigger than or equal to 1.');
         }
 
         if (!is_null($profileId) && (strlen($profileId) > 36)) {
@@ -165,7 +165,7 @@ class CustomerPaymentInstrumentApi
         }
 
         // parse inputs
-        $resourcePath = "/tms/v2/customers/{customerId}/payment-instruments/{paymentInstrumentId}";
+        $resourcePath = "/tms/v2/customers/{customerTokenId}/payment-instruments/{paymentInstrumentTokenId}";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -181,18 +181,18 @@ class CustomerPaymentInstrumentApi
             $headerParams['profile-id'] = $this->apiClient->getSerializer()->toHeaderValue($profileId);
         }
         // path params
-        if ($customerId !== null) {
+        if ($customerTokenId !== null) {
             $resourcePath = str_replace(
-                "{" . "customerId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($customerId),
+                "{" . "customerTokenId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($customerTokenId),
                 $resourcePath
             );
         }
         // path params
-        if ($paymentInstrumentId !== null) {
+        if ($paymentInstrumentTokenId !== null) {
             $resourcePath = str_replace(
-                "{" . "paymentInstrumentId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($paymentInstrumentId),
+                "{" . "paymentInstrumentTokenId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($paymentInstrumentTokenId),
                 $resourcePath
             );
         }
@@ -229,7 +229,7 @@ class CustomerPaymentInstrumentApi
                 $httpBody,
                 $headerParams,
                 null,
-                '/tms/v2/customers/{customerId}/payment-instruments/{paymentInstrumentId}'
+                '/tms/v2/customers/{customerTokenId}/payment-instruments/{paymentInstrumentTokenId}'
             );
             
             self::$logger->debug("Response Headers :\n" . \CyberSource\Utilities\Helpers\ListHelper::toString($httpHeader));
@@ -242,27 +242,23 @@ class CustomerPaymentInstrumentApi
                     $e->setResponseObject($data);
                     break;
                 case 403:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse403', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 404:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse424', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-                case 409:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse409', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 410:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse410', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 424:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse424', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 500:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse500', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -277,16 +273,16 @@ class CustomerPaymentInstrumentApi
      *
      * Retrieve a Customer Payment Instrument
      *
-     * @param string $customerId The Id of a Customer. (required)
-     * @param string $paymentInstrumentId The Id of a payment instrument. (required)
-     * @param string $profileId The Id of a profile containing user specific TMS configuration. (optional)
+     * @param string $customerTokenId The TokenId of a customer. (required)
+     * @param string $paymentInstrumentTokenId The TokenId of a payment instrument. (required)
+     * @param string $profileId The id of a profile containing user specific TMS configuration. (optional)
      * @throws \CyberSource\ApiException on non-2xx response
      * @return array of \CyberSource\Model\Tmsv2customersEmbeddedDefaultPaymentInstrument, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCustomerPaymentInstrument($customerId, $paymentInstrumentId, $profileId = null)
+    public function getCustomerPaymentInstrument($customerTokenId, $paymentInstrumentTokenId, $profileId = null)
     {
         self::$logger->info('CALL TO METHOD getCustomerPaymentInstrument STARTED');
-        list($response, $statusCode, $httpHeader) = $this->getCustomerPaymentInstrumentWithHttpInfo($customerId, $paymentInstrumentId, $profileId);
+        list($response, $statusCode, $httpHeader) = $this->getCustomerPaymentInstrumentWithHttpInfo($customerTokenId, $paymentInstrumentTokenId, $profileId);
         self::$logger->info('CALL TO METHOD getCustomerPaymentInstrument ENDED');
         self::$logger->close();
         return [$response, $statusCode, $httpHeader];
@@ -297,40 +293,40 @@ class CustomerPaymentInstrumentApi
      *
      * Retrieve a Customer Payment Instrument
      *
-     * @param string $customerId The Id of a Customer. (required)
-     * @param string $paymentInstrumentId The Id of a payment instrument. (required)
-     * @param string $profileId The Id of a profile containing user specific TMS configuration. (optional)
+     * @param string $customerTokenId The TokenId of a customer. (required)
+     * @param string $paymentInstrumentTokenId The TokenId of a payment instrument. (required)
+     * @param string $profileId The id of a profile containing user specific TMS configuration. (optional)
      * @throws \CyberSource\ApiException on non-2xx response
      * @return array of \CyberSource\Model\Tmsv2customersEmbeddedDefaultPaymentInstrument, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCustomerPaymentInstrumentWithHttpInfo($customerId, $paymentInstrumentId, $profileId = null)
+    public function getCustomerPaymentInstrumentWithHttpInfo($customerTokenId, $paymentInstrumentTokenId, $profileId = null)
     {
-        // verify the required parameter 'customerId' is set
-        if ($customerId === null) {
-            self::$logger->error("InvalidArgumentException : Missing the required parameter $customerId when calling getCustomerPaymentInstrument");
-            throw new \InvalidArgumentException('Missing the required parameter $customerId when calling getCustomerPaymentInstrument');
+        // verify the required parameter 'customerTokenId' is set
+        if ($customerTokenId === null) {
+            self::$logger->error("InvalidArgumentException : Missing the required parameter $customerTokenId when calling getCustomerPaymentInstrument");
+            throw new \InvalidArgumentException('Missing the required parameter $customerTokenId when calling getCustomerPaymentInstrument');
         }
-        if ((strlen($customerId) > 32)) {
-            self::$logger->error("InvalidArgumentException : Invalid length for \"$customerId\" when calling CustomerPaymentInstrumentApi.getCustomerPaymentInstrument, must be smaller than or equal to 32.");
-            throw new \InvalidArgumentException('Invalid length for "$customerId" when calling CustomerPaymentInstrumentApi.getCustomerPaymentInstrument, must be smaller than or equal to 32.');
+        if ((strlen($customerTokenId) > 32)) {
+            self::$logger->error("InvalidArgumentException : Invalid length for \"$customerTokenId\" when calling CustomerPaymentInstrumentApi.getCustomerPaymentInstrument, must be smaller than or equal to 32.");
+            throw new \InvalidArgumentException('Invalid length for "$customerTokenId" when calling CustomerPaymentInstrumentApi.getCustomerPaymentInstrument, must be smaller than or equal to 32.');
         }
-        if ((strlen($customerId) < 1)) {
-            self::$logger->error("InvalidArgumentException : Invalid length for \"$customerId\" when calling CustomerPaymentInstrumentApi.getCustomerPaymentInstrument, must be bigger than or equal to 1.");
-            throw new \InvalidArgumentException('Invalid length for "$customerId" when calling CustomerPaymentInstrumentApi.getCustomerPaymentInstrument, must be bigger than or equal to 1.');
+        if ((strlen($customerTokenId) < 1)) {
+            self::$logger->error("InvalidArgumentException : Invalid length for \"$customerTokenId\" when calling CustomerPaymentInstrumentApi.getCustomerPaymentInstrument, must be bigger than or equal to 1.");
+            throw new \InvalidArgumentException('Invalid length for "$customerTokenId" when calling CustomerPaymentInstrumentApi.getCustomerPaymentInstrument, must be bigger than or equal to 1.');
         }
 
-        // verify the required parameter 'paymentInstrumentId' is set
-        if ($paymentInstrumentId === null) {
-            self::$logger->error("InvalidArgumentException : Missing the required parameter $paymentInstrumentId when calling getCustomerPaymentInstrument");
-            throw new \InvalidArgumentException('Missing the required parameter $paymentInstrumentId when calling getCustomerPaymentInstrument');
+        // verify the required parameter 'paymentInstrumentTokenId' is set
+        if ($paymentInstrumentTokenId === null) {
+            self::$logger->error("InvalidArgumentException : Missing the required parameter $paymentInstrumentTokenId when calling getCustomerPaymentInstrument");
+            throw new \InvalidArgumentException('Missing the required parameter $paymentInstrumentTokenId when calling getCustomerPaymentInstrument');
         }
-        if ((strlen($paymentInstrumentId) > 32)) {
-            self::$logger->error("InvalidArgumentException : Invalid length for \"$paymentInstrumentId\" when calling CustomerPaymentInstrumentApi.getCustomerPaymentInstrument, must be smaller than or equal to 32.");
-            throw new \InvalidArgumentException('Invalid length for "$paymentInstrumentId" when calling CustomerPaymentInstrumentApi.getCustomerPaymentInstrument, must be smaller than or equal to 32.');
+        if ((strlen($paymentInstrumentTokenId) > 32)) {
+            self::$logger->error("InvalidArgumentException : Invalid length for \"$paymentInstrumentTokenId\" when calling CustomerPaymentInstrumentApi.getCustomerPaymentInstrument, must be smaller than or equal to 32.");
+            throw new \InvalidArgumentException('Invalid length for "$paymentInstrumentTokenId" when calling CustomerPaymentInstrumentApi.getCustomerPaymentInstrument, must be smaller than or equal to 32.');
         }
-        if ((strlen($paymentInstrumentId) < 1)) {
-            self::$logger->error("InvalidArgumentException : Invalid length for \"$paymentInstrumentId\" when calling CustomerPaymentInstrumentApi.getCustomerPaymentInstrument, must be bigger than or equal to 1.");
-            throw new \InvalidArgumentException('Invalid length for "$paymentInstrumentId" when calling CustomerPaymentInstrumentApi.getCustomerPaymentInstrument, must be bigger than or equal to 1.');
+        if ((strlen($paymentInstrumentTokenId) < 1)) {
+            self::$logger->error("InvalidArgumentException : Invalid length for \"$paymentInstrumentTokenId\" when calling CustomerPaymentInstrumentApi.getCustomerPaymentInstrument, must be bigger than or equal to 1.");
+            throw new \InvalidArgumentException('Invalid length for "$paymentInstrumentTokenId" when calling CustomerPaymentInstrumentApi.getCustomerPaymentInstrument, must be bigger than or equal to 1.');
         }
 
         if (!is_null($profileId) && (strlen($profileId) > 36)) {
@@ -343,7 +339,7 @@ class CustomerPaymentInstrumentApi
         }
 
         // parse inputs
-        $resourcePath = "/tms/v2/customers/{customerId}/payment-instruments/{paymentInstrumentId}";
+        $resourcePath = "/tms/v2/customers/{customerTokenId}/payment-instruments/{paymentInstrumentTokenId}";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -359,18 +355,18 @@ class CustomerPaymentInstrumentApi
             $headerParams['profile-id'] = $this->apiClient->getSerializer()->toHeaderValue($profileId);
         }
         // path params
-        if ($customerId !== null) {
+        if ($customerTokenId !== null) {
             $resourcePath = str_replace(
-                "{" . "customerId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($customerId),
+                "{" . "customerTokenId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($customerTokenId),
                 $resourcePath
             );
         }
         // path params
-        if ($paymentInstrumentId !== null) {
+        if ($paymentInstrumentTokenId !== null) {
             $resourcePath = str_replace(
-                "{" . "paymentInstrumentId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($paymentInstrumentId),
+                "{" . "paymentInstrumentTokenId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($paymentInstrumentTokenId),
                 $resourcePath
             );
         }
@@ -407,7 +403,7 @@ class CustomerPaymentInstrumentApi
                 $httpBody,
                 $headerParams,
                 '\CyberSource\Model\Tmsv2customersEmbeddedDefaultPaymentInstrument',
-                '/tms/v2/customers/{customerId}/payment-instruments/{paymentInstrumentId}'
+                '/tms/v2/customers/{customerTokenId}/payment-instruments/{paymentInstrumentTokenId}'
             );
             
             self::$logger->debug("Response Headers :\n" . \CyberSource\Utilities\Helpers\ListHelper::toString($httpHeader));
@@ -424,23 +420,23 @@ class CustomerPaymentInstrumentApi
                     $e->setResponseObject($data);
                     break;
                 case 403:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse403', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 404:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse424', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 410:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse410', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 424:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse424', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 500:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse500', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -455,17 +451,17 @@ class CustomerPaymentInstrumentApi
      *
      * List Payment Instruments for a Customer
      *
-     * @param string $customerId The Id of a Customer. (required)
-     * @param string $profileId The Id of a profile containing user specific TMS configuration. (optional)
+     * @param string $customerTokenId The TokenId of a customer. (required)
+     * @param string $profileId The id of a profile containing user specific TMS configuration. (optional)
      * @param int $offset Starting record in zero-based dataset that should be returned as the first object in the array. Default is 0. (optional, default to 0)
      * @param int $limit The maximum number that can be returned in the array starting from the offset record in zero-based dataset. Default is 20, maximum is 100. (optional, default to 20)
      * @throws \CyberSource\ApiException on non-2xx response
      * @return array of \CyberSource\Model\PaymentInstrumentList, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCustomerPaymentInstrumentsList($customerId, $profileId = null, $offset = '0', $limit = '20')
+    public function getCustomerPaymentInstrumentsList($customerTokenId, $profileId = null, $offset = '0', $limit = '20')
     {
         self::$logger->info('CALL TO METHOD getCustomerPaymentInstrumentsList STARTED');
-        list($response, $statusCode, $httpHeader) = $this->getCustomerPaymentInstrumentsListWithHttpInfo($customerId, $profileId, $offset, $limit);
+        list($response, $statusCode, $httpHeader) = $this->getCustomerPaymentInstrumentsListWithHttpInfo($customerTokenId, $profileId, $offset, $limit);
         self::$logger->info('CALL TO METHOD getCustomerPaymentInstrumentsList ENDED');
         self::$logger->close();
         return [$response, $statusCode, $httpHeader];
@@ -476,27 +472,27 @@ class CustomerPaymentInstrumentApi
      *
      * List Payment Instruments for a Customer
      *
-     * @param string $customerId The Id of a Customer. (required)
-     * @param string $profileId The Id of a profile containing user specific TMS configuration. (optional)
+     * @param string $customerTokenId The TokenId of a customer. (required)
+     * @param string $profileId The id of a profile containing user specific TMS configuration. (optional)
      * @param int $offset Starting record in zero-based dataset that should be returned as the first object in the array. Default is 0. (optional, default to 0)
      * @param int $limit The maximum number that can be returned in the array starting from the offset record in zero-based dataset. Default is 20, maximum is 100. (optional, default to 20)
      * @throws \CyberSource\ApiException on non-2xx response
      * @return array of \CyberSource\Model\PaymentInstrumentList, HTTP status code, HTTP response headers (array of strings)
      */
-    public function getCustomerPaymentInstrumentsListWithHttpInfo($customerId, $profileId = null, $offset = '0', $limit = '20')
+    public function getCustomerPaymentInstrumentsListWithHttpInfo($customerTokenId, $profileId = null, $offset = '0', $limit = '20')
     {
-        // verify the required parameter 'customerId' is set
-        if ($customerId === null) {
-            self::$logger->error("InvalidArgumentException : Missing the required parameter $customerId when calling getCustomerPaymentInstrumentsList");
-            throw new \InvalidArgumentException('Missing the required parameter $customerId when calling getCustomerPaymentInstrumentsList');
+        // verify the required parameter 'customerTokenId' is set
+        if ($customerTokenId === null) {
+            self::$logger->error("InvalidArgumentException : Missing the required parameter $customerTokenId when calling getCustomerPaymentInstrumentsList");
+            throw new \InvalidArgumentException('Missing the required parameter $customerTokenId when calling getCustomerPaymentInstrumentsList');
         }
-        if ((strlen($customerId) > 32)) {
-            self::$logger->error("InvalidArgumentException : Invalid length for \"$customerId\" when calling CustomerPaymentInstrumentApi.getCustomerPaymentInstrumentsList, must be smaller than or equal to 32.");
-            throw new \InvalidArgumentException('Invalid length for "$customerId" when calling CustomerPaymentInstrumentApi.getCustomerPaymentInstrumentsList, must be smaller than or equal to 32.');
+        if ((strlen($customerTokenId) > 32)) {
+            self::$logger->error("InvalidArgumentException : Invalid length for \"$customerTokenId\" when calling CustomerPaymentInstrumentApi.getCustomerPaymentInstrumentsList, must be smaller than or equal to 32.");
+            throw new \InvalidArgumentException('Invalid length for "$customerTokenId" when calling CustomerPaymentInstrumentApi.getCustomerPaymentInstrumentsList, must be smaller than or equal to 32.');
         }
-        if ((strlen($customerId) < 1)) {
-            self::$logger->error("InvalidArgumentException : Invalid length for \"$customerId\" when calling CustomerPaymentInstrumentApi.getCustomerPaymentInstrumentsList, must be bigger than or equal to 1.");
-            throw new \InvalidArgumentException('Invalid length for "$customerId" when calling CustomerPaymentInstrumentApi.getCustomerPaymentInstrumentsList, must be bigger than or equal to 1.');
+        if ((strlen($customerTokenId) < 1)) {
+            self::$logger->error("InvalidArgumentException : Invalid length for \"$customerTokenId\" when calling CustomerPaymentInstrumentApi.getCustomerPaymentInstrumentsList, must be bigger than or equal to 1.");
+            throw new \InvalidArgumentException('Invalid length for "$customerTokenId" when calling CustomerPaymentInstrumentApi.getCustomerPaymentInstrumentsList, must be bigger than or equal to 1.');
         }
 
         if (!is_null($profileId) && (strlen($profileId) > 36)) {
@@ -523,7 +519,7 @@ class CustomerPaymentInstrumentApi
         }
 
         // parse inputs
-        $resourcePath = "/tms/v2/customers/{customerId}/payment-instruments";
+        $resourcePath = "/tms/v2/customers/{customerTokenId}/payment-instruments";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -547,10 +543,10 @@ class CustomerPaymentInstrumentApi
             $headerParams['profile-id'] = $this->apiClient->getSerializer()->toHeaderValue($profileId);
         }
         // path params
-        if ($customerId !== null) {
+        if ($customerTokenId !== null) {
             $resourcePath = str_replace(
-                "{" . "customerId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($customerId),
+                "{" . "customerTokenId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($customerTokenId),
                 $resourcePath
             );
         }
@@ -589,7 +585,7 @@ class CustomerPaymentInstrumentApi
                 $httpBody,
                 $headerParams,
                 '\CyberSource\Model\PaymentInstrumentList',
-                '/tms/v2/customers/{customerId}/payment-instruments'
+                '/tms/v2/customers/{customerTokenId}/payment-instruments'
             );
             
             self::$logger->debug("Response Headers :\n" . \CyberSource\Utilities\Helpers\ListHelper::toString($httpHeader));
@@ -606,23 +602,23 @@ class CustomerPaymentInstrumentApi
                     $e->setResponseObject($data);
                     break;
                 case 403:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse403', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 404:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse424', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 410:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse410', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 424:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse424', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 500:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse500', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -637,18 +633,18 @@ class CustomerPaymentInstrumentApi
      *
      * Update a Customer Payment Instrument
      *
-     * @param string $customerId The Id of a Customer. (required)
-     * @param string $paymentInstrumentId The Id of a payment instrument. (required)
+     * @param string $customerTokenId The TokenId of a customer. (required)
+     * @param string $paymentInstrumentTokenId The TokenId of a payment instrument. (required)
      * @param \CyberSource\Model\PatchCustomerPaymentInstrumentRequest $patchCustomerPaymentInstrumentRequest  (required)
-     * @param string $profileId The Id of a profile containing user specific TMS configuration. (optional)
+     * @param string $profileId The id of a profile containing user specific TMS configuration. (optional)
      * @param string $ifMatch Contains an ETag value from a GET request to make the request conditional. (optional)
      * @throws \CyberSource\ApiException on non-2xx response
      * @return array of \CyberSource\Model\Tmsv2customersEmbeddedDefaultPaymentInstrument, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchCustomersPaymentInstrument($customerId, $paymentInstrumentId, $patchCustomerPaymentInstrumentRequest, $profileId = null, $ifMatch = null)
+    public function patchCustomersPaymentInstrument($customerTokenId, $paymentInstrumentTokenId, $patchCustomerPaymentInstrumentRequest, $profileId = null, $ifMatch = null)
     {
         self::$logger->info('CALL TO METHOD patchCustomersPaymentInstrument STARTED');
-        list($response, $statusCode, $httpHeader) = $this->patchCustomersPaymentInstrumentWithHttpInfo($customerId, $paymentInstrumentId, $patchCustomerPaymentInstrumentRequest, $profileId, $ifMatch);
+        list($response, $statusCode, $httpHeader) = $this->patchCustomersPaymentInstrumentWithHttpInfo($customerTokenId, $paymentInstrumentTokenId, $patchCustomerPaymentInstrumentRequest, $profileId, $ifMatch);
         self::$logger->info('CALL TO METHOD patchCustomersPaymentInstrument ENDED');
         self::$logger->close();
         return [$response, $statusCode, $httpHeader];
@@ -659,42 +655,42 @@ class CustomerPaymentInstrumentApi
      *
      * Update a Customer Payment Instrument
      *
-     * @param string $customerId The Id of a Customer. (required)
-     * @param string $paymentInstrumentId The Id of a payment instrument. (required)
+     * @param string $customerTokenId The TokenId of a customer. (required)
+     * @param string $paymentInstrumentTokenId The TokenId of a payment instrument. (required)
      * @param \CyberSource\Model\PatchCustomerPaymentInstrumentRequest $patchCustomerPaymentInstrumentRequest  (required)
-     * @param string $profileId The Id of a profile containing user specific TMS configuration. (optional)
+     * @param string $profileId The id of a profile containing user specific TMS configuration. (optional)
      * @param string $ifMatch Contains an ETag value from a GET request to make the request conditional. (optional)
      * @throws \CyberSource\ApiException on non-2xx response
      * @return array of \CyberSource\Model\Tmsv2customersEmbeddedDefaultPaymentInstrument, HTTP status code, HTTP response headers (array of strings)
      */
-    public function patchCustomersPaymentInstrumentWithHttpInfo($customerId, $paymentInstrumentId, $patchCustomerPaymentInstrumentRequest, $profileId = null, $ifMatch = null)
+    public function patchCustomersPaymentInstrumentWithHttpInfo($customerTokenId, $paymentInstrumentTokenId, $patchCustomerPaymentInstrumentRequest, $profileId = null, $ifMatch = null)
     {
-        // verify the required parameter 'customerId' is set
-        if ($customerId === null) {
-            self::$logger->error("InvalidArgumentException : Missing the required parameter $customerId when calling patchCustomersPaymentInstrument");
-            throw new \InvalidArgumentException('Missing the required parameter $customerId when calling patchCustomersPaymentInstrument');
+        // verify the required parameter 'customerTokenId' is set
+        if ($customerTokenId === null) {
+            self::$logger->error("InvalidArgumentException : Missing the required parameter $customerTokenId when calling patchCustomersPaymentInstrument");
+            throw new \InvalidArgumentException('Missing the required parameter $customerTokenId when calling patchCustomersPaymentInstrument');
         }
-        if ((strlen($customerId) > 32)) {
-            self::$logger->error("InvalidArgumentException : Invalid length for \"$customerId\" when calling CustomerPaymentInstrumentApi.patchCustomersPaymentInstrument, must be smaller than or equal to 32.");
-            throw new \InvalidArgumentException('Invalid length for "$customerId" when calling CustomerPaymentInstrumentApi.patchCustomersPaymentInstrument, must be smaller than or equal to 32.');
+        if ((strlen($customerTokenId) > 32)) {
+            self::$logger->error("InvalidArgumentException : Invalid length for \"$customerTokenId\" when calling CustomerPaymentInstrumentApi.patchCustomersPaymentInstrument, must be smaller than or equal to 32.");
+            throw new \InvalidArgumentException('Invalid length for "$customerTokenId" when calling CustomerPaymentInstrumentApi.patchCustomersPaymentInstrument, must be smaller than or equal to 32.');
         }
-        if ((strlen($customerId) < 1)) {
-            self::$logger->error("InvalidArgumentException : Invalid length for \"$customerId\" when calling CustomerPaymentInstrumentApi.patchCustomersPaymentInstrument, must be bigger than or equal to 1.");
-            throw new \InvalidArgumentException('Invalid length for "$customerId" when calling CustomerPaymentInstrumentApi.patchCustomersPaymentInstrument, must be bigger than or equal to 1.');
+        if ((strlen($customerTokenId) < 1)) {
+            self::$logger->error("InvalidArgumentException : Invalid length for \"$customerTokenId\" when calling CustomerPaymentInstrumentApi.patchCustomersPaymentInstrument, must be bigger than or equal to 1.");
+            throw new \InvalidArgumentException('Invalid length for "$customerTokenId" when calling CustomerPaymentInstrumentApi.patchCustomersPaymentInstrument, must be bigger than or equal to 1.');
         }
 
-        // verify the required parameter 'paymentInstrumentId' is set
-        if ($paymentInstrumentId === null) {
-            self::$logger->error("InvalidArgumentException : Missing the required parameter $paymentInstrumentId when calling patchCustomersPaymentInstrument");
-            throw new \InvalidArgumentException('Missing the required parameter $paymentInstrumentId when calling patchCustomersPaymentInstrument');
+        // verify the required parameter 'paymentInstrumentTokenId' is set
+        if ($paymentInstrumentTokenId === null) {
+            self::$logger->error("InvalidArgumentException : Missing the required parameter $paymentInstrumentTokenId when calling patchCustomersPaymentInstrument");
+            throw new \InvalidArgumentException('Missing the required parameter $paymentInstrumentTokenId when calling patchCustomersPaymentInstrument');
         }
-        if ((strlen($paymentInstrumentId) > 32)) {
-            self::$logger->error("InvalidArgumentException : Invalid length for \"$paymentInstrumentId\" when calling CustomerPaymentInstrumentApi.patchCustomersPaymentInstrument, must be smaller than or equal to 32.");
-            throw new \InvalidArgumentException('Invalid length for "$paymentInstrumentId" when calling CustomerPaymentInstrumentApi.patchCustomersPaymentInstrument, must be smaller than or equal to 32.');
+        if ((strlen($paymentInstrumentTokenId) > 32)) {
+            self::$logger->error("InvalidArgumentException : Invalid length for \"$paymentInstrumentTokenId\" when calling CustomerPaymentInstrumentApi.patchCustomersPaymentInstrument, must be smaller than or equal to 32.");
+            throw new \InvalidArgumentException('Invalid length for "$paymentInstrumentTokenId" when calling CustomerPaymentInstrumentApi.patchCustomersPaymentInstrument, must be smaller than or equal to 32.');
         }
-        if ((strlen($paymentInstrumentId) < 1)) {
-            self::$logger->error("InvalidArgumentException : Invalid length for \"$paymentInstrumentId\" when calling CustomerPaymentInstrumentApi.patchCustomersPaymentInstrument, must be bigger than or equal to 1.");
-            throw new \InvalidArgumentException('Invalid length for "$paymentInstrumentId" when calling CustomerPaymentInstrumentApi.patchCustomersPaymentInstrument, must be bigger than or equal to 1.');
+        if ((strlen($paymentInstrumentTokenId) < 1)) {
+            self::$logger->error("InvalidArgumentException : Invalid length for \"$paymentInstrumentTokenId\" when calling CustomerPaymentInstrumentApi.patchCustomersPaymentInstrument, must be bigger than or equal to 1.");
+            throw new \InvalidArgumentException('Invalid length for "$paymentInstrumentTokenId" when calling CustomerPaymentInstrumentApi.patchCustomersPaymentInstrument, must be bigger than or equal to 1.');
         }
 
         // verify the required parameter 'patchCustomerPaymentInstrumentRequest' is set
@@ -721,7 +717,7 @@ class CustomerPaymentInstrumentApi
         }
 
         // parse inputs
-        $resourcePath = "/tms/v2/customers/{customerId}/payment-instruments/{paymentInstrumentId}";
+        $resourcePath = "/tms/v2/customers/{customerTokenId}/payment-instruments/{paymentInstrumentTokenId}";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -741,18 +737,18 @@ class CustomerPaymentInstrumentApi
             $headerParams['if-match'] = $this->apiClient->getSerializer()->toHeaderValue($ifMatch);
         }
         // path params
-        if ($customerId !== null) {
+        if ($customerTokenId !== null) {
             $resourcePath = str_replace(
-                "{" . "customerId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($customerId),
+                "{" . "customerTokenId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($customerTokenId),
                 $resourcePath
             );
         }
         // path params
-        if ($paymentInstrumentId !== null) {
+        if ($paymentInstrumentTokenId !== null) {
             $resourcePath = str_replace(
-                "{" . "paymentInstrumentId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($paymentInstrumentId),
+                "{" . "paymentInstrumentTokenId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($paymentInstrumentTokenId),
                 $resourcePath
             );
         }
@@ -791,7 +787,7 @@ class CustomerPaymentInstrumentApi
                 $httpBody,
                 $headerParams,
                 '\CyberSource\Model\Tmsv2customersEmbeddedDefaultPaymentInstrument',
-                '/tms/v2/customers/{customerId}/payment-instruments/{paymentInstrumentId}'
+                '/tms/v2/customers/{customerTokenId}/payment-instruments/{paymentInstrumentTokenId}'
             );
             
             self::$logger->debug("Response Headers :\n" . \CyberSource\Utilities\Helpers\ListHelper::toString($httpHeader));
@@ -808,27 +804,27 @@ class CustomerPaymentInstrumentApi
                     $e->setResponseObject($data);
                     break;
                 case 403:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse403', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 404:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse424', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 410:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse410', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 412:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse412', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 424:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse424', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 500:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse500', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }
@@ -843,16 +839,16 @@ class CustomerPaymentInstrumentApi
      *
      * Create a Customer Payment Instrument
      *
-     * @param string $customerId The Id of a Customer. (required)
+     * @param string $customerTokenId The TokenId of a customer. (required)
      * @param \CyberSource\Model\PostCustomerPaymentInstrumentRequest $postCustomerPaymentInstrumentRequest  (required)
-     * @param string $profileId The Id of a profile containing user specific TMS configuration. (optional)
+     * @param string $profileId The id of a profile containing user specific TMS configuration. (optional)
      * @throws \CyberSource\ApiException on non-2xx response
      * @return array of \CyberSource\Model\Tmsv2customersEmbeddedDefaultPaymentInstrument, HTTP status code, HTTP response headers (array of strings)
      */
-    public function postCustomerPaymentInstrument($customerId, $postCustomerPaymentInstrumentRequest, $profileId = null)
+    public function postCustomerPaymentInstrument($customerTokenId, $postCustomerPaymentInstrumentRequest, $profileId = null)
     {
         self::$logger->info('CALL TO METHOD postCustomerPaymentInstrument STARTED');
-        list($response, $statusCode, $httpHeader) = $this->postCustomerPaymentInstrumentWithHttpInfo($customerId, $postCustomerPaymentInstrumentRequest, $profileId);
+        list($response, $statusCode, $httpHeader) = $this->postCustomerPaymentInstrumentWithHttpInfo($customerTokenId, $postCustomerPaymentInstrumentRequest, $profileId);
         self::$logger->info('CALL TO METHOD postCustomerPaymentInstrument ENDED');
         self::$logger->close();
         return [$response, $statusCode, $httpHeader];
@@ -863,26 +859,26 @@ class CustomerPaymentInstrumentApi
      *
      * Create a Customer Payment Instrument
      *
-     * @param string $customerId The Id of a Customer. (required)
+     * @param string $customerTokenId The TokenId of a customer. (required)
      * @param \CyberSource\Model\PostCustomerPaymentInstrumentRequest $postCustomerPaymentInstrumentRequest  (required)
-     * @param string $profileId The Id of a profile containing user specific TMS configuration. (optional)
+     * @param string $profileId The id of a profile containing user specific TMS configuration. (optional)
      * @throws \CyberSource\ApiException on non-2xx response
      * @return array of \CyberSource\Model\Tmsv2customersEmbeddedDefaultPaymentInstrument, HTTP status code, HTTP response headers (array of strings)
      */
-    public function postCustomerPaymentInstrumentWithHttpInfo($customerId, $postCustomerPaymentInstrumentRequest, $profileId = null)
+    public function postCustomerPaymentInstrumentWithHttpInfo($customerTokenId, $postCustomerPaymentInstrumentRequest, $profileId = null)
     {
-        // verify the required parameter 'customerId' is set
-        if ($customerId === null) {
-            self::$logger->error("InvalidArgumentException : Missing the required parameter $customerId when calling postCustomerPaymentInstrument");
-            throw new \InvalidArgumentException('Missing the required parameter $customerId when calling postCustomerPaymentInstrument');
+        // verify the required parameter 'customerTokenId' is set
+        if ($customerTokenId === null) {
+            self::$logger->error("InvalidArgumentException : Missing the required parameter $customerTokenId when calling postCustomerPaymentInstrument");
+            throw new \InvalidArgumentException('Missing the required parameter $customerTokenId when calling postCustomerPaymentInstrument');
         }
-        if ((strlen($customerId) > 32)) {
-            self::$logger->error("InvalidArgumentException : Invalid length for \"$customerId\" when calling CustomerPaymentInstrumentApi.postCustomerPaymentInstrument, must be smaller than or equal to 32.");
-            throw new \InvalidArgumentException('Invalid length for "$customerId" when calling CustomerPaymentInstrumentApi.postCustomerPaymentInstrument, must be smaller than or equal to 32.');
+        if ((strlen($customerTokenId) > 32)) {
+            self::$logger->error("InvalidArgumentException : Invalid length for \"$customerTokenId\" when calling CustomerPaymentInstrumentApi.postCustomerPaymentInstrument, must be smaller than or equal to 32.");
+            throw new \InvalidArgumentException('Invalid length for "$customerTokenId" when calling CustomerPaymentInstrumentApi.postCustomerPaymentInstrument, must be smaller than or equal to 32.');
         }
-        if ((strlen($customerId) < 1)) {
-            self::$logger->error("InvalidArgumentException : Invalid length for \"$customerId\" when calling CustomerPaymentInstrumentApi.postCustomerPaymentInstrument, must be bigger than or equal to 1.");
-            throw new \InvalidArgumentException('Invalid length for "$customerId" when calling CustomerPaymentInstrumentApi.postCustomerPaymentInstrument, must be bigger than or equal to 1.');
+        if ((strlen($customerTokenId) < 1)) {
+            self::$logger->error("InvalidArgumentException : Invalid length for \"$customerTokenId\" when calling CustomerPaymentInstrumentApi.postCustomerPaymentInstrument, must be bigger than or equal to 1.");
+            throw new \InvalidArgumentException('Invalid length for "$customerTokenId" when calling CustomerPaymentInstrumentApi.postCustomerPaymentInstrument, must be bigger than or equal to 1.');
         }
 
         // verify the required parameter 'postCustomerPaymentInstrumentRequest' is set
@@ -900,7 +896,7 @@ class CustomerPaymentInstrumentApi
         }
 
         // parse inputs
-        $resourcePath = "/tms/v2/customers/{customerId}/payment-instruments";
+        $resourcePath = "/tms/v2/customers/{customerTokenId}/payment-instruments";
         $httpBody = '';
         $queryParams = [];
         $headerParams = [];
@@ -916,10 +912,10 @@ class CustomerPaymentInstrumentApi
             $headerParams['profile-id'] = $this->apiClient->getSerializer()->toHeaderValue($profileId);
         }
         // path params
-        if ($customerId !== null) {
+        if ($customerTokenId !== null) {
             $resourcePath = str_replace(
-                "{" . "customerId" . "}",
-                $this->apiClient->getSerializer()->toPathValue($customerId),
+                "{" . "customerTokenId" . "}",
+                $this->apiClient->getSerializer()->toPathValue($customerTokenId),
                 $resourcePath
             );
         }
@@ -958,7 +954,7 @@ class CustomerPaymentInstrumentApi
                 $httpBody,
                 $headerParams,
                 '\CyberSource\Model\Tmsv2customersEmbeddedDefaultPaymentInstrument',
-                '/tms/v2/customers/{customerId}/payment-instruments'
+                '/tms/v2/customers/{customerTokenId}/payment-instruments'
             );
             
             self::$logger->debug("Response Headers :\n" . \CyberSource\Utilities\Helpers\ListHelper::toString($httpHeader));
@@ -975,19 +971,15 @@ class CustomerPaymentInstrumentApi
                     $e->setResponseObject($data);
                     break;
                 case 403:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse403', $e->getResponseHeaders());
-                    $e->setResponseObject($data);
-                    break;
-                case 409:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse409', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 424:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse424', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
                 case 500:
-                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse500', $e->getResponseHeaders());
+                    $data = $this->apiClient->getSerializer()->deserialize($e->getResponseBody(), '\CyberSource\Model\InlineResponse400', $e->getResponseHeaders());
                     $e->setResponseObject($data);
                     break;
             }

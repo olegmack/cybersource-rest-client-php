@@ -57,9 +57,7 @@ class TssV2TransactionsGet200ResponseTokenInformation implements ArrayAccess
         'customer' => '\CyberSource\Model\PtsV2PaymentsPost201ResponseTokenInformationCustomer',
         'paymentInstrument' => '\CyberSource\Model\PtsV2PaymentsPost201ResponseTokenInformationPaymentInstrument',
         'shippingAddress' => '\CyberSource\Model\PtsV2PaymentsPost201ResponseTokenInformationShippingAddress',
-        'instrumentIdentifier' => '\CyberSource\Model\TssV2TransactionsGet200ResponsePaymentInformationInstrumentIdentifier',
-        'jti' => 'string',
-        'transientTokenJwt' => 'string'
+        'instrumentIdentifier' => '\CyberSource\Model\TssV2TransactionsGet200ResponsePaymentInformationInstrumentIdentifier'
     ];
 
     /**
@@ -70,9 +68,7 @@ class TssV2TransactionsGet200ResponseTokenInformation implements ArrayAccess
         'customer' => null,
         'paymentInstrument' => null,
         'shippingAddress' => null,
-        'instrumentIdentifier' => null,
-        'jti' => null,
-        'transientTokenJwt' => null
+        'instrumentIdentifier' => null
     ];
 
     public static function swaggerTypes()
@@ -93,9 +89,7 @@ class TssV2TransactionsGet200ResponseTokenInformation implements ArrayAccess
         'customer' => 'customer',
         'paymentInstrument' => 'paymentInstrument',
         'shippingAddress' => 'shippingAddress',
-        'instrumentIdentifier' => 'instrumentIdentifier',
-        'jti' => 'jti',
-        'transientTokenJwt' => 'transientTokenJwt'
+        'instrumentIdentifier' => 'instrumentIdentifier'
     ];
 
 
@@ -107,9 +101,7 @@ class TssV2TransactionsGet200ResponseTokenInformation implements ArrayAccess
         'customer' => 'setCustomer',
         'paymentInstrument' => 'setPaymentInstrument',
         'shippingAddress' => 'setShippingAddress',
-        'instrumentIdentifier' => 'setInstrumentIdentifier',
-        'jti' => 'setJti',
-        'transientTokenJwt' => 'setTransientTokenJwt'
+        'instrumentIdentifier' => 'setInstrumentIdentifier'
     ];
 
 
@@ -121,9 +113,7 @@ class TssV2TransactionsGet200ResponseTokenInformation implements ArrayAccess
         'customer' => 'getCustomer',
         'paymentInstrument' => 'getPaymentInstrument',
         'shippingAddress' => 'getShippingAddress',
-        'instrumentIdentifier' => 'getInstrumentIdentifier',
-        'jti' => 'getJti',
-        'transientTokenJwt' => 'getTransientTokenJwt'
+        'instrumentIdentifier' => 'getInstrumentIdentifier'
     ];
 
     public static function attributeMap()
@@ -161,8 +151,6 @@ class TssV2TransactionsGet200ResponseTokenInformation implements ArrayAccess
         $this->container['paymentInstrument'] = isset($data['paymentInstrument']) ? $data['paymentInstrument'] : null;
         $this->container['shippingAddress'] = isset($data['shippingAddress']) ? $data['shippingAddress'] : null;
         $this->container['instrumentIdentifier'] = isset($data['instrumentIdentifier']) ? $data['instrumentIdentifier'] : null;
-        $this->container['jti'] = isset($data['jti']) ? $data['jti'] : null;
-        $this->container['transientTokenJwt'] = isset($data['transientTokenJwt']) ? $data['transientTokenJwt'] : null;
     }
 
     /**
@@ -273,54 +261,11 @@ class TssV2TransactionsGet200ResponseTokenInformation implements ArrayAccess
 
         return $this;
     }
-
-    /**
-     * Gets jti
-     * @return string
-     */
-    public function getJti()
-    {
-        return $this->container['jti'];
-    }
-
-    /**
-     * Sets jti
-     * @param string $jti TMS Transient Token, 64 hexadecimal id value representing captured payment credentials (including Sensitive Authentication Data, e.g. CVV).
-     * @return $this
-     */
-    public function setJti($jti)
-    {
-        $this->container['jti'] = $jti;
-
-        return $this;
-    }
-
-    /**
-     * Gets transientTokenJwt
-     * @return string
-     */
-    public function getTransientTokenJwt()
-    {
-        return $this->container['transientTokenJwt'];
-    }
-
-    /**
-     * Sets transientTokenJwt
-     * @param string $transientTokenJwt Flex API Transient Token encoded as JWT (JSON Web Token), e.g. Flex microform or Unified Payment checkout result.
-     * @return $this
-     */
-    public function setTransientTokenJwt($transientTokenJwt)
-    {
-        $this->container['transientTokenJwt'] = $transientTokenJwt;
-
-        return $this;
-    }
     /**
      * Returns true if offset exists. False otherwise.
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -331,7 +276,6 @@ class TssV2TransactionsGet200ResponseTokenInformation implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -343,7 +287,6 @@ class TssV2TransactionsGet200ResponseTokenInformation implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -358,7 +301,6 @@ class TssV2TransactionsGet200ResponseTokenInformation implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

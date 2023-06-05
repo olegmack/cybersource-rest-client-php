@@ -55,7 +55,7 @@ class Riskv1exportcomplianceinquiriesExportComplianceInformation implements Arra
       */
     protected static $swaggerTypes = [
         'addressOperator' => 'string',
-        'weights' => '\CyberSource\Model\Ptsv2paymentsWatchlistScreeningInformationWeights',
+        'weights' => '\CyberSource\Model\Riskv1exportcomplianceinquiriesExportComplianceInformationWeights',
         'sanctionLists' => 'string[]'
     ];
 
@@ -195,7 +195,7 @@ class Riskv1exportcomplianceinquiriesExportComplianceInformation implements Arra
 
     /**
      * Gets weights
-     * @return \CyberSource\Model\Ptsv2paymentsWatchlistScreeningInformationWeights
+     * @return \CyberSource\Model\Riskv1exportcomplianceinquiriesExportComplianceInformationWeights
      */
     public function getWeights()
     {
@@ -204,7 +204,7 @@ class Riskv1exportcomplianceinquiriesExportComplianceInformation implements Arra
 
     /**
      * Sets weights
-     * @param \CyberSource\Model\Ptsv2paymentsWatchlistScreeningInformationWeights $weights
+     * @param \CyberSource\Model\Riskv1exportcomplianceinquiriesExportComplianceInformationWeights $weights
      * @return $this
      */
     public function setWeights($weights)
@@ -239,7 +239,6 @@ class Riskv1exportcomplianceinquiriesExportComplianceInformation implements Arra
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -250,7 +249,6 @@ class Riskv1exportcomplianceinquiriesExportComplianceInformation implements Arra
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -262,7 +260,6 @@ class Riskv1exportcomplianceinquiriesExportComplianceInformation implements Arra
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -277,7 +274,6 @@ class Riskv1exportcomplianceinquiriesExportComplianceInformation implements Arra
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

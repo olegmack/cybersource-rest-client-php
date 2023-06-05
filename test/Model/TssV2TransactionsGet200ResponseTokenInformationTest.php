@@ -104,18 +104,4 @@ class TssV2TransactionsGet200ResponseTokenInformationTest extends \PHPUnit_Frame
     public function testPropertyInstrumentIdentifier()
     {
     }
-
-    /**
-     * Test attribute "jti"
-     */
-    public function testPropertyJti()
-    {
-    }
-
-    /**
-     * Test attribute "transientTokenJwt"
-     */
-    public function testPropertyTransientTokenJwt()
-    {
-    }
 }

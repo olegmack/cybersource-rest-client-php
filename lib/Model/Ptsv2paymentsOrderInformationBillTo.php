@@ -67,17 +67,13 @@ class Ptsv2paymentsOrderInformationBillTo implements ArrayAccess
         'locality' => 'string',
         'administrativeArea' => 'string',
         'postalCode' => 'string',
-        'county' => 'string',
         'country' => 'string',
         'district' => 'string',
         'buildingNumber' => 'string',
         'email' => 'string',
         'emailDomain' => 'string',
         'phoneNumber' => 'string',
-        'phoneType' => 'string',
-        'verificationStatus' => 'string',
-        'alternatePhoneNumber' => 'string',
-        'alternateEmail' => 'string'
+        'phoneType' => 'string'
     ];
 
     /**
@@ -98,17 +94,13 @@ class Ptsv2paymentsOrderInformationBillTo implements ArrayAccess
         'locality' => null,
         'administrativeArea' => null,
         'postalCode' => null,
-        'county' => null,
         'country' => null,
         'district' => null,
         'buildingNumber' => null,
         'email' => null,
         'emailDomain' => null,
         'phoneNumber' => null,
-        'phoneType' => null,
-        'verificationStatus' => null,
-        'alternatePhoneNumber' => null,
-        'alternateEmail' => null
+        'phoneType' => null
     ];
 
     public static function swaggerTypes()
@@ -139,17 +131,13 @@ class Ptsv2paymentsOrderInformationBillTo implements ArrayAccess
         'locality' => 'locality',
         'administrativeArea' => 'administrativeArea',
         'postalCode' => 'postalCode',
-        'county' => 'county',
         'country' => 'country',
         'district' => 'district',
         'buildingNumber' => 'buildingNumber',
         'email' => 'email',
         'emailDomain' => 'emailDomain',
         'phoneNumber' => 'phoneNumber',
-        'phoneType' => 'phoneType',
-        'verificationStatus' => 'verificationStatus',
-        'alternatePhoneNumber' => 'alternatePhoneNumber',
-        'alternateEmail' => 'alternateEmail'
+        'phoneType' => 'phoneType'
     ];
 
 
@@ -171,17 +159,13 @@ class Ptsv2paymentsOrderInformationBillTo implements ArrayAccess
         'locality' => 'setLocality',
         'administrativeArea' => 'setAdministrativeArea',
         'postalCode' => 'setPostalCode',
-        'county' => 'setCounty',
         'country' => 'setCountry',
         'district' => 'setDistrict',
         'buildingNumber' => 'setBuildingNumber',
         'email' => 'setEmail',
         'emailDomain' => 'setEmailDomain',
         'phoneNumber' => 'setPhoneNumber',
-        'phoneType' => 'setPhoneType',
-        'verificationStatus' => 'setVerificationStatus',
-        'alternatePhoneNumber' => 'setAlternatePhoneNumber',
-        'alternateEmail' => 'setAlternateEmail'
+        'phoneType' => 'setPhoneType'
     ];
 
 
@@ -203,17 +187,13 @@ class Ptsv2paymentsOrderInformationBillTo implements ArrayAccess
         'locality' => 'getLocality',
         'administrativeArea' => 'getAdministrativeArea',
         'postalCode' => 'getPostalCode',
-        'county' => 'getCounty',
         'country' => 'getCountry',
         'district' => 'getDistrict',
         'buildingNumber' => 'getBuildingNumber',
         'email' => 'getEmail',
         'emailDomain' => 'getEmailDomain',
         'phoneNumber' => 'getPhoneNumber',
-        'phoneType' => 'getPhoneType',
-        'verificationStatus' => 'getVerificationStatus',
-        'alternatePhoneNumber' => 'getAlternatePhoneNumber',
-        'alternateEmail' => 'getAlternateEmail'
+        'phoneType' => 'getPhoneType'
     ];
 
     public static function attributeMap()
@@ -260,7 +240,6 @@ class Ptsv2paymentsOrderInformationBillTo implements ArrayAccess
         $this->container['locality'] = isset($data['locality']) ? $data['locality'] : null;
         $this->container['administrativeArea'] = isset($data['administrativeArea']) ? $data['administrativeArea'] : null;
         $this->container['postalCode'] = isset($data['postalCode']) ? $data['postalCode'] : null;
-        $this->container['county'] = isset($data['county']) ? $data['county'] : null;
         $this->container['country'] = isset($data['country']) ? $data['country'] : null;
         $this->container['district'] = isset($data['district']) ? $data['district'] : null;
         $this->container['buildingNumber'] = isset($data['buildingNumber']) ? $data['buildingNumber'] : null;
@@ -268,9 +247,6 @@ class Ptsv2paymentsOrderInformationBillTo implements ArrayAccess
         $this->container['emailDomain'] = isset($data['emailDomain']) ? $data['emailDomain'] : null;
         $this->container['phoneNumber'] = isset($data['phoneNumber']) ? $data['phoneNumber'] : null;
         $this->container['phoneType'] = isset($data['phoneType']) ? $data['phoneType'] : null;
-        $this->container['verificationStatus'] = isset($data['verificationStatus']) ? $data['verificationStatus'] : null;
-        $this->container['alternatePhoneNumber'] = isset($data['alternatePhoneNumber']) ? $data['alternatePhoneNumber'] : null;
-        $this->container['alternateEmail'] = isset($data['alternateEmail']) ? $data['alternateEmail'] : null;
     }
 
     /**
@@ -314,6 +290,7 @@ class Ptsv2paymentsOrderInformationBillTo implements ArrayAccess
      */
     public function setFirstName($firstName)
     {
+
         $this->container['firstName'] = $firstName;
 
         return $this;
@@ -335,6 +312,7 @@ class Ptsv2paymentsOrderInformationBillTo implements ArrayAccess
      */
     public function setLastName($lastName)
     {
+
         $this->container['lastName'] = $lastName;
 
         return $this;
@@ -356,6 +334,7 @@ class Ptsv2paymentsOrderInformationBillTo implements ArrayAccess
      */
     public function setMiddleName($middleName)
     {
+
         $this->container['middleName'] = $middleName;
 
         return $this;
@@ -377,6 +356,7 @@ class Ptsv2paymentsOrderInformationBillTo implements ArrayAccess
      */
     public function setNameSuffix($nameSuffix)
     {
+
         $this->container['nameSuffix'] = $nameSuffix;
 
         return $this;
@@ -398,6 +378,7 @@ class Ptsv2paymentsOrderInformationBillTo implements ArrayAccess
      */
     public function setTitle($title)
     {
+
         $this->container['title'] = $title;
 
         return $this;
@@ -440,6 +421,7 @@ class Ptsv2paymentsOrderInformationBillTo implements ArrayAccess
      */
     public function setAddress1($address1)
     {
+
         $this->container['address1'] = $address1;
 
         return $this;
@@ -461,6 +443,7 @@ class Ptsv2paymentsOrderInformationBillTo implements ArrayAccess
      */
     public function setAddress2($address2)
     {
+
         $this->container['address2'] = $address2;
 
         return $this;
@@ -482,6 +465,7 @@ class Ptsv2paymentsOrderInformationBillTo implements ArrayAccess
      */
     public function setAddress3($address3)
     {
+
         $this->container['address3'] = $address3;
 
         return $this;
@@ -503,6 +487,7 @@ class Ptsv2paymentsOrderInformationBillTo implements ArrayAccess
      */
     public function setAddress4($address4)
     {
+
         $this->container['address4'] = $address4;
 
         return $this;
@@ -524,6 +509,7 @@ class Ptsv2paymentsOrderInformationBillTo implements ArrayAccess
      */
     public function setLocality($locality)
     {
+
         $this->container['locality'] = $locality;
 
         return $this;
@@ -545,6 +531,7 @@ class Ptsv2paymentsOrderInformationBillTo implements ArrayAccess
      */
     public function setAdministrativeArea($administrativeArea)
     {
+
         $this->container['administrativeArea'] = $administrativeArea;
 
         return $this;
@@ -566,28 +553,8 @@ class Ptsv2paymentsOrderInformationBillTo implements ArrayAccess
      */
     public function setPostalCode($postalCode)
     {
+
         $this->container['postalCode'] = $postalCode;
-
-        return $this;
-    }
-
-    /**
-     * Gets county
-     * @return string
-     */
-    public function getCounty()
-    {
-        return $this->container['county'];
-    }
-
-    /**
-     * Sets county
-     * @param string $county U.S. county if available.
-     * @return $this
-     */
-    public function setCounty($county)
-    {
-        $this->container['county'] = $county;
 
         return $this;
     }
@@ -608,6 +575,7 @@ class Ptsv2paymentsOrderInformationBillTo implements ArrayAccess
      */
     public function setCountry($country)
     {
+
         $this->container['country'] = $country;
 
         return $this;
@@ -629,6 +597,7 @@ class Ptsv2paymentsOrderInformationBillTo implements ArrayAccess
      */
     public function setDistrict($district)
     {
+
         $this->container['district'] = $district;
 
         return $this;
@@ -650,6 +619,7 @@ class Ptsv2paymentsOrderInformationBillTo implements ArrayAccess
      */
     public function setBuildingNumber($buildingNumber)
     {
+
         $this->container['buildingNumber'] = $buildingNumber;
 
         return $this;
@@ -671,6 +641,7 @@ class Ptsv2paymentsOrderInformationBillTo implements ArrayAccess
      */
     public function setEmail($email)
     {
+
         $this->container['email'] = $email;
 
         return $this;
@@ -692,6 +663,7 @@ class Ptsv2paymentsOrderInformationBillTo implements ArrayAccess
      */
     public function setEmailDomain($emailDomain)
     {
+
         $this->container['emailDomain'] = $emailDomain;
 
         return $this;
@@ -713,6 +685,7 @@ class Ptsv2paymentsOrderInformationBillTo implements ArrayAccess
      */
     public function setPhoneNumber($phoneNumber)
     {
+
         $this->container['phoneNumber'] = $phoneNumber;
 
         return $this;
@@ -738,75 +711,11 @@ class Ptsv2paymentsOrderInformationBillTo implements ArrayAccess
 
         return $this;
     }
-
-    /**
-     * Gets verificationStatus
-     * @return string
-     */
-    public function getVerificationStatus()
-    {
-        return $this->container['verificationStatus'];
-    }
-
-    /**
-     * Sets verificationStatus
-     * @param string $verificationStatus Whether buyer has verified their identity. Used in case of PayPal transactions.  Possible Values: * VERIFIED * UNVERIFIED
-     * @return $this
-     */
-    public function setVerificationStatus($verificationStatus)
-    {
-        $this->container['verificationStatus'] = $verificationStatus;
-
-        return $this;
-    }
-
-    /**
-     * Gets alternatePhoneNumber
-     * @return string
-     */
-    public function getAlternatePhoneNumber()
-    {
-        return $this->container['alternatePhoneNumber'];
-    }
-
-    /**
-     * Sets alternatePhoneNumber
-     * @param string $alternatePhoneNumber #### Visa Platform Connect contains customer’s alternate phone number.
-     * @return $this
-     */
-    public function setAlternatePhoneNumber($alternatePhoneNumber)
-    {
-        $this->container['alternatePhoneNumber'] = $alternatePhoneNumber;
-
-        return $this;
-    }
-
-    /**
-     * Gets alternateEmail
-     * @return string
-     */
-    public function getAlternateEmail()
-    {
-        return $this->container['alternateEmail'];
-    }
-
-    /**
-     * Sets alternateEmail
-     * @param string $alternateEmail #### Visa Platform Connect contains customer’s alternate email address.
-     * @return $this
-     */
-    public function setAlternateEmail($alternateEmail)
-    {
-        $this->container['alternateEmail'] = $alternateEmail;
-
-        return $this;
-    }
     /**
      * Returns true if offset exists. False otherwise.
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -817,7 +726,6 @@ class Ptsv2paymentsOrderInformationBillTo implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -829,7 +737,6 @@ class Ptsv2paymentsOrderInformationBillTo implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -844,7 +751,6 @@ class Ptsv2paymentsOrderInformationBillTo implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

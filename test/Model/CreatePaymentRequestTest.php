@@ -237,11 +237,4 @@ class CreatePaymentRequestTest extends \PHPUnit_Framework_TestCase
     public function testPropertyRecurringPaymentInformation()
     {
     }
-
-    /**
-     * Test attribute "watchlistScreeningInformation"
-     */
-    public function testPropertyWatchlistScreeningInformation()
-    {
-    }
 }

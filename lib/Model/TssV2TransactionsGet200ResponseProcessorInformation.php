@@ -302,6 +302,7 @@ class TssV2TransactionsGet200ResponseProcessorInformation implements ArrayAccess
      */
     public function setTransactionId($transactionId)
     {
+
         $this->container['transactionId'] = $transactionId;
 
         return $this;
@@ -344,6 +345,7 @@ class TssV2TransactionsGet200ResponseProcessorInformation implements ArrayAccess
      */
     public function setRetrievalReferenceNumber($retrievalReferenceNumber)
     {
+
         $this->container['retrievalReferenceNumber'] = $retrievalReferenceNumber;
 
         return $this;
@@ -386,6 +388,7 @@ class TssV2TransactionsGet200ResponseProcessorInformation implements ArrayAccess
      */
     public function setApprovalCode($approvalCode)
     {
+
         $this->container['approvalCode'] = $approvalCode;
 
         return $this;
@@ -407,6 +410,7 @@ class TssV2TransactionsGet200ResponseProcessorInformation implements ArrayAccess
      */
     public function setResponseCode($responseCode)
     {
+
         $this->container['responseCode'] = $responseCode;
 
         return $this;
@@ -512,6 +516,7 @@ class TssV2TransactionsGet200ResponseProcessorInformation implements ArrayAccess
      */
     public function setSystemTraceAuditNumber($systemTraceAuditNumber)
     {
+
         $this->container['systemTraceAuditNumber'] = $systemTraceAuditNumber;
 
         return $this;
@@ -533,6 +538,7 @@ class TssV2TransactionsGet200ResponseProcessorInformation implements ArrayAccess
      */
     public function setResponseCodeSource($responseCodeSource)
     {
+
         $this->container['responseCodeSource'] = $responseCodeSource;
 
         return $this;
@@ -554,6 +560,7 @@ class TssV2TransactionsGet200ResponseProcessorInformation implements ArrayAccess
      */
     public function setPaymentAccountReferenceNumber($paymentAccountReferenceNumber)
     {
+
         $this->container['paymentAccountReferenceNumber'] = $paymentAccountReferenceNumber;
 
         return $this;
@@ -563,7 +570,6 @@ class TssV2TransactionsGet200ResponseProcessorInformation implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -574,7 +580,6 @@ class TssV2TransactionsGet200ResponseProcessorInformation implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -586,7 +591,6 @@ class TssV2TransactionsGet200ResponseProcessorInformation implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -601,7 +605,6 @@ class TssV2TransactionsGet200ResponseProcessorInformation implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

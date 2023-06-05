@@ -236,6 +236,7 @@ class Riskv1liststypeentriesOrderInformationBillTo implements ArrayAccess
      */
     public function setAddress1($address1)
     {
+
         $this->container['address1'] = $address1;
 
         return $this;
@@ -257,6 +258,7 @@ class Riskv1liststypeentriesOrderInformationBillTo implements ArrayAccess
      */
     public function setAddress2($address2)
     {
+
         $this->container['address2'] = $address2;
 
         return $this;
@@ -278,6 +280,7 @@ class Riskv1liststypeentriesOrderInformationBillTo implements ArrayAccess
      */
     public function setAdministrativeArea($administrativeArea)
     {
+
         $this->container['administrativeArea'] = $administrativeArea;
 
         return $this;
@@ -299,6 +302,7 @@ class Riskv1liststypeentriesOrderInformationBillTo implements ArrayAccess
      */
     public function setCountry($country)
     {
+
         $this->container['country'] = $country;
 
         return $this;
@@ -320,6 +324,7 @@ class Riskv1liststypeentriesOrderInformationBillTo implements ArrayAccess
      */
     public function setLocality($locality)
     {
+
         $this->container['locality'] = $locality;
 
         return $this;
@@ -341,6 +346,7 @@ class Riskv1liststypeentriesOrderInformationBillTo implements ArrayAccess
      */
     public function setPostalCode($postalCode)
     {
+
         $this->container['postalCode'] = $postalCode;
 
         return $this;
@@ -362,6 +368,7 @@ class Riskv1liststypeentriesOrderInformationBillTo implements ArrayAccess
      */
     public function setFirstName($firstName)
     {
+
         $this->container['firstName'] = $firstName;
 
         return $this;
@@ -383,6 +390,7 @@ class Riskv1liststypeentriesOrderInformationBillTo implements ArrayAccess
      */
     public function setLastName($lastName)
     {
+
         $this->container['lastName'] = $lastName;
 
         return $this;
@@ -404,6 +412,7 @@ class Riskv1liststypeentriesOrderInformationBillTo implements ArrayAccess
      */
     public function setPhoneNumber($phoneNumber)
     {
+
         $this->container['phoneNumber'] = $phoneNumber;
 
         return $this;
@@ -425,6 +434,7 @@ class Riskv1liststypeentriesOrderInformationBillTo implements ArrayAccess
      */
     public function setEmail($email)
     {
+
         $this->container['email'] = $email;
 
         return $this;
@@ -446,6 +456,7 @@ class Riskv1liststypeentriesOrderInformationBillTo implements ArrayAccess
      */
     public function setEmailDomain($emailDomain)
     {
+
         $this->container['emailDomain'] = $emailDomain;
 
         return $this;
@@ -455,7 +466,6 @@ class Riskv1liststypeentriesOrderInformationBillTo implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -466,7 +476,6 @@ class Riskv1liststypeentriesOrderInformationBillTo implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -478,7 +487,6 @@ class Riskv1liststypeentriesOrderInformationBillTo implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -493,7 +501,6 @@ class Riskv1liststypeentriesOrderInformationBillTo implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

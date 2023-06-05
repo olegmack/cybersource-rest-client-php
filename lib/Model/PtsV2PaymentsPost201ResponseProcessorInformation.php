@@ -64,7 +64,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
         'responseDetails' => 'string',
         'responseCategoryCode' => 'string',
         'forwardedAcquirerCode' => 'string',
-        'settlementDate' => 'string',
         'avs' => '\CyberSource\Model\PtsV2PaymentsPost201ResponseProcessorInformationAvs',
         'cardVerification' => '\CyberSource\Model\PtsV2PaymentsPost201ResponseProcessorInformationCardVerification',
         'merchantAdvice' => '\CyberSource\Model\PtsV2PaymentsPost201ResponseProcessorInformationMerchantAdvice',
@@ -84,9 +83,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
         'merchantNumber' => 'string',
         'retrievalReferenceNumber' => 'string',
         'paymentUrl' => 'string',
-        'completeUrl' => 'string',
-        'signature' => 'string',
-        'publicKey' => 'string'
+        'completeUrl' => 'string'
     ];
 
     /**
@@ -104,7 +101,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
         'responseDetails' => null,
         'responseCategoryCode' => null,
         'forwardedAcquirerCode' => null,
-        'settlementDate' => null,
         'avs' => null,
         'cardVerification' => null,
         'merchantAdvice' => null,
@@ -124,9 +120,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
         'merchantNumber' => null,
         'retrievalReferenceNumber' => null,
         'paymentUrl' => null,
-        'completeUrl' => null,
-        'signature' => null,
-        'publicKey' => null
+        'completeUrl' => null
     ];
 
     public static function swaggerTypes()
@@ -154,7 +148,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
         'responseDetails' => 'responseDetails',
         'responseCategoryCode' => 'responseCategoryCode',
         'forwardedAcquirerCode' => 'forwardedAcquirerCode',
-        'settlementDate' => 'settlementDate',
         'avs' => 'avs',
         'cardVerification' => 'cardVerification',
         'merchantAdvice' => 'merchantAdvice',
@@ -174,9 +167,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
         'merchantNumber' => 'merchantNumber',
         'retrievalReferenceNumber' => 'retrievalReferenceNumber',
         'paymentUrl' => 'paymentUrl',
-        'completeUrl' => 'completeUrl',
-        'signature' => 'signature',
-        'publicKey' => 'publicKey'
+        'completeUrl' => 'completeUrl'
     ];
 
 
@@ -195,7 +186,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
         'responseDetails' => 'setResponseDetails',
         'responseCategoryCode' => 'setResponseCategoryCode',
         'forwardedAcquirerCode' => 'setForwardedAcquirerCode',
-        'settlementDate' => 'setSettlementDate',
         'avs' => 'setAvs',
         'cardVerification' => 'setCardVerification',
         'merchantAdvice' => 'setMerchantAdvice',
@@ -215,9 +205,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
         'merchantNumber' => 'setMerchantNumber',
         'retrievalReferenceNumber' => 'setRetrievalReferenceNumber',
         'paymentUrl' => 'setPaymentUrl',
-        'completeUrl' => 'setCompleteUrl',
-        'signature' => 'setSignature',
-        'publicKey' => 'setPublicKey'
+        'completeUrl' => 'setCompleteUrl'
     ];
 
 
@@ -236,7 +224,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
         'responseDetails' => 'getResponseDetails',
         'responseCategoryCode' => 'getResponseCategoryCode',
         'forwardedAcquirerCode' => 'getForwardedAcquirerCode',
-        'settlementDate' => 'getSettlementDate',
         'avs' => 'getAvs',
         'cardVerification' => 'getCardVerification',
         'merchantAdvice' => 'getMerchantAdvice',
@@ -256,9 +243,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
         'merchantNumber' => 'getMerchantNumber',
         'retrievalReferenceNumber' => 'getRetrievalReferenceNumber',
         'paymentUrl' => 'getPaymentUrl',
-        'completeUrl' => 'getCompleteUrl',
-        'signature' => 'getSignature',
-        'publicKey' => 'getPublicKey'
+        'completeUrl' => 'getCompleteUrl'
     ];
 
     public static function attributeMap()
@@ -302,7 +287,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
         $this->container['responseDetails'] = isset($data['responseDetails']) ? $data['responseDetails'] : null;
         $this->container['responseCategoryCode'] = isset($data['responseCategoryCode']) ? $data['responseCategoryCode'] : null;
         $this->container['forwardedAcquirerCode'] = isset($data['forwardedAcquirerCode']) ? $data['forwardedAcquirerCode'] : null;
-        $this->container['settlementDate'] = isset($data['settlementDate']) ? $data['settlementDate'] : null;
         $this->container['avs'] = isset($data['avs']) ? $data['avs'] : null;
         $this->container['cardVerification'] = isset($data['cardVerification']) ? $data['cardVerification'] : null;
         $this->container['merchantAdvice'] = isset($data['merchantAdvice']) ? $data['merchantAdvice'] : null;
@@ -323,8 +307,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
         $this->container['retrievalReferenceNumber'] = isset($data['retrievalReferenceNumber']) ? $data['retrievalReferenceNumber'] : null;
         $this->container['paymentUrl'] = isset($data['paymentUrl']) ? $data['paymentUrl'] : null;
         $this->container['completeUrl'] = isset($data['completeUrl']) ? $data['completeUrl'] : null;
-        $this->container['signature'] = isset($data['signature']) ? $data['signature'] : null;
-        $this->container['publicKey'] = isset($data['publicKey']) ? $data['publicKey'] : null;
     }
 
     /**
@@ -368,6 +350,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
      */
     public function setAuthIndicator($authIndicator)
     {
+
         $this->container['authIndicator'] = $authIndicator;
 
         return $this;
@@ -389,6 +372,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
      */
     public function setApprovalCode($approvalCode)
     {
+
         $this->container['approvalCode'] = $approvalCode;
 
         return $this;
@@ -410,6 +394,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
      */
     public function setCardReferenceData($cardReferenceData)
     {
+
         $this->container['cardReferenceData'] = $cardReferenceData;
 
         return $this;
@@ -431,6 +416,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
      */
     public function setTransactionId($transactionId)
     {
+
         $this->container['transactionId'] = $transactionId;
 
         return $this;
@@ -473,6 +459,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
      */
     public function setResponseCode($responseCode)
     {
+
         $this->container['responseCode'] = $responseCode;
 
         return $this;
@@ -494,6 +481,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
      */
     public function setResponseCodeSource($responseCodeSource)
     {
+
         $this->container['responseCodeSource'] = $responseCodeSource;
 
         return $this;
@@ -515,6 +503,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
      */
     public function setResponseDetails($responseDetails)
     {
+
         $this->container['responseDetails'] = $responseDetails;
 
         return $this;
@@ -536,6 +525,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
      */
     public function setResponseCategoryCode($responseCategoryCode)
     {
+
         $this->container['responseCategoryCode'] = $responseCategoryCode;
 
         return $this;
@@ -557,28 +547,8 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
      */
     public function setForwardedAcquirerCode($forwardedAcquirerCode)
     {
+
         $this->container['forwardedAcquirerCode'] = $forwardedAcquirerCode;
-
-        return $this;
-    }
-
-    /**
-     * Gets settlementDate
-     * @return string
-     */
-    public function getSettlementDate()
-    {
-        return $this->container['settlementDate'];
-    }
-
-    /**
-     * Sets settlementDate
-     * @param string $settlementDate Field contains a settlement date. The date is in mmdd format, where: mm = month and dd = day.
-     * @return $this
-     */
-    public function setSettlementDate($settlementDate)
-    {
-        $this->container['settlementDate'] = $settlementDate;
 
         return $this;
     }
@@ -746,6 +716,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
      */
     public function setSystemTraceAuditNumber($systemTraceAuditNumber)
     {
+
         $this->container['systemTraceAuditNumber'] = $systemTraceAuditNumber;
 
         return $this;
@@ -767,6 +738,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
      */
     public function setPaymentAccountReferenceNumber($paymentAccountReferenceNumber)
     {
+
         $this->container['paymentAccountReferenceNumber'] = $paymentAccountReferenceNumber;
 
         return $this;
@@ -788,6 +760,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
      */
     public function setTransactionIntegrityCode($transactionIntegrityCode)
     {
+
         $this->container['transactionIntegrityCode'] = $transactionIntegrityCode;
 
         return $this;
@@ -809,6 +782,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
      */
     public function setAmexVerbalAuthReferenceNumber($amexVerbalAuthReferenceNumber)
     {
+
         $this->container['amexVerbalAuthReferenceNumber'] = $amexVerbalAuthReferenceNumber;
 
         return $this;
@@ -830,6 +804,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
      */
     public function setMasterCardServiceCode($masterCardServiceCode)
     {
+
         $this->container['masterCardServiceCode'] = $masterCardServiceCode;
 
         return $this;
@@ -851,6 +826,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
      */
     public function setMasterCardServiceReplyCode($masterCardServiceReplyCode)
     {
+
         $this->container['masterCardServiceReplyCode'] = $masterCardServiceReplyCode;
 
         return $this;
@@ -872,6 +848,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
      */
     public function setMasterCardAuthenticationType($masterCardAuthenticationType)
     {
+
         $this->container['masterCardAuthenticationType'] = $masterCardAuthenticationType;
 
         return $this;
@@ -893,6 +870,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
      */
     public function setName($name)
     {
+
         $this->container['name'] = $name;
 
         return $this;
@@ -935,6 +913,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
      */
     public function setMerchantNumber($merchantNumber)
     {
+
         $this->container['merchantNumber'] = $merchantNumber;
 
         return $this;
@@ -956,6 +935,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
      */
     public function setRetrievalReferenceNumber($retrievalReferenceNumber)
     {
+
         $this->container['retrievalReferenceNumber'] = $retrievalReferenceNumber;
 
         return $this;
@@ -977,6 +957,7 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
      */
     public function setPaymentUrl($paymentUrl)
     {
+
         $this->container['paymentUrl'] = $paymentUrl;
 
         return $this;
@@ -998,49 +979,8 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
      */
     public function setCompleteUrl($completeUrl)
     {
+
         $this->container['completeUrl'] = $completeUrl;
-
-        return $this;
-    }
-
-    /**
-     * Gets signature
-     * @return string
-     */
-    public function getSignature()
-    {
-        return $this->container['signature'];
-    }
-
-    /**
-     * Sets signature
-     * @param string $signature
-     * @return $this
-     */
-    public function setSignature($signature)
-    {
-        $this->container['signature'] = $signature;
-
-        return $this;
-    }
-
-    /**
-     * Gets publicKey
-     * @return string
-     */
-    public function getPublicKey()
-    {
-        return $this->container['publicKey'];
-    }
-
-    /**
-     * Sets publicKey
-     * @param string $publicKey
-     * @return $this
-     */
-    public function setPublicKey($publicKey)
-    {
-        $this->container['publicKey'] = $publicKey;
 
         return $this;
     }
@@ -1049,7 +989,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -1060,7 +999,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -1072,7 +1010,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -1087,7 +1024,6 @@ class PtsV2PaymentsPost201ResponseProcessorInformation implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

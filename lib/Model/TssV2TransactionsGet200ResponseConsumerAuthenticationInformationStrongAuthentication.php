@@ -200,6 +200,7 @@ class TssV2TransactionsGet200ResponseConsumerAuthenticationInformationStrongAuth
      */
     public function setLowValueExemptionIndicator($lowValueExemptionIndicator)
     {
+
         $this->container['lowValueExemptionIndicator'] = $lowValueExemptionIndicator;
 
         return $this;
@@ -221,6 +222,7 @@ class TssV2TransactionsGet200ResponseConsumerAuthenticationInformationStrongAuth
      */
     public function setRiskAnalysisExemptionIndicator($riskAnalysisExemptionIndicator)
     {
+
         $this->container['riskAnalysisExemptionIndicator'] = $riskAnalysisExemptionIndicator;
 
         return $this;
@@ -242,6 +244,7 @@ class TssV2TransactionsGet200ResponseConsumerAuthenticationInformationStrongAuth
      */
     public function setTrustedMerchantExemptionIndicator($trustedMerchantExemptionIndicator)
     {
+
         $this->container['trustedMerchantExemptionIndicator'] = $trustedMerchantExemptionIndicator;
 
         return $this;
@@ -263,6 +266,7 @@ class TssV2TransactionsGet200ResponseConsumerAuthenticationInformationStrongAuth
      */
     public function setSecureCorporatePaymentIndicator($secureCorporatePaymentIndicator)
     {
+
         $this->container['secureCorporatePaymentIndicator'] = $secureCorporatePaymentIndicator;
 
         return $this;
@@ -284,6 +288,7 @@ class TssV2TransactionsGet200ResponseConsumerAuthenticationInformationStrongAuth
      */
     public function setDelegatedAuthenticationExemptionIndicator($delegatedAuthenticationExemptionIndicator)
     {
+
         $this->container['delegatedAuthenticationExemptionIndicator'] = $delegatedAuthenticationExemptionIndicator;
 
         return $this;
@@ -293,7 +298,6 @@ class TssV2TransactionsGet200ResponseConsumerAuthenticationInformationStrongAuth
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -304,7 +308,6 @@ class TssV2TransactionsGet200ResponseConsumerAuthenticationInformationStrongAuth
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -316,7 +319,6 @@ class TssV2TransactionsGet200ResponseConsumerAuthenticationInformationStrongAuth
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -331,7 +333,6 @@ class TssV2TransactionsGet200ResponseConsumerAuthenticationInformationStrongAuth
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

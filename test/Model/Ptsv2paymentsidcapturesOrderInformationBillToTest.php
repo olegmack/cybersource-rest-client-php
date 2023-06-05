@@ -78,23 +78,9 @@ class Ptsv2paymentsidcapturesOrderInformationBillToTest extends \PHPUnit_Framewo
     }
 
     /**
-     * Test attribute "title"
-     */
-    public function testPropertyTitle()
-    {
-    }
-
-    /**
      * Test attribute "firstName"
      */
     public function testPropertyFirstName()
-    {
-    }
-
-    /**
-     * Test attribute "middleName"
-     */
-    public function testPropertyMiddleName()
     {
     }
 
@@ -134,13 +120,6 @@ class Ptsv2paymentsidcapturesOrderInformationBillToTest extends \PHPUnit_Framewo
     }
 
     /**
-     * Test attribute "district"
-     */
-    public function testPropertyDistrict()
-    {
-    }
-
-    /**
      * Test attribute "administrativeArea"
      */
     public function testPropertyAdministrativeArea()
@@ -151,13 +130,6 @@ class Ptsv2paymentsidcapturesOrderInformationBillToTest extends \PHPUnit_Framewo
      * Test attribute "postalCode"
      */
     public function testPropertyPostalCode()
-    {
-    }
-
-    /**
-     * Test attribute "county"
-     */
-    public function testPropertyCounty()
     {
     }
 

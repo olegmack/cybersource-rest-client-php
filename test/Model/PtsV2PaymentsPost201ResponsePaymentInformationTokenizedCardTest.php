@@ -125,11 +125,4 @@ class PtsV2PaymentsPost201ResponsePaymentInformationTokenizedCardTest extends \P
     public function testPropertyRequestorId()
     {
     }
-
-    /**
-     * Test attribute "assuranceMethod"
-     */
-    public function testPropertyAssuranceMethod()
-    {
-    }
 }

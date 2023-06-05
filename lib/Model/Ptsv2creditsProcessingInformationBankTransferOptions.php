@@ -212,6 +212,7 @@ class Ptsv2creditsProcessingInformationBankTransferOptions implements ArrayAcces
      */
     public function setCustomerMemo($customerMemo)
     {
+
         $this->container['customerMemo'] = $customerMemo;
 
         return $this;
@@ -233,6 +234,7 @@ class Ptsv2creditsProcessingInformationBankTransferOptions implements ArrayAcces
      */
     public function setSecCode($secCode)
     {
+
         $this->container['secCode'] = $secCode;
 
         return $this;
@@ -254,6 +256,7 @@ class Ptsv2creditsProcessingInformationBankTransferOptions implements ArrayAcces
      */
     public function setTerminalCity($terminalCity)
     {
+
         $this->container['terminalCity'] = $terminalCity;
 
         return $this;
@@ -275,6 +278,7 @@ class Ptsv2creditsProcessingInformationBankTransferOptions implements ArrayAcces
      */
     public function setTerminalState($terminalState)
     {
+
         $this->container['terminalState'] = $terminalState;
 
         return $this;
@@ -296,6 +300,7 @@ class Ptsv2creditsProcessingInformationBankTransferOptions implements ArrayAcces
      */
     public function setEffectiveDate($effectiveDate)
     {
+
         $this->container['effectiveDate'] = $effectiveDate;
 
         return $this;
@@ -317,6 +322,7 @@ class Ptsv2creditsProcessingInformationBankTransferOptions implements ArrayAcces
      */
     public function setPartialPaymentId($partialPaymentId)
     {
+
         $this->container['partialPaymentId'] = $partialPaymentId;
 
         return $this;
@@ -338,6 +344,7 @@ class Ptsv2creditsProcessingInformationBankTransferOptions implements ArrayAcces
      */
     public function setSettlementMethod($settlementMethod)
     {
+
         $this->container['settlementMethod'] = $settlementMethod;
 
         return $this;
@@ -347,7 +354,6 @@ class Ptsv2creditsProcessingInformationBankTransferOptions implements ArrayAcces
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -358,7 +364,6 @@ class Ptsv2creditsProcessingInformationBankTransferOptions implements ArrayAcces
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -370,7 +375,6 @@ class Ptsv2creditsProcessingInformationBankTransferOptions implements ArrayAcces
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -385,7 +389,6 @@ class Ptsv2creditsProcessingInformationBankTransferOptions implements ArrayAcces
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

@@ -188,6 +188,7 @@ class Ptsv2paymentsidreversalsClientReferenceInformationPartner implements Array
      */
     public function setDeveloperId($developerId)
     {
+
         $this->container['developerId'] = $developerId;
 
         return $this;
@@ -209,6 +210,7 @@ class Ptsv2paymentsidreversalsClientReferenceInformationPartner implements Array
      */
     public function setSolutionId($solutionId)
     {
+
         $this->container['solutionId'] = $solutionId;
 
         return $this;
@@ -230,6 +232,7 @@ class Ptsv2paymentsidreversalsClientReferenceInformationPartner implements Array
      */
     public function setThirdPartyCertificationNumber($thirdPartyCertificationNumber)
     {
+
         $this->container['thirdPartyCertificationNumber'] = $thirdPartyCertificationNumber;
 
         return $this;
@@ -239,7 +242,6 @@ class Ptsv2paymentsidreversalsClientReferenceInformationPartner implements Array
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -250,7 +252,6 @@ class Ptsv2paymentsidreversalsClientReferenceInformationPartner implements Array
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -262,7 +263,6 @@ class Ptsv2paymentsidreversalsClientReferenceInformationPartner implements Array
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -277,7 +277,6 @@ class Ptsv2paymentsidreversalsClientReferenceInformationPartner implements Array
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

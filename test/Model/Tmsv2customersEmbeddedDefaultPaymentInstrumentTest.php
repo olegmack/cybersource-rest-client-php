@@ -113,13 +113,6 @@ class Tmsv2customersEmbeddedDefaultPaymentInstrumentTest extends \PHPUnit_Framew
     }
 
     /**
-     * Test attribute "type"
-     */
-    public function testPropertyType()
-    {
-    }
-
-    /**
      * Test attribute "bankAccount"
      */
     public function testPropertyBankAccount()

@@ -60,8 +60,7 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation implements ArrayAcc
         'merchantNumber' => 'string',
         'responseCode' => 'string',
         'achVerification' => '\CyberSource\Model\PtsV2PaymentsPost201ResponseProcessorInformationAchVerification',
-        'networkTransactionId' => 'string',
-        'settlementDate' => 'string'
+        'networkTransactionId' => 'string'
     ];
 
     /**
@@ -75,8 +74,7 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation implements ArrayAcc
         'merchantNumber' => null,
         'responseCode' => null,
         'achVerification' => null,
-        'networkTransactionId' => null,
-        'settlementDate' => null
+        'networkTransactionId' => null
     ];
 
     public static function swaggerTypes()
@@ -100,8 +98,7 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation implements ArrayAcc
         'merchantNumber' => 'merchantNumber',
         'responseCode' => 'responseCode',
         'achVerification' => 'achVerification',
-        'networkTransactionId' => 'networkTransactionId',
-        'settlementDate' => 'settlementDate'
+        'networkTransactionId' => 'networkTransactionId'
     ];
 
 
@@ -116,8 +113,7 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation implements ArrayAcc
         'merchantNumber' => 'setMerchantNumber',
         'responseCode' => 'setResponseCode',
         'achVerification' => 'setAchVerification',
-        'networkTransactionId' => 'setNetworkTransactionId',
-        'settlementDate' => 'setSettlementDate'
+        'networkTransactionId' => 'setNetworkTransactionId'
     ];
 
 
@@ -132,8 +128,7 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation implements ArrayAcc
         'merchantNumber' => 'getMerchantNumber',
         'responseCode' => 'getResponseCode',
         'achVerification' => 'getAchVerification',
-        'networkTransactionId' => 'getNetworkTransactionId',
-        'settlementDate' => 'getSettlementDate'
+        'networkTransactionId' => 'getNetworkTransactionId'
     ];
 
     public static function attributeMap()
@@ -174,7 +169,6 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation implements ArrayAcc
         $this->container['responseCode'] = isset($data['responseCode']) ? $data['responseCode'] : null;
         $this->container['achVerification'] = isset($data['achVerification']) ? $data['achVerification'] : null;
         $this->container['networkTransactionId'] = isset($data['networkTransactionId']) ? $data['networkTransactionId'] : null;
-        $this->container['settlementDate'] = isset($data['settlementDate']) ? $data['settlementDate'] : null;
     }
 
     /**
@@ -218,6 +212,7 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation implements ArrayAcc
      */
     public function setApprovalCode($approvalCode)
     {
+
         $this->container['approvalCode'] = $approvalCode;
 
         return $this;
@@ -239,6 +234,7 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation implements ArrayAcc
      */
     public function setTransactionId($transactionId)
     {
+
         $this->container['transactionId'] = $transactionId;
 
         return $this;
@@ -260,6 +256,7 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation implements ArrayAcc
      */
     public function setForwardedAcquirerCode($forwardedAcquirerCode)
     {
+
         $this->container['forwardedAcquirerCode'] = $forwardedAcquirerCode;
 
         return $this;
@@ -281,6 +278,7 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation implements ArrayAcc
      */
     public function setMerchantNumber($merchantNumber)
     {
+
         $this->container['merchantNumber'] = $merchantNumber;
 
         return $this;
@@ -302,6 +300,7 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation implements ArrayAcc
      */
     public function setResponseCode($responseCode)
     {
+
         $this->container['responseCode'] = $responseCode;
 
         return $this;
@@ -348,33 +347,11 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation implements ArrayAcc
 
         return $this;
     }
-
-    /**
-     * Gets settlementDate
-     * @return string
-     */
-    public function getSettlementDate()
-    {
-        return $this->container['settlementDate'];
-    }
-
-    /**
-     * Sets settlementDate
-     * @param string $settlementDate Field contains a settlement date. The date is in mmdd format, where: mm = month and dd = day.
-     * @return $this
-     */
-    public function setSettlementDate($settlementDate)
-    {
-        $this->container['settlementDate'] = $settlementDate;
-
-        return $this;
-    }
     /**
      * Returns true if offset exists. False otherwise.
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -385,7 +362,6 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation implements ArrayAcc
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -397,7 +373,6 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation implements ArrayAcc
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -412,7 +387,6 @@ class PtsV2PaymentsRefundPost201ResponseProcessorInformation implements ArrayAcc
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

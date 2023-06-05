@@ -83,11 +83,4 @@ class Ptsv2paymentsPaymentInformationPaymentTypeMethodTest extends \PHPUnit_Fram
     public function testPropertyName()
     {
     }
-
-    /**
-     * Test attribute "type"
-     */
-    public function testPropertyType()
-    {
-    }
 }

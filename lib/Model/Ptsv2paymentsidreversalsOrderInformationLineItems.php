@@ -150,6 +150,14 @@ class Ptsv2paymentsidreversalsOrderInformationLineItems implements ArrayAccess
     {
         $invalid_properties = [];
 
+        if (!is_null($this->container['quantity']) && ($this->container['quantity'] > 999999999)) {
+            $invalid_properties[] = "invalid value for 'quantity', must be smaller than or equal to 999999999.";
+        }
+
+        if (!is_null($this->container['quantity']) && ($this->container['quantity'] < 1)) {
+            $invalid_properties[] = "invalid value for 'quantity', must be bigger than or equal to 1.";
+        }
+
         return $invalid_properties;
     }
 
@@ -162,6 +170,12 @@ class Ptsv2paymentsidreversalsOrderInformationLineItems implements ArrayAccess
     public function valid()
     {
 
+        if ($this->container['quantity'] > 999999999) {
+            return false;
+        }
+        if ($this->container['quantity'] < 1) {
+            return false;
+        }
         return true;
     }
 
@@ -182,6 +196,13 @@ class Ptsv2paymentsidreversalsOrderInformationLineItems implements ArrayAccess
      */
     public function setQuantity($quantity)
     {
+        if (!is_null($quantity) && ($quantity > 999999999)) {
+            throw new \InvalidArgumentException('invalid value for $quantity when calling Ptsv2paymentsidreversalsOrderInformationLineItems., must be smaller than or equal to 999999999.');
+        }
+        if (!is_null($quantity) && ($quantity < 1)) {
+            throw new \InvalidArgumentException('invalid value for $quantity when calling Ptsv2paymentsidreversalsOrderInformationLineItems., must be bigger than or equal to 1.');
+        }
+
         $this->container['quantity'] = $quantity;
 
         return $this;
@@ -203,6 +224,7 @@ class Ptsv2paymentsidreversalsOrderInformationLineItems implements ArrayAccess
      */
     public function setUnitPrice($unitPrice)
     {
+
         $this->container['unitPrice'] = $unitPrice;
 
         return $this;
@@ -212,7 +234,6 @@ class Ptsv2paymentsidreversalsOrderInformationLineItems implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -223,7 +244,6 @@ class Ptsv2paymentsidreversalsOrderInformationLineItems implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -235,7 +255,6 @@ class Ptsv2paymentsidreversalsOrderInformationLineItems implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -250,7 +269,6 @@ class Ptsv2paymentsidreversalsOrderInformationLineItems implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

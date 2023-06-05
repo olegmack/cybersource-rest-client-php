@@ -17,7 +17,6 @@ Name | Type | Description | Notes
 **acquirerInformation** | [**\CyberSource\Model\Ptsv2paymentsAcquirerInformation**](Ptsv2paymentsAcquirerInformation.md) |  | [optional] 
 **recurringPaymentInformation** | [**\CyberSource\Model\Ptsv2paymentsRecurringPaymentInformation**](Ptsv2paymentsRecurringPaymentInformation.md) |  | [optional] 
 **consumerAuthenticationInformation** | [**\CyberSource\Model\Riskv1decisionsConsumerAuthenticationInformation**](Riskv1decisionsConsumerAuthenticationInformation.md) |  | [optional] 
-**watchlistScreeningInformation** | [**\CyberSource\Model\Ptsv2paymentsWatchlistScreeningInformation**](Ptsv2paymentsWatchlistScreeningInformation.md) |  | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

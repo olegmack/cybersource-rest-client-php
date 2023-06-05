@@ -35,6 +35,7 @@ use \ArrayAccess;
  * InlineResponse200 Class Doc Comment
  *
  * @category    Class
+ * @description Successful searchKeysResponse
  * @package     CyberSource
  * @author      Swagger Codegen team
  * @link        https://github.com/swagger-api/swagger-codegen
@@ -54,10 +55,12 @@ class InlineResponse200 implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'links' => '\CyberSource\Model\InlineResponse200Links',
         'submitTimeUtc' => 'string',
         'totalCount' => 'int',
-        'plans' => '\CyberSource\Model\InlineResponse200Plans[]'
+        'offset' => 'int',
+        'limit' => 'int',
+        'sort' => 'string',
+        'keys' => '\CyberSource\Model\InlineResponse200Keys[]'
     ];
 
     /**
@@ -65,10 +68,12 @@ class InlineResponse200 implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerFormats = [
-        'links' => null,
         'submitTimeUtc' => null,
         'totalCount' => null,
-        'plans' => null
+        'offset' => null,
+        'limit' => null,
+        'sort' => null,
+        'keys' => null
     ];
 
     public static function swaggerTypes()
@@ -86,10 +91,12 @@ class InlineResponse200 implements ArrayAccess
      * @var string[]
      */
     protected static $attributeMap = [
-        'links' => '_links',
         'submitTimeUtc' => 'submitTimeUtc',
         'totalCount' => 'totalCount',
-        'plans' => 'plans'
+        'offset' => 'offset',
+        'limit' => 'limit',
+        'sort' => 'sort',
+        'keys' => 'keys'
     ];
 
 
@@ -98,10 +105,12 @@ class InlineResponse200 implements ArrayAccess
      * @var string[]
      */
     protected static $setters = [
-        'links' => 'setLinks',
         'submitTimeUtc' => 'setSubmitTimeUtc',
         'totalCount' => 'setTotalCount',
-        'plans' => 'setPlans'
+        'offset' => 'setOffset',
+        'limit' => 'setLimit',
+        'sort' => 'setSort',
+        'keys' => 'setKeys'
     ];
 
 
@@ -110,10 +119,12 @@ class InlineResponse200 implements ArrayAccess
      * @var string[]
      */
     protected static $getters = [
-        'links' => 'getLinks',
         'submitTimeUtc' => 'getSubmitTimeUtc',
         'totalCount' => 'getTotalCount',
-        'plans' => 'getPlans'
+        'offset' => 'getOffset',
+        'limit' => 'getLimit',
+        'sort' => 'getSort',
+        'keys' => 'getKeys'
     ];
 
     public static function attributeMap()
@@ -147,10 +158,12 @@ class InlineResponse200 implements ArrayAccess
      */
     public function __construct(array $data = null)
     {
-        $this->container['links'] = isset($data['links']) ? $data['links'] : null;
         $this->container['submitTimeUtc'] = isset($data['submitTimeUtc']) ? $data['submitTimeUtc'] : null;
         $this->container['totalCount'] = isset($data['totalCount']) ? $data['totalCount'] : null;
-        $this->container['plans'] = isset($data['plans']) ? $data['plans'] : null;
+        $this->container['offset'] = isset($data['offset']) ? $data['offset'] : null;
+        $this->container['limit'] = isset($data['limit']) ? $data['limit'] : null;
+        $this->container['sort'] = isset($data['sort']) ? $data['sort'] : null;
+        $this->container['keys'] = isset($data['keys']) ? $data['keys'] : null;
     }
 
     /**
@@ -179,27 +192,6 @@ class InlineResponse200 implements ArrayAccess
 
 
     /**
-     * Gets links
-     * @return \CyberSource\Model\InlineResponse200Links
-     */
-    public function getLinks()
-    {
-        return $this->container['links'];
-    }
-
-    /**
-     * Sets links
-     * @param \CyberSource\Model\InlineResponse200Links $links
-     * @return $this
-     */
-    public function setLinks($links)
-    {
-        $this->container['links'] = $links;
-
-        return $this;
-    }
-
-    /**
      * Gets submitTimeUtc
      * @return string
      */
@@ -210,7 +202,7 @@ class InlineResponse200 implements ArrayAccess
 
     /**
      * Sets submitTimeUtc
-     * @param string $submitTimeUtc Time of request in UTC. Format: `YYYY-MM-DDThh:mm:ssZ` **Example** `2016-08-11T22:47:57Z` equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The `T` separates the date and the time. The `Z` indicates UTC.  Returned by Cybersource for all services.
+     * @param string $submitTimeUtc Time of request in UTC. `Format: YYYY-MM-DDThh:mm:ssZ`  Example 2016-08-11T22:47:57Z equals August 11, 2016, at 22:47:57 (10:47:57 p.m.). The T separates the date and the time. The Z indicates UTC.
      * @return $this
      */
     public function setSubmitTimeUtc($submitTimeUtc)
@@ -231,7 +223,7 @@ class InlineResponse200 implements ArrayAccess
 
     /**
      * Sets totalCount
-     * @param int $totalCount total number of plans created
+     * @param int $totalCount Specifies the total number of items found based on the request
      * @return $this
      */
     public function setTotalCount($totalCount)
@@ -242,22 +234,85 @@ class InlineResponse200 implements ArrayAccess
     }
 
     /**
-     * Gets plans
-     * @return \CyberSource\Model\InlineResponse200Plans[]
+     * Gets offset
+     * @return int
      */
-    public function getPlans()
+    public function getOffset()
     {
-        return $this->container['plans'];
+        return $this->container['offset'];
     }
 
     /**
-     * Sets plans
-     * @param \CyberSource\Model\InlineResponse200Plans[] $plans
+     * Sets offset
+     * @param int $offset Specifies the record offset from the records are returned part of the response
      * @return $this
      */
-    public function setPlans($plans)
+    public function setOffset($offset)
     {
-        $this->container['plans'] = $plans;
+        $this->container['offset'] = $offset;
+
+        return $this;
+    }
+
+    /**
+     * Gets limit
+     * @return int
+     */
+    public function getLimit()
+    {
+        return $this->container['limit'];
+    }
+
+    /**
+     * Sets limit
+     * @param int $limit Specifies the maximum number of records requested part of the response
+     * @return $this
+     */
+    public function setLimit($limit)
+    {
+        $this->container['limit'] = $limit;
+
+        return $this;
+    }
+
+    /**
+     * Gets sort
+     * @return string
+     */
+    public function getSort()
+    {
+        return $this->container['sort'];
+    }
+
+    /**
+     * Sets sort
+     * @param string $sort Specifies a comma separated list of field names based on which the result is sorted.
+     * @return $this
+     */
+    public function setSort($sort)
+    {
+        $this->container['sort'] = $sort;
+
+        return $this;
+    }
+
+    /**
+     * Gets keys
+     * @return \CyberSource\Model\InlineResponse200Keys[]
+     */
+    public function getKeys()
+    {
+        return $this->container['keys'];
+    }
+
+    /**
+     * Sets keys
+     * @param \CyberSource\Model\InlineResponse200Keys[] $keys
+     * @return $this
+     */
+    public function setKeys($keys)
+    {
+        $this->container['keys'] = $keys;
 
         return $this;
     }
@@ -266,7 +321,6 @@ class InlineResponse200 implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -277,7 +331,6 @@ class InlineResponse200 implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -289,7 +342,6 @@ class InlineResponse200 implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -304,7 +356,6 @@ class InlineResponse200 implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

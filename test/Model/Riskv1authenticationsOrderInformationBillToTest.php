@@ -92,13 +92,6 @@ class Riskv1authenticationsOrderInformationBillToTest extends \PHPUnit_Framework
     }
 
     /**
-     * Test attribute "address3"
-     */
-    public function testPropertyAddress3()
-    {
-    }
-
-    /**
      * Test attribute "administrativeArea"
      */
     public function testPropertyAdministrativeArea()

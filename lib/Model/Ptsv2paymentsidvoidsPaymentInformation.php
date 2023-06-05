@@ -54,7 +54,7 @@ class Ptsv2paymentsidvoidsPaymentInformation implements ArrayAccess
       * @var string[]
       */
     protected static $swaggerTypes = [
-        'paymentType' => '\CyberSource\Model\Ptsv2paymentsidrefundsPaymentInformationPaymentType'
+        'paymentType' => '\CyberSource\Model\Ptsv2paymentsPaymentInformationPaymentType'
     ];
 
     /**
@@ -162,7 +162,7 @@ class Ptsv2paymentsidvoidsPaymentInformation implements ArrayAccess
 
     /**
      * Gets paymentType
-     * @return \CyberSource\Model\Ptsv2paymentsidrefundsPaymentInformationPaymentType
+     * @return \CyberSource\Model\Ptsv2paymentsPaymentInformationPaymentType
      */
     public function getPaymentType()
     {
@@ -171,7 +171,7 @@ class Ptsv2paymentsidvoidsPaymentInformation implements ArrayAccess
 
     /**
      * Sets paymentType
-     * @param \CyberSource\Model\Ptsv2paymentsidrefundsPaymentInformationPaymentType $paymentType
+     * @param \CyberSource\Model\Ptsv2paymentsPaymentInformationPaymentType $paymentType
      * @return $this
      */
     public function setPaymentType($paymentType)
@@ -185,7 +185,6 @@ class Ptsv2paymentsidvoidsPaymentInformation implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -196,7 +195,6 @@ class Ptsv2paymentsidvoidsPaymentInformation implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -208,7 +206,6 @@ class Ptsv2paymentsidvoidsPaymentInformation implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -223,7 +220,6 @@ class Ptsv2paymentsidvoidsPaymentInformation implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

@@ -60,7 +60,6 @@ class Ptsv2paymentsDeviceInformation implements ArrayAccess
         'fingerprintSessionId' => 'string',
         'useRawFingerprintSessionId' => 'bool',
         'deviceType' => 'string',
-        'appUrl' => 'string',
         'rawData' => '\CyberSource\Model\Ptsv2paymentsDeviceInformationRawData[]',
         'httpAcceptBrowserValue' => 'string',
         'httpAcceptContent' => 'string',
@@ -86,7 +85,6 @@ class Ptsv2paymentsDeviceInformation implements ArrayAccess
         'fingerprintSessionId' => null,
         'useRawFingerprintSessionId' => null,
         'deviceType' => null,
-        'appUrl' => null,
         'rawData' => null,
         'httpAcceptBrowserValue' => null,
         'httpAcceptContent' => null,
@@ -122,7 +120,6 @@ class Ptsv2paymentsDeviceInformation implements ArrayAccess
         'fingerprintSessionId' => 'fingerprintSessionId',
         'useRawFingerprintSessionId' => 'useRawFingerprintSessionId',
         'deviceType' => 'deviceType',
-        'appUrl' => 'appUrl',
         'rawData' => 'rawData',
         'httpAcceptBrowserValue' => 'httpAcceptBrowserValue',
         'httpAcceptContent' => 'httpAcceptContent',
@@ -149,7 +146,6 @@ class Ptsv2paymentsDeviceInformation implements ArrayAccess
         'fingerprintSessionId' => 'setFingerprintSessionId',
         'useRawFingerprintSessionId' => 'setUseRawFingerprintSessionId',
         'deviceType' => 'setDeviceType',
-        'appUrl' => 'setAppUrl',
         'rawData' => 'setRawData',
         'httpAcceptBrowserValue' => 'setHttpAcceptBrowserValue',
         'httpAcceptContent' => 'setHttpAcceptContent',
@@ -176,7 +172,6 @@ class Ptsv2paymentsDeviceInformation implements ArrayAccess
         'fingerprintSessionId' => 'getFingerprintSessionId',
         'useRawFingerprintSessionId' => 'getUseRawFingerprintSessionId',
         'deviceType' => 'getDeviceType',
-        'appUrl' => 'getAppUrl',
         'rawData' => 'getRawData',
         'httpAcceptBrowserValue' => 'getHttpAcceptBrowserValue',
         'httpAcceptContent' => 'getHttpAcceptContent',
@@ -228,7 +223,6 @@ class Ptsv2paymentsDeviceInformation implements ArrayAccess
         $this->container['fingerprintSessionId'] = isset($data['fingerprintSessionId']) ? $data['fingerprintSessionId'] : null;
         $this->container['useRawFingerprintSessionId'] = isset($data['useRawFingerprintSessionId']) ? $data['useRawFingerprintSessionId'] : null;
         $this->container['deviceType'] = isset($data['deviceType']) ? $data['deviceType'] : null;
-        $this->container['appUrl'] = isset($data['appUrl']) ? $data['appUrl'] : null;
         $this->container['rawData'] = isset($data['rawData']) ? $data['rawData'] : null;
         $this->container['httpAcceptBrowserValue'] = isset($data['httpAcceptBrowserValue']) ? $data['httpAcceptBrowserValue'] : null;
         $this->container['httpAcceptContent'] = isset($data['httpAcceptContent']) ? $data['httpAcceptContent'] : null;
@@ -284,6 +278,7 @@ class Ptsv2paymentsDeviceInformation implements ArrayAccess
      */
     public function setHostName($hostName)
     {
+
         $this->container['hostName'] = $hostName;
 
         return $this;
@@ -305,6 +300,7 @@ class Ptsv2paymentsDeviceInformation implements ArrayAccess
      */
     public function setIpAddress($ipAddress)
     {
+
         $this->container['ipAddress'] = $ipAddress;
 
         return $this;
@@ -326,6 +322,7 @@ class Ptsv2paymentsDeviceInformation implements ArrayAccess
      */
     public function setUserAgent($userAgent)
     {
+
         $this->container['userAgent'] = $userAgent;
 
         return $this;
@@ -389,28 +386,8 @@ class Ptsv2paymentsDeviceInformation implements ArrayAccess
      */
     public function setDeviceType($deviceType)
     {
+
         $this->container['deviceType'] = $deviceType;
-
-        return $this;
-    }
-
-    /**
-     * Gets appUrl
-     * @return string
-     */
-    public function getAppUrl()
-    {
-        return $this->container['appUrl'];
-    }
-
-    /**
-     * Sets appUrl
-     * @param string $appUrl This field will contain the deep link that would help the Customer App to wake up.
-     * @return $this
-     */
-    public function setAppUrl($appUrl)
-    {
-        $this->container['appUrl'] = $appUrl;
 
         return $this;
     }
@@ -452,6 +429,7 @@ class Ptsv2paymentsDeviceInformation implements ArrayAccess
      */
     public function setHttpAcceptBrowserValue($httpAcceptBrowserValue)
     {
+
         $this->container['httpAcceptBrowserValue'] = $httpAcceptBrowserValue;
 
         return $this;
@@ -473,6 +451,7 @@ class Ptsv2paymentsDeviceInformation implements ArrayAccess
      */
     public function setHttpAcceptContent($httpAcceptContent)
     {
+
         $this->container['httpAcceptContent'] = $httpAcceptContent;
 
         return $this;
@@ -515,6 +494,7 @@ class Ptsv2paymentsDeviceInformation implements ArrayAccess
      */
     public function setHttpBrowserLanguage($httpBrowserLanguage)
     {
+
         $this->container['httpBrowserLanguage'] = $httpBrowserLanguage;
 
         return $this;
@@ -578,6 +558,7 @@ class Ptsv2paymentsDeviceInformation implements ArrayAccess
      */
     public function setHttpBrowserColorDepth($httpBrowserColorDepth)
     {
+
         $this->container['httpBrowserColorDepth'] = $httpBrowserColorDepth;
 
         return $this;
@@ -599,6 +580,7 @@ class Ptsv2paymentsDeviceInformation implements ArrayAccess
      */
     public function setHttpBrowserScreenHeight($httpBrowserScreenHeight)
     {
+
         $this->container['httpBrowserScreenHeight'] = $httpBrowserScreenHeight;
 
         return $this;
@@ -620,6 +602,7 @@ class Ptsv2paymentsDeviceInformation implements ArrayAccess
      */
     public function setHttpBrowserScreenWidth($httpBrowserScreenWidth)
     {
+
         $this->container['httpBrowserScreenWidth'] = $httpBrowserScreenWidth;
 
         return $this;
@@ -641,6 +624,7 @@ class Ptsv2paymentsDeviceInformation implements ArrayAccess
      */
     public function setHttpBrowserTimeDifference($httpBrowserTimeDifference)
     {
+
         $this->container['httpBrowserTimeDifference'] = $httpBrowserTimeDifference;
 
         return $this;
@@ -662,6 +646,7 @@ class Ptsv2paymentsDeviceInformation implements ArrayAccess
      */
     public function setUserAgentBrowserValue($userAgentBrowserValue)
     {
+
         $this->container['userAgentBrowserValue'] = $userAgentBrowserValue;
 
         return $this;
@@ -671,7 +656,6 @@ class Ptsv2paymentsDeviceInformation implements ArrayAccess
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -682,7 +666,6 @@ class Ptsv2paymentsDeviceInformation implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -694,7 +677,6 @@ class Ptsv2paymentsDeviceInformation implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -709,7 +691,6 @@ class Ptsv2paymentsDeviceInformation implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

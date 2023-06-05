@@ -91,14 +91,4 @@ class PaymentsApiTest extends \PHPUnit_Framework_TestCase
     public function testIncrementAuth()
     {
     }
-
-    /**
-     * Test case for refreshPaymentStatus
-     *
-     * Check a Payment Status.
-     *
-     */
-    public function testRefreshPaymentStatus()
-    {
-    }
 }

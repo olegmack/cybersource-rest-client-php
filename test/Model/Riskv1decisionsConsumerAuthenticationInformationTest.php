@@ -363,11 +363,4 @@ class Riskv1decisionsConsumerAuthenticationInformationTest extends \PHPUnit_Fram
     public function testPropertyWhiteListStatus()
     {
     }
-
-    /**
-     * Test attribute "scoreRequest"
-     */
-    public function testPropertyScoreRequest()
-    {
-    }
 }

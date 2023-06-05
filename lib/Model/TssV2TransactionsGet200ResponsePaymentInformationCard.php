@@ -62,8 +62,6 @@ class TssV2TransactionsGet200ResponsePaymentInformationCard implements ArrayAcce
         'startYear' => 'string',
         'issueNumber' => 'string',
         'type' => 'string',
-        'brandName' => 'string',
-        'currency' => 'string',
         'accountEncoderId' => 'string',
         'useAs' => 'string'
     ];
@@ -81,8 +79,6 @@ class TssV2TransactionsGet200ResponsePaymentInformationCard implements ArrayAcce
         'startYear' => null,
         'issueNumber' => null,
         'type' => null,
-        'brandName' => null,
-        'currency' => null,
         'accountEncoderId' => null,
         'useAs' => null
     ];
@@ -110,8 +106,6 @@ class TssV2TransactionsGet200ResponsePaymentInformationCard implements ArrayAcce
         'startYear' => 'startYear',
         'issueNumber' => 'issueNumber',
         'type' => 'type',
-        'brandName' => 'brandName',
-        'currency' => 'currency',
         'accountEncoderId' => 'accountEncoderId',
         'useAs' => 'useAs'
     ];
@@ -130,8 +124,6 @@ class TssV2TransactionsGet200ResponsePaymentInformationCard implements ArrayAcce
         'startYear' => 'setStartYear',
         'issueNumber' => 'setIssueNumber',
         'type' => 'setType',
-        'brandName' => 'setBrandName',
-        'currency' => 'setCurrency',
         'accountEncoderId' => 'setAccountEncoderId',
         'useAs' => 'setUseAs'
     ];
@@ -150,8 +142,6 @@ class TssV2TransactionsGet200ResponsePaymentInformationCard implements ArrayAcce
         'startYear' => 'getStartYear',
         'issueNumber' => 'getIssueNumber',
         'type' => 'getType',
-        'brandName' => 'getBrandName',
-        'currency' => 'getCurrency',
         'accountEncoderId' => 'getAccountEncoderId',
         'useAs' => 'getUseAs'
     ];
@@ -195,8 +185,6 @@ class TssV2TransactionsGet200ResponsePaymentInformationCard implements ArrayAcce
         $this->container['startYear'] = isset($data['startYear']) ? $data['startYear'] : null;
         $this->container['issueNumber'] = isset($data['issueNumber']) ? $data['issueNumber'] : null;
         $this->container['type'] = isset($data['type']) ? $data['type'] : null;
-        $this->container['brandName'] = isset($data['brandName']) ? $data['brandName'] : null;
-        $this->container['currency'] = isset($data['currency']) ? $data['currency'] : null;
         $this->container['accountEncoderId'] = isset($data['accountEncoderId']) ? $data['accountEncoderId'] : null;
         $this->container['useAs'] = isset($data['useAs']) ? $data['useAs'] : null;
     }
@@ -263,6 +251,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationCard implements ArrayAcce
      */
     public function setPrefix($prefix)
     {
+
         $this->container['prefix'] = $prefix;
 
         return $this;
@@ -284,6 +273,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationCard implements ArrayAcce
      */
     public function setExpirationMonth($expirationMonth)
     {
+
         $this->container['expirationMonth'] = $expirationMonth;
 
         return $this;
@@ -305,6 +295,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationCard implements ArrayAcce
      */
     public function setExpirationYear($expirationYear)
     {
+
         $this->container['expirationYear'] = $expirationYear;
 
         return $this;
@@ -326,6 +317,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationCard implements ArrayAcce
      */
     public function setStartMonth($startMonth)
     {
+
         $this->container['startMonth'] = $startMonth;
 
         return $this;
@@ -347,6 +339,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationCard implements ArrayAcce
      */
     public function setStartYear($startYear)
     {
+
         $this->container['startYear'] = $startYear;
 
         return $this;
@@ -368,6 +361,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationCard implements ArrayAcce
      */
     public function setIssueNumber($issueNumber)
     {
+
         $this->container['issueNumber'] = $issueNumber;
 
         return $this;
@@ -384,54 +378,12 @@ class TssV2TransactionsGet200ResponsePaymentInformationCard implements ArrayAcce
 
     /**
      * Sets type
-     * @param string $type Three-digit value that indicates the card type.  **IMPORTANT** It is strongly recommended that you include the card type field in request messages even if it is optional for your processor and card type. Omitting the card type can cause the transaction to be processed with the wrong card type.  Possible values: - `001`: Visa. For card-present transactions on all processors except SIX, the Visa Electron card type is processed the same way that the Visa debit card is processed. Use card type value `001` for Visa Electron. - `002`: Mastercard, Eurocard[^1], which is a European regional brand of Mastercard. - `003`: American Express - `004`: Discover - `005`: Diners Club - `006`: Carte Blanche[^1] - `007`: JCB[^1] - `014`: Enroute[^1] - `021`: JAL[^1] - `024`: Maestro (UK Domestic)[^1] - `031`: Delta[^1]: Use this value only for Ingenico ePayments. For other processors, use `001` for all Visa card types. - `033`: Visa Electron[^1]. Use this value only for Ingenico ePayments and SIX. For other processors, use `001` for all Visa card types. - `034`: Dankort[^1] - `036`: Cartes Bancaires[^1,4] - `037`: Carta Si[^1] - `039`: Encoded account number[^1] - `040`: UATP[^1] - `042`: Maestro (International)[^1] - `050`: Hipercard[^2,3] - `051`: Aura - `054`: Elo[^3] - `062`: China UnionPay - '070': EFTPOS  [^1]: For this card type, you must include the `paymentInformation.card.type` or `paymentInformation.tokenizedCard.type` field in your request for an authorization or a stand-alone credit. [^2]: For this card type on Cielo 3.0, you must include the `paymentInformation.card.type` or `paymentInformation.tokenizedCard.type` field in a request for an authorization or a stand-alone credit. This card type is not supported on Cielo 1.5. [^3]: For this card type on Getnet and Rede, you must include the `paymentInformation.card.type` or `paymentInformation.tokenizedCard.type` field in a request for an authorization or a stand-alone credit. [^4]: For this card type, you must include the `paymentInformation.card.type` in your request for any payer authentication services.  #### Used by **Authorization** Required for Carte Blanche and JCB. Optional for all other card types.  #### Card Present reply This field is included in the reply message when the client software that is installed on the POS terminal uses the token management service (TMS) to retrieve tokenized payment details. You must contact customer support to have your account enabled to receive these fields in the credit reply message.  Returned by the Credit service.  This reply field is only supported by the following processors: - American Express Direct - Credit Mutuel-CIC - FDC Nashville Global - OmniPay Direct - SIX  #### Google Pay transactions For PAN-based Google Pay transactions, this field is returned in the API response.  #### GPX This field only supports transactions from the following card types: - Visa - Mastercard - AMEX - Discover - Diners - JCB - Union Pay International
+     * @param string $type Three-digit value that indicates the card type.  **IMPORTANT** It is strongly recommended that you include the card type field in request messages even if it is optional for your processor and card type. Omitting the card type can cause the transaction to be processed with the wrong card type.  Possible values: - `001`: Visa. For card-present transactions on all processors except SIX, the Visa Electron card type is processed the same way that the Visa debit card is processed. Use card type value `001` for Visa Electron. - `002`: Mastercard, Eurocard[^1], which is a European regional brand of Mastercard. - `003`: American Express - `004`: Discover - `005`: Diners Club - `006`: Carte Blanche[^1] - `007`: JCB[^1] - `014`: Enroute[^1] - `021`: JAL[^1] - `024`: Maestro (UK Domestic)[^1] - `031`: Delta[^1]: Use this value only for Ingenico ePayments. For other processors, use `001` for all Visa card types. - `033`: Visa Electron[^1]. Use this value only for Ingenico ePayments and SIX. For other processors, use `001` for all Visa card types. - `034`: Dankort[^1] - `036`: Cartes Bancaires[^1,4] - `037`: Carta Si[^1] - `039`: Encoded account number[^1] - `040`: UATP[^1] - `042`: Maestro (International)[^1] - `050`: Hipercard[^2,3] - `051`: Aura - `054`: Elo[^3] - `062`: China UnionPay  [^1]: For this card type, you must include the `paymentInformation.card.type` or `paymentInformation.tokenizedCard.type` field in your request for an authorization or a stand-alone credit. [^2]: For this card type on Cielo 3.0, you must include the `paymentInformation.card.type` or `paymentInformation.tokenizedCard.type` field in a request for an authorization or a stand-alone credit. This card type is not supported on Cielo 1.5. [^3]: For this card type on Getnet and Rede, you must include the `paymentInformation.card.type` or `paymentInformation.tokenizedCard.type` field in a request for an authorization or a stand-alone credit. [^4]: For this card type, you must include the `paymentInformation.card.type` in your request for any payer authentication services.  #### Used by **Authorization** Required for Carte Blanche and JCB. Optional for all other card types.  #### Card Present reply This field is included in the reply message when the client software that is installed on the POS terminal uses the token management service (TMS) to retrieve tokenized payment details. You must contact customer support to have your account enabled to receive these fields in the credit reply message.  Returned by the Credit service.  This reply field is only supported by the following processors: - American Express Direct - Credit Mutuel-CIC - FDC Nashville Global - OmniPay Direct - SIX  #### Google Pay transactions For PAN-based Google Pay transactions, this field is returned in the API response.  #### GPX This field only supports transactions from the following card types: - Visa - Mastercard - AMEX - Discover - Diners - JCB - Union Pay International
      * @return $this
      */
     public function setType($type)
     {
         $this->container['type'] = $type;
-
-        return $this;
-    }
-
-    /**
-     * Gets brandName
-     * @return string
-     */
-    public function getBrandName()
-    {
-        return $this->container['brandName'];
-    }
-
-    /**
-     * Sets brandName
-     * @param string $brandName This field contains the card brand name.   Some of the possible values (not an exhaustive list) are -    - VISA   - MASTERCARD   - AMERICAN EXPRESS   - DISCOVER   - DINERS CLUB   - CARTE BLANCHE   - JCB   - OPTIMA   - TWINPAY CREDIT CARD   - TWINPAY DEBIT CARD   - WALMART   - ENROUTE   - LOWES CONSUMER   - HOME DEPOT CONSUMER   - MBNA   - DICKS SPORTWEAR   - CASUAL CORNER   - SEARS   - JAL   - DISNEY CARD   - SWITCH/SOLO   - SAMS CLUB CONSUMER   - SAMS CLUB BUSINESS   - NICOS HOUSE CARD   - BEBE   - RESTORATION HARDWARE   - DELTA ONLINE   - SOLO   - VISA ELECTRON   - DANKORT   - LASER   - CARTE BANCAIRE   - CARTA SI   - ENCODED ACCOUNT   - UATP   - HOUSEHOLD   - MAESTRO   - GE CAPITAL   - KOREAN CARDS   - STYLE CARDS   - JCREW   - MEIJER   - HIPERCARD   - AURA   - REDECARD   - ORICO HOUSE CARD   - ELO   - CAPITAL ONE PRIVATE LABEL   - CARNET   - RUPAY   - CHINA UNION PAY   - FALABELLA PRIVATE LABEL   - PROMPTCARD   - KOREAN DOMESTIC   - BANRICOMPRAS
-     * @return $this
-     */
-    public function setBrandName($brandName)
-    {
-        $this->container['brandName'] = $brandName;
-
-        return $this;
-    }
-
-    /**
-     * Gets currency
-     * @return string
-     */
-    public function getCurrency()
-    {
-        return $this->container['currency'];
-    }
-
-    /**
-     * Sets currency
-     * @param string $currency This field indicates the 3-letter [ISO Standard Currency Codes](http://apps.cybersource.com/library/documentation/sbc/quickref/currencies.pdf) for the card currency.
-     * @return $this
-     */
-    public function setCurrency($currency)
-    {
-        $this->container['currency'] = $currency;
 
         return $this;
     }
@@ -452,6 +404,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationCard implements ArrayAcce
      */
     public function setAccountEncoderId($accountEncoderId)
     {
+
         $this->container['accountEncoderId'] = $accountEncoderId;
 
         return $this;
@@ -473,6 +426,7 @@ class TssV2TransactionsGet200ResponsePaymentInformationCard implements ArrayAcce
      */
     public function setUseAs($useAs)
     {
+
         $this->container['useAs'] = $useAs;
 
         return $this;
@@ -482,7 +436,6 @@ class TssV2TransactionsGet200ResponsePaymentInformationCard implements ArrayAcce
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -493,7 +446,6 @@ class TssV2TransactionsGet200ResponsePaymentInformationCard implements ArrayAcce
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -505,7 +457,6 @@ class TssV2TransactionsGet200ResponsePaymentInformationCard implements ArrayAcce
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -520,7 +471,6 @@ class TssV2TransactionsGet200ResponsePaymentInformationCard implements ArrayAcce
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

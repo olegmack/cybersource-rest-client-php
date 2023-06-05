@@ -57,8 +57,7 @@ class Ptsv2paymentsPaymentInformationBank implements ArrayAccess
         'account' => '\CyberSource\Model\Ptsv2paymentsPaymentInformationBankAccount',
         'routingNumber' => 'string',
         'iban' => 'string',
-        'swiftCode' => 'string',
-        'code' => 'string'
+        'swiftCode' => 'string'
     ];
 
     /**
@@ -69,8 +68,7 @@ class Ptsv2paymentsPaymentInformationBank implements ArrayAccess
         'account' => null,
         'routingNumber' => null,
         'iban' => null,
-        'swiftCode' => null,
-        'code' => null
+        'swiftCode' => null
     ];
 
     public static function swaggerTypes()
@@ -91,8 +89,7 @@ class Ptsv2paymentsPaymentInformationBank implements ArrayAccess
         'account' => 'account',
         'routingNumber' => 'routingNumber',
         'iban' => 'iban',
-        'swiftCode' => 'swiftCode',
-        'code' => 'code'
+        'swiftCode' => 'swiftCode'
     ];
 
 
@@ -104,8 +101,7 @@ class Ptsv2paymentsPaymentInformationBank implements ArrayAccess
         'account' => 'setAccount',
         'routingNumber' => 'setRoutingNumber',
         'iban' => 'setIban',
-        'swiftCode' => 'setSwiftCode',
-        'code' => 'setCode'
+        'swiftCode' => 'setSwiftCode'
     ];
 
 
@@ -117,8 +113,7 @@ class Ptsv2paymentsPaymentInformationBank implements ArrayAccess
         'account' => 'getAccount',
         'routingNumber' => 'getRoutingNumber',
         'iban' => 'getIban',
-        'swiftCode' => 'getSwiftCode',
-        'code' => 'getCode'
+        'swiftCode' => 'getSwiftCode'
     ];
 
     public static function attributeMap()
@@ -156,7 +151,6 @@ class Ptsv2paymentsPaymentInformationBank implements ArrayAccess
         $this->container['routingNumber'] = isset($data['routingNumber']) ? $data['routingNumber'] : null;
         $this->container['iban'] = isset($data['iban']) ? $data['iban'] : null;
         $this->container['swiftCode'] = isset($data['swiftCode']) ? $data['swiftCode'] : null;
-        $this->container['code'] = isset($data['code']) ? $data['code'] : null;
     }
 
     /**
@@ -221,6 +215,7 @@ class Ptsv2paymentsPaymentInformationBank implements ArrayAccess
      */
     public function setRoutingNumber($routingNumber)
     {
+
         $this->container['routingNumber'] = $routingNumber;
 
         return $this;
@@ -242,6 +237,7 @@ class Ptsv2paymentsPaymentInformationBank implements ArrayAccess
      */
     public function setIban($iban)
     {
+
         $this->container['iban'] = $iban;
 
         return $this;
@@ -267,33 +263,11 @@ class Ptsv2paymentsPaymentInformationBank implements ArrayAccess
 
         return $this;
     }
-
-    /**
-     * Gets code
-     * @return string
-     */
-    public function getCode()
-    {
-        return $this->container['code'];
-    }
-
-    /**
-     * Sets code
-     * @param string $code Bank code of the consumer’s account
-     * @return $this
-     */
-    public function setCode($code)
-    {
-        $this->container['code'] = $code;
-
-        return $this;
-    }
     /**
      * Returns true if offset exists. False otherwise.
      * @param  integer $offset Offset
      * @return boolean
      */
-    #[\ReturnTypeWillChange]
     public function offsetExists($offset)
     {
         return isset($this->container[$offset]);
@@ -304,7 +278,6 @@ class Ptsv2paymentsPaymentInformationBank implements ArrayAccess
      * @param  integer $offset Offset
      * @return mixed
      */
-    #[\ReturnTypeWillChange]
     public function offsetGet($offset)
     {
         return isset($this->container[$offset]) ? $this->container[$offset] : null;
@@ -316,7 +289,6 @@ class Ptsv2paymentsPaymentInformationBank implements ArrayAccess
      * @param  mixed   $value  Value to be set
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetSet($offset, $value)
     {
         if (is_null($offset)) {
@@ -331,7 +303,6 @@ class Ptsv2paymentsPaymentInformationBank implements ArrayAccess
      * @param  integer $offset Offset
      * @return void
      */
-    #[\ReturnTypeWillChange]
     public function offsetUnset($offset)
     {
         unset($this->container[$offset]);

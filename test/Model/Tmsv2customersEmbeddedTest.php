@@ -33,7 +33,7 @@ namespace CyberSource;
  * Tmsv2customersEmbeddedTest Class Doc Comment
  *
  * @category    Class */
-// * @description Additional resources for the Customer.
+// * @description Additional resources for the Customer token.
 /**
  * @package     CyberSource
  * @author      Swagger Codegen team
